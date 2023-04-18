@@ -47,5 +47,18 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetDataTable("select dn.IDDienNuoc, kh.HoTen,dv.IDLoaiDV,dv.Cu,dv.Moi,dn.DonGia from DienNuoc dn,DichVu dv,KhachHang kh where kh.IDKH=dn.IDKH and dn.IDDV=dv.IDDV");
         }
+        public DataTable loadKH_DN_DV()
+        {
+            return modify.GetDataTable("select DISTINCT kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong group by kh.HoTen,p.TenPhong");
+        }
+        public DataTable loadThongKe()
+        {
+            return modify.GetDataTable("select * from ThongKe");
+        }
+        public DataTable loadKHChuaDongTien()
+        {
+            return modify.GetDataTable("select DISTINCT kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and kh.HoTen not in (select HoTenKH from ThongKe) group by kh.HoTen,p.TenPhong");
+        }
+
     }
 }

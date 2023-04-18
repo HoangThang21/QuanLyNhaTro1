@@ -30,7 +30,7 @@
         {
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnDSOTro = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnDSPhong = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,15 +58,16 @@
             this.btnDSOTro.UseVisualStyleBackColor = false;
             this.btnDSOTro.Click += new System.EventHandler(this.btnDSOTro_Click);
             // 
-            // button4
+            // btnThanhToan
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(52, 419);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(342, 152);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Thanh Toán";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThanhToan.Location = new System.Drawing.Point(52, 419);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(342, 152);
+            this.btnThanhToan.TabIndex = 3;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnDSPhong
             // 
@@ -107,7 +108,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.btnDSPhong);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnDSOTro);
             this.Controls.Add(this.btnDangKy);
             this.Name = "Main";
@@ -119,7 +120,7 @@
         #endregion
         private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnDSOTro;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnDSPhong;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;

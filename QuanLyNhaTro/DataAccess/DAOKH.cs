@@ -23,11 +23,17 @@ namespace QuanLyNhaTro.DataAccess
         public void UpdateKH(String PositionID, String HoTen, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh)
         {
             String query = "Update KhachHang set HoTen=N'"+HoTen+"',CMND='"+CMND+"',SDT='"+SDT+"',NgaySinh='"+NgaySinh+"',DiaChi=N'"+DiaChi+"',GioiTinh=N'"+GioiTinh+"' where IDKH='"+ PositionID + "'";
+            
             modify.Command(query);
         }
         public string getIDKH(String HoTen)
         {
             String query = "select kh.IDKH from KhachHang kh where HoTen=N'" + HoTen + "'";
+            return modify.GetID(query);
+        }
+        public string getHoTenKH(String id)
+        {
+            String query = "select kh.HoTen from KhachHang kh where IDKH='" + id + "'";
             return modify.GetID(query);
         }
     }

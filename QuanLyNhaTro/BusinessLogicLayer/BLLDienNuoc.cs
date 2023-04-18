@@ -13,6 +13,8 @@ namespace QuanLyNhaTro.BusinessLogicLayer
     {
         DataAccess.DAODichVu DAODichVu=new DAODichVu();
         DataAccess.DAODienNuoc DAODienNuoc = new DAODienNuoc();
+        DataAccess.DAOKH DAOKH = new DAOKH();
+
         public void KtText (String LoaiDv,String Cu , String Moi,String idKH)
         {
             String IDDV = "DV";
@@ -66,6 +68,8 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                                 IDDienNuoc = "DN";
                             }
                         }
+                        
+
                     }
                     else
                     {

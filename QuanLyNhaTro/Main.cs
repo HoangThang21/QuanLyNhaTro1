@@ -40,5 +40,11 @@ namespace QuanLyNhaTro
             QuanLyDienNuoc quanLyDienNuoc = new QuanLyDienNuoc();
             quanLyDienNuoc.ShowDialog();
         }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            ThanhToan thanhToan = new ThanhToan();
+            thanhToan.ShowDialog();
+        }
     }
 }

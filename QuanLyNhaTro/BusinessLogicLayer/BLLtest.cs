@@ -32,42 +32,49 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                         {
                             if(SDT!=""&&SDT.All(char.IsDigit) == true)
                             {
-                                MessageBox.Show(""+ TienDatCoc+" " + NgayThue +" " + NgayTra+ " " + Ten+" " + CMND+" " + SDT+" " + NgaySinh+" " + DiaChi+ " " + GioiTinh+ " " + TenPhong+ " " + LoaiPhong);
-                                while (true)
+                                if (TenPhong != "")
                                 {
-                                    try
+                                    MessageBox.Show("" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " + TenPhong + " " + LoaiPhong);
+                                    while (true)
                                     {
-                                        Random r = new Random();
-                                        int ID = r.Next(100, 1000);
-                                        idKH += ID;
-                                        daokh.InsertKH(idKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
-                                        
-                                        break;
+                                        try
+                                        {
+                                            Random r = new Random();
+                                            int ID = r.Next(100, 1000);
+                                            idKH += ID;
+                                            daokh.InsertKH(idKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
+
+                                            break;
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            idKH = "KH";
+                                        }
                                     }
-                                    catch (Exception ex)
+
+                                    DAOPhong.UpdatePhongTrangThai(idPhong, "Đã đặt");
+
+                                    while (true)
                                     {
-                                        idKH = "KH";
+                                        try
+                                        {
+                                            Random r = new Random();
+                                            int ID = r.Next(100, 1000);
+                                            idThuePhong += ID;
+                                            DAOThuePhong.InsertThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, idKH, idPhong);
+                                            break;
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            idKH = "TP";
+                                        }
                                     }
+                                    MessageBox.Show("Đã đặt thành công.");
                                 }
-                                
-                              DAOPhong.UpdatePhongTrangThai(idPhong, "Đã đặt");
-                                
-                                while (true)
+                                else
                                 {
-                                    try
-                                    {
-                                        Random r = new Random();
-                                        int ID = r.Next(100, 1000);
-                                        idThuePhong += ID;
-                                        DAOThuePhong.InsertThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, idKH, idPhong);
-                                        break;
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        idKH = "TP";
-                                    }
+                                    MessageBox.Show("Hết Phòng.");
                                 }
-                                MessageBox.Show("Đã đặt thành công.");
                             }
                             else
                             {

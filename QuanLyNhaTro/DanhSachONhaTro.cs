@@ -36,6 +36,7 @@ namespace QuanLyNhaTro
             dGVDSOTro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dGVDSOTro.ReadOnly = true;
             dGVDSOTro.DataSource = dao.loadthuePhong();
+          
         }
 
         private void dGVDSOTro_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -57,7 +58,8 @@ namespace QuanLyNhaTro
         BusinessLogicLayer.BLLQLDSTro BLLQLDSTro = new BusinessLogicLayer.BLLQLDSTro();
         private void btnSua_Click(object sender, EventArgs e)
         {
-            BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text,txtTenPhong.Text);
+            int i = dGVDSOTro.CurrentRow.Index;
+            BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text,txtTenPhong.Text, dGVDSOTro.Rows[i].Cells[12].Value.ToString());
             LoadDataGirView();
         }
 
@@ -65,7 +67,7 @@ namespace QuanLyNhaTro
         {
             int i = dGVDSOTro.CurrentRow.Index;
             //MessageBox.Show(""+dGVDSOTro.Rows[i].Cells[0].Value.ToString());
-            BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString());
+            BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString(), dGVDSOTro.Rows[i].Cells[11].Value.ToString());
             LoadDataGirView();
         }
 

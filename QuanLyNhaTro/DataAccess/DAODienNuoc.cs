@@ -24,5 +24,14 @@ namespace QuanLyNhaTro.DataAccess
             String query = "Update DienNuoc set IDDienNuoc='" + IDDV + "',IDDV='" + IDDV + "',DonGia='" + IDKH + "' where IDDienNuoc='" + PositionID + "'";
             modify.Command(query);
         }
+        public string getID_KH(String IDKH) 
+        {
+            return modify.GetID("select IDDienNuoc from DienNuoc where IDKH='" + IDKH + "'");
+        }
+        public int getcountIDDN_KH(String IDKH)
+        {
+            return modify.GetInt32("select count(IDDienNuoc) from DienNuoc where IDKH='" + IDKH + "'");
+        }
+
     }
 }

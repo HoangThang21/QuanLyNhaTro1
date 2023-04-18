@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4CB6FAE-C946-40AC-9308-B868D431C354}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhaTro</RootNamespace>
+    <AssemblyName>QuanLyNhaTro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\QLNT\QuanLyNhaTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\QLNT\QuanLyNhaTro.Designer.cs">
+      <DependentUpon>QuanLyNhaTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogicLayer\BLLDienNuoc.cs" />
+    <Compile Include="BusinessLogicLayer\BLLQLDSTro.cs" />
+    <Compile Include="BusinessLogicLayer\BLLtest.cs" />
+    <Compile Include="ClassModle\Connec.cs" />
+    <Compile Include="ClassModle\Modify.cs" />
+    <Compile Include="DangKyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyPhong.Designer.cs">
+      <DependentUpon>DangKyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachONhaTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachONhaTro.Designer.cs">
+      <DependentUpon>DanhSachONhaTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DAO.cs" />
+    <Compile Include="DataAccess\DAODichVu.cs" />
+    <Compile Include="DataAccess\DAODienNuoc.cs" />
+    <Compile Include="DataAccess\DAOKH.cs" />
+    <Compile Include="DataAccess\DAOPhong.cs" />
+    <Compile Include="DataAccess\DAOThuePhong.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDienNuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDienNuoc.Designer.cs">
+      <DependentUpon>QuanLyDienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhong.Designer.cs">
+      <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="..\..\QLNT\QuanLyNhaTro.resx">
+      <DependentUpon>QuanLyNhaTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyPhong.resx">
+      <DependentUpon>DangKyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachONhaTro.resx">
+      <DependentUpon>DanhSachONhaTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuanLyDienNuoc.resx">
+      <DependentUpon>QuanLyDienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhong.resx">
+      <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -13,11 +13,11 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DataAccess.DAOKH DAOKH=new DataAccess.DAOKH();
         DataAccess.DAOPhong DAOPhong = new DAOPhong();
         DataAccess.DAOThuePhong DAOThuePhong=new DataAccess.DAOThuePhong();
-        public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDTen)
+        public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH)
         {
-            String idKH = DAOKH.getIDKH(IDTen);
+            //String idKH = DAOKH.getIDKH(IDTen);
             String idphong = DAOPhong.returnIDPhong(tenPhong);
-            String idThuePhong = DAOThuePhong.GetIDThuePhong(idKH);
+            String idThuePhong = DAOThuePhong.GetIDThuePhong(IDKH);
             try
             {
                 if (TienDatCoc != "" && int.Parse(TienDatCoc.Trim()) > 0)
@@ -31,9 +31,9 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             {
                                 //MessageBox.Show(""+idKH+"" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " );
 
-                                MessageBox.Show("" + idKH);
-                                DAOKH.UpdateKH(idKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
-                                DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, idKH, idphong);
+                                MessageBox.Show("" + IDKH);
+                                DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
+                                DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);
 
                             }
                             else
@@ -64,6 +64,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
 
         }
         DataAccess.DAODienNuoc DAODienNuoc=new DataAccess.DAODienNuoc();
+        DataAccess.DAODichVu DAODichVu =new DataAccess.DAODichVu();
         public void DeleteThuePhong(String id,String idPhong,String idKH)
         {
             int tmp = DAODienNuoc.getcountIDDN_KH(idKH);
@@ -78,8 +79,15 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 DAOThuePhong.DeleteThuePhong(id);
                 for(int i = 0; i < tmp; i++)
                 {
-                   
                     DAODienNuoc.DeleteDienNuoc(DAODienNuoc.getID_KH(idKH));
+                    //MessageBox.Show("a");
+                  
+                    
+                }
+                for(int y=0; y < tmp; y++)
+                {
+                    
+                    DAODichVu.DeleteDichVu(DAODienNuoc.GetID_DV(idKH));
                 }
                 DAOPhong.UpdatePhongTrangThai(idPhong, "Trống");
                 DAOKH.DeleteKH(idKH);

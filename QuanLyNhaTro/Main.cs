@@ -12,9 +12,16 @@ namespace QuanLyNhaTro
 {
     public partial class Main : Form
     {
+        private static String tenTk;
+        public Main(String TenTk)
+        {
+            InitializeComponent();
+            tenTk = TenTk;
+        }
         public Main()
         {
             InitializeComponent();
+            
         }
 
         private void btnDSPhong_Click(object sender, EventArgs e)
@@ -45,6 +52,18 @@ namespace QuanLyNhaTro
         {
             ThanhToan thanhToan = new ThanhToan();
             thanhToan.ShowDialog();
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe thongKe = new ThongKe();
+            thongKe.ShowDialog();
+        }
+        DataAccess.DAO dao = new DataAccess.DAO();
+        private void Main_Load(object sender, EventArgs e)
+        {
+            labelTen.Text = "Tên tài khoản: "+tenTk;
+            labelChucVu.Text ="Chức vụ: "+ dao.selectChucVu(tenTk);
         }
     }
 }

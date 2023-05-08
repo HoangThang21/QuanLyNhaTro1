@@ -116,6 +116,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             if(DonGia!=""&& int.Parse(DonGia.Trim())>0)
                             {
                                 DAOPhong.InsertPhong(id, TenPhong, LoaiPhong, TrangThai, DonGia);
+                                MessageBox.Show("Thêm Phòng Thành công");
                             }
                             else
                             {
@@ -160,6 +161,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             {
                                 
                                 DAOPhong.UpdatePhong(id, TenPhong, LoaiPhong, TrangThai, DonGia);
+                                MessageBox.Show("Cập nhật Phòng Thành công");
                             }
                             else
                             {

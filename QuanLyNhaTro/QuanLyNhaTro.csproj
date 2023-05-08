@@ -49,10 +49,18 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BLLDienNuoc.cs" />
     <Compile Include="BusinessLogicLayer\BLLQLDSTro.cs" />
+    <Compile Include="BusinessLogicLayer\BLLQuanLy.cs" />
     <Compile Include="BusinessLogicLayer\BLLtest.cs" />
     <Compile Include="BusinessLogicLayer\BLLThanhToan.cs" />
     <Compile Include="ClassModle\Connec.cs" />
     <Compile Include="ClassModle\Modify.cs" />
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKycs.cs" />
     <Compile Include="DangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,8 +78,11 @@
     <Compile Include="DataAccess\DAODienNuoc.cs" />
     <Compile Include="DataAccess\DAOKH.cs" />
     <Compile Include="DataAccess\DAOPhong.cs" />
+    <Compile Include="DataAccess\DAOQuanLy.cs" />
     <Compile Include="DataAccess\DAOThongKeThanhToan.cs" />
     <Compile Include="DataAccess\DAOThuePhong.cs" />
+    <Compile Include="DTO\DTOTaiKhoan.cs" />
+    <Compile Include="DTO\DTOThongKe.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +109,12 @@
     <Compile Include="QuanLyPhong.Designer.cs">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMK.Designer.cs">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +127,9 @@
     <Compile Include="ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKyPhong.resx">
       <DependentUpon>DangKyPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,12 +150,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyDienNuoc.resx">
       <DependentUpon>QuanLyDienNuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyPhong.resx">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>
@@ -156,6 +180,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\subscribe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ds4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hous1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tk.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyNhaTro.DataAccess
 {
@@ -16,13 +17,19 @@ namespace QuanLyNhaTro.DataAccess
         }
         public void DeleteDichVu(String id)
         {
-            String query = "Delete From DichVu where IDDichVu='" + id + "'";
+            String query = "Delete From DichVu where IDDV='" + id + "'";
+            
             modify.Command(query);
         }
         public void UpdateDichVu(String PositionID, String LoaiDV, int Cu, int Moi)
         {
-            String query = "Update DichVu set IDLoaiDV=N'" + LoaiDV + "',Cu='" + Cu + "',Moi='" + Moi + "' where IDDichVu='" + PositionID + "'";
+            String query = "update DichVu set IDLoaiDV=N'"+ LoaiDV + "',Cu="+ Cu + ",Moi="+ Moi + " where IDDV='"+ PositionID + "'";
+          
             modify.Command(query);
+        }
+        public String GetiDDV_DN(String iDDienNuoc)
+        {
+            return modify.GetID("select dn.IDDV from DienNuoc dn, DichVu dv where dn.IDDienNuoc='" + iDDienNuoc + "' and dn.IDDV=dv.IDDV");
         }
     }
 }

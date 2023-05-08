@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 using System.Collections.ObjectModel;
+using QuanLyNhaTro.DTO;
 
 namespace QuanLyNhaTro.ClassModle
 {
@@ -69,5 +70,23 @@ namespace QuanLyNhaTro.ClassModle
             return id;
 
         }
+        public List<DTOTaiKhoan> TaiKhoans(string query)
+        {
+            List<DTOTaiKhoan> taiKhoans = new List<DTOTaiKhoan>();
+
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    taiKhoans.Add(new DTOTaiKhoan(dataReader.GetString(0), dataReader.GetString(1)));
+                }
+                sqlConnection.Close();
+            }
+            return taiKhoans;
+        }
+
     }
 }

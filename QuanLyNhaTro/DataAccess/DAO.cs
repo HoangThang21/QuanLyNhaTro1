@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QuanLyNhaTro.DataAccess
 {
@@ -59,6 +60,24 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetDataTable("select DISTINCT kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and kh.HoTen not in (select HoTenKH from ThongKe) group by kh.HoTen,p.TenPhong");
         }
+        public int selectTk(String tenTK,String matKhau)
+        {
+            string squery = "select * from QuanLy where taikhoan= '" + tenTK + "' and matkhau = '" + matKhau + "'";
+            return modify.TaiKhoans(squery).Count;
+        }
+        public String selectPass(String tenTK)
+        {
+            return modify.GetID("select matkhau from QuanLy where taikhoan='" + tenTK + "'");
+        }
+        public String selectChucVu(String tenTK)
+        {
+            return modify.GetID("select chucvu from QuanLy where taikhoan='" + tenTK + "'");
+        }
+        public String selectHoTen_Tk(String HoTen)
+        {
+            return modify.GetID("select DISTINCT HoTenKH from ThongKe where HoTenKH='" + HoTen+"'");
+        }
+        
 
     }
 }

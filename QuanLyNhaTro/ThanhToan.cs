@@ -36,9 +36,19 @@ namespace QuanLyNhaTro
         BusinessLogicLayer.BLLThanhToan BLLThanhToan=new BusinessLogicLayer.BLLThanhToan(); 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            int i = dGVChuaDong.CurrentRow.Index;
-            dGVChuaDong.Rows[i].Cells[1].Value.ToString();
-            BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[2].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString());
+            if (dGVChuaDong.RowCount > 1)
+            {
+                int i = dGVChuaDong.CurrentRow.Index;
+
+                BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[2].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Không có Khách Hàng hoặc chưa ghi điện nước cho khách hàng.");
+
+              
+            }
+  
             loaddgvDaDong();
         }
 

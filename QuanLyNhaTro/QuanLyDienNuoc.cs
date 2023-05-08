@@ -39,32 +39,66 @@ namespace QuanLyNhaTro
 
         private void dGVKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dGVKH.CurrentRow.Index;
-            txtKH.Text = dGVKH.Rows[i].Cells[1].Value.ToString();
+            if (dGVKH.RowCount > 1)
+            {
+                int i = dGVKH.CurrentRow.Index;
+                txtKH.Text = dGVKH.Rows[i].Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để chọn");
+            }
+           
+
+            
         }
         BusinessLogicLayer.BLLDienNuoc BLLDienNuoc = new BusinessLogicLayer.BLLDienNuoc();
         private void btnThemDn_Click(object sender, EventArgs e)
         {
-            int i = dGVKH.CurrentRow.Index;
-            BLLDienNuoc.KtText(cbDienNuoc.Text, txtCu.Text, txtMoi.Text, dGVKH.Rows[i].Cells[0].Value.ToString());
+            if (dGVKH.RowCount > 1)
+            {
+                int i = dGVKH.CurrentRow.Index;
+                BLLDienNuoc.KtText(cbDienNuoc.Text, txtCu.Text, txtMoi.Text, dGVKH.Rows[i].Cells[0].Value.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Không có khách hàng để thêm");
+            }
+           
             load();
         }
 
         private void btnXoaDN_Click(object sender, EventArgs e)
         {
-            int i = dGVDienNuoc.CurrentRow.Index;
-            BLLDienNuoc.DeleteDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString());
+            if (dGVDienNuoc.RowCount > 1)
+            {
+                int i = dGVDienNuoc.CurrentRow.Index;
+                BLLDienNuoc.DeleteDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Không có điện nước để xóa");
+            }
+          
             load();
         }
 
         private void dGVDienNuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dGVDienNuoc.CurrentRow.Index;
-            txtKH.Text = dGVDienNuoc.Rows[i].Cells[1].Value.ToString();
-            cbDienNuoc.Text= dGVDienNuoc.Rows[i].Cells[2].Value.ToString();
-            txtCu.Text = dGVDienNuoc.Rows[i].Cells[3].Value.ToString();
-            txtMoi.Text = dGVDienNuoc.Rows[i].Cells[4].Value.ToString();
-            txtGia.Text = dGVDienNuoc.Rows[i].Cells[5].Value.ToString();
+            if (dGVDienNuoc.RowCount > 1)
+            {
+                int i = dGVDienNuoc.CurrentRow.Index;
+                txtKH.Text = dGVDienNuoc.Rows[i].Cells[1].Value.ToString();
+                cbDienNuoc.Text = dGVDienNuoc.Rows[i].Cells[2].Value.ToString();
+                txtCu.Text = dGVDienNuoc.Rows[i].Cells[3].Value.ToString();
+                txtMoi.Text = dGVDienNuoc.Rows[i].Cells[4].Value.ToString();
+                txtGia.Text = dGVDienNuoc.Rows[i].Cells[5].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để chọn");
+            }
+          
         }
 
         private void btnDongDSP_Click(object sender, EventArgs e)
@@ -74,7 +108,17 @@ namespace QuanLyNhaTro
 
         private void btnCapNhatDn_Click(object sender, EventArgs e)
         {
+            if (dGVKH.RowCount > 1)
+            {
+                int i = dGVDienNuoc.CurrentRow.Index;
+                BLLDienNuoc.updateDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString(),cbDienNuoc.Text,txtCu.Text,txtMoi.Text);
+            }
+            else
+            {
+                MessageBox.Show("Không có điện nước để cập nhật");
+            }
 
+            load();
         }
     }
 }

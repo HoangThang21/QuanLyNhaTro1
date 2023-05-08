@@ -32,9 +32,11 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.lblDangKy = new System.Windows.Forms.LinkLabel();
+            this.lblQuenMK = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtPass
@@ -82,18 +84,19 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "User Name:";
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(168, 484);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(298, 58);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Thoát ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnThoat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThoat.Location = new System.Drawing.Point(168, 484);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(298, 58);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát ";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
@@ -120,21 +123,51 @@
             this.btnDangNhap.Text = "Đăng Nhập ";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.UseWaitCursor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // Form1
+            // lblDangKy
+            // 
+            this.lblDangKy.AutoSize = true;
+            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.Location = new System.Drawing.Point(496, 584);
+            this.lblDangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(103, 29);
+            this.lblDangKy.TabIndex = 12;
+            this.lblDangKy.TabStop = true;
+            this.lblDangKy.Text = "Đăng Ký";
+            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
+            // 
+            // lblQuenMK
+            // 
+            this.lblQuenMK.AutoSize = true;
+            this.lblQuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuenMK.Location = new System.Drawing.Point(48, 584);
+            this.lblQuenMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuenMK.Name = "lblQuenMK";
+            this.lblQuenMK.Size = new System.Drawing.Size(178, 29);
+            this.lblQuenMK.TabIndex = 13;
+            this.lblQuenMK.TabStop = true;
+            this.lblQuenMK.Text = "Quên Mật Khẩu";
+            this.lblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMK_LinkClicked);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 573);
+            this.ClientSize = new System.Drawing.Size(653, 680);
+            this.Controls.Add(this.lblDangKy);
+            this.Controls.Add(this.lblQuenMK);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDangNhap);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,9 +179,11 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.LinkLabel lblDangKy;
+        private System.Windows.Forms.LinkLabel lblQuenMK;
     }
 }
 

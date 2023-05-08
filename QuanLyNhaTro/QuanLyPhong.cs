@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaTro.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,22 +42,39 @@ namespace QuanLyNhaTro
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           int i = dGVPhongDat.CurrentRow.Index;
-            txtMaPhong.Text = dGVPhongDat.Rows[i].Cells[0].Value.ToString();
-            txtTenPhong.Text = dGVPhongDat.Rows[i].Cells[1].Value.ToString();
-            cbLoaiPhong.Text = dGVPhongDat.Rows[i].Cells[2].Value.ToString();
-            cbTrangThai.Text = dGVPhongDat.Rows[i].Cells[3].Value.ToString();
-            txtDonGia.Text = dGVPhongDat.Rows[i].Cells[4].Value.ToString();
+
+            if (dGVPhongDat.RowCount > 1)
+            {
+                int i = dGVPhongDat.CurrentRow.Index;
+                txtMaPhong.Text = dGVPhongDat.Rows[i].Cells[0].Value.ToString();
+                txtTenPhong.Text = dGVPhongDat.Rows[i].Cells[1].Value.ToString();
+                cbLoaiPhong.Text = dGVPhongDat.Rows[i].Cells[2].Value.ToString();
+                cbTrangThai.Text = dGVPhongDat.Rows[i].Cells[3].Value.ToString();
+                txtDonGia.Text = dGVPhongDat.Rows[i].Cells[4].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để chọn");
+            }
+          
         }
 
         private void dGVPhongTrong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dGVPhongTrong.CurrentRow.Index;
-            txtMaPhong.Text = dGVPhongTrong.Rows[i].Cells[0].Value.ToString();
-            txtTenPhong.Text = dGVPhongTrong.Rows[i].Cells[1].Value.ToString();
-            cbLoaiPhong.Text = dGVPhongTrong.Rows[i].Cells[2].Value.ToString();
-            cbTrangThai.Text = dGVPhongTrong.Rows[i].Cells[3].Value.ToString();
-            txtDonGia.Text = dGVPhongTrong.Rows[i].Cells[4].Value.ToString();
+            if (dGVPhongTrong.RowCount > 1)
+            {
+                int i = dGVPhongTrong.CurrentRow.Index;
+                txtMaPhong.Text = dGVPhongTrong.Rows[i].Cells[0].Value.ToString();
+                txtTenPhong.Text = dGVPhongTrong.Rows[i].Cells[1].Value.ToString();
+                cbLoaiPhong.Text = dGVPhongTrong.Rows[i].Cells[2].Value.ToString();
+                cbTrangThai.Text = dGVPhongTrong.Rows[i].Cells[3].Value.ToString();
+                txtDonGia.Text = dGVPhongTrong.Rows[i].Cells[4].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để chọn");
+            }
+        
         }
         BusinessLogicLayer.BLLtest bll= new BusinessLogicLayer.BLLtest();
         private void btnThemPhong_Click(object sender, EventArgs e)

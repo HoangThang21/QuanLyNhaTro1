@@ -28,10 +28,15 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetID("select IDDienNuoc from DienNuoc where IDKH='" + IDKH + "'");
         }
+        public String GetID_DV(String idkh)
+        {
+            return modify.GetID("select dn.IDDV From DienNuoc dn, KhachHang kh, DichVu dv where dn.IDKH=kh.IDKH and dn.IDDV=dv.IDDV and dn.IDKH='"+idkh+"'");
+        }
         public int getcountIDDN_KH(String IDKH)
         {
             return modify.GetInt32("select count(IDDienNuoc) from DienNuoc where IDKH='" + IDKH + "'");
         }
+        
 
     }
 }

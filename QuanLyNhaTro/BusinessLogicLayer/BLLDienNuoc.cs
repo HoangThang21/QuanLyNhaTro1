@@ -36,37 +36,44 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                         {
                             Gia = (int.Parse(Moi) - int.Parse(Cu))*5000;
                         }
-                        while (true)
+                        if (int.Parse(Moi) > int.Parse(Cu))
                         {
-                            try
+                            while (true)
                             {
-                                Random r = new Random();
-                                int ID = r.Next(100, 1000);
-                                IDDV += ID;
-                                DAODichVu.InsertDichVu(IDDV,LoaiDv, int.Parse(Cu), (int.Parse(Moi)));
+                                try
+                                {
+                                    Random r = new Random();
+                                    int ID = r.Next(100, 1000);
+                                    IDDV += ID;
+                                    DAODichVu.InsertDichVu(IDDV, LoaiDv, int.Parse(Cu), (int.Parse(Moi)));
 
-                                break;
+                                    break;
+                                }
+                                catch (Exception ex)
+                                {
+                                    IDDV = "DV";
+                                }
                             }
-                            catch (Exception ex)
+                            while (true)
                             {
-                                IDDV = "DV";
+                                try
+                                {
+                                    Random r = new Random();
+                                    int ID = r.Next(100, 1000);
+                                    IDDienNuoc += ID;
+                                    DAODienNuoc.InsertDienNuoc(IDDienNuoc, IDDV, Gia, idKH);
+
+                                    break;
+                                }
+                                catch (Exception ex)
+                                {
+                                    IDDienNuoc = "DN";
+                                }
                             }
                         }
-                        while (true)
+                        else
                         {
-                            try
-                            {
-                                Random r = new Random();
-                                int ID = r.Next(100, 1000);
-                                IDDienNuoc += ID;
-                                DAODienNuoc.InsertDienNuoc(IDDienNuoc, IDDV, Gia, idKH);
-
-                                break;
-                            }
-                            catch (Exception ex)
-                            {
-                                IDDienNuoc = "DN";
-                            }
+                            MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ");
                         }
                         
 
@@ -89,16 +96,24 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         public void DeleteDN( string id)
         {
             DAODienNuoc.DeleteDienNuoc(id);
+
         }
+       
         public void updateDN(String id,String loaiDV,String Cu , String Moi)
         {
+            int cu = Int32.Parse(Cu);
+            int moi= Int32.Parse(Moi);
+            String idDV=DAODichVu.GetiDDV_DN(id);
             try
             {
+                
                 if (Cu != "" && Cu.All(char.IsDigit) == true)
                 {
                     if (Moi != "" && Moi.All(char.IsDigit) == true)
                     {
-                        DAODichVu.UpdateDichVu(id, loaiDV, int.Parse(Cu), (int.Parse(Moi)));
+                       
+                       
+                        DAODichVu.UpdateDichVu(idDV, loaiDV, cu, moi);
 
 
                     }

@@ -12,7 +12,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
     internal class BLLThanhToan
     {
         DataAccess.DAOThongKeThanhToan DAOThongKeThanhToan=new DataAccess.DAOThongKeThanhToan();
-       
+        DataAccess.DAO dao = new DataAccess.DAO();
 
         DateTime d1 = DateTime.Now;
         DateTime ThangNam = DateTime.Now;
@@ -22,9 +22,9 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             String idThongKe = "TK";
             int Tong=int.Parse(tienPhong)+int.Parse(tienDienNuoc);
             d1.ToString("yyyy / MM / dd");
-            
+            String sqlHoTenThongKe =dao.selectHoTen_Tk(Hoten);
             String NgayThu = d1.ToShortDateString();
-            String thangnam=ThangNam.Year+"/"+ThangNam.Month;
+            String thangnam=ThangNam.Year+"/"+ThangNam.Month;//Lấy tháng năm hiện tại của máy tính
             String sqlThangNam =DAOThongKeThanhToan.selectyear()+"/"+DAOThongKeThanhToan.selectmonth();
             try
             {
@@ -34,10 +34,10 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                     {
                         if (tienDienNuoc != "" && int.Parse(tienDienNuoc.Trim()) > 0)
                         {
-                            //MessageBox.Show(thangnam + ",,,," + sqlThangNam);
-                            if(thangnam== sqlThangNam)
+                            
+                            if(thangnam== sqlThangNam&&Hoten== sqlHoTenThongKe)
                             {
-                                MessageBox.Show(thangnam + "=" + sqlThangNam+".Tháng này đã thu");
+                                MessageBox.Show(Hoten+".Tháng này đã thu");
                             }
                             else
                             {

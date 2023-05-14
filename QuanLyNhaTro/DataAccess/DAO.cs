@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace QuanLyNhaTro.DataAccess
@@ -75,7 +76,8 @@ namespace QuanLyNhaTro.DataAccess
         }
         public String selectHoTen_Tk(String HoTen)
         {
-            return modify.GetID("select DISTINCT HoTenKH from ThongKe where HoTenKH='" + HoTen+"'");
+
+            return modify.GetID("select DISTINCT HoTenKH from ThongKe where HoTenKH=N'" + HoTen + "'");
         }
         
 

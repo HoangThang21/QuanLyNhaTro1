@@ -80,12 +80,12 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                     }
                     else
                     {
-                        MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                        MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                    MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
                 }
             }
             catch (Exception ex)
@@ -111,15 +111,21 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 {
                     if (Moi != "" && Moi.All(char.IsDigit) == true)
                     {
-                       
-                       
-                        DAODichVu.UpdateDichVu(idDV, loaiDV, cu, moi);
+
+                        if (moi > cu)
+                        {
+                            DAODichVu.UpdateDichVu(idDV, loaiDV, cu, moi);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                        }
 
 
                     }
                     else
                     {
-                        MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                        MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ. Vui lòng nhập lại!");
                     }
                 }
                 else

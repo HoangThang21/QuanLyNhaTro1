@@ -41,6 +41,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             }
                             else
                             {
+
                                 while (true)
                                 {
                                     try
@@ -49,7 +50,6 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                                         int ID = r.Next(100, 1000);
                                         idThongKe += ID;
                                         DAOThongKeThanhToan.InsertTKKH(idThongKe, Hoten, Tong, NgayThu, "Đã thu");
-
                                         break;
                                     }
                                     catch (Exception ex)

@@ -65,5 +65,7 @@ namespace QuanLyNhaTro
             labelTen.Text = "Tên tài khoản: "+tenTk;
             labelChucVu.Text ="Chức vụ: "+ dao.selectChucVu(tenTk);
         }
+
+
     }
 }

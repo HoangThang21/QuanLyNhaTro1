@@ -129,6 +129,10 @@
             // btnDangKy
             // 
             this.btnDangKy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangKy.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDangKy.FlatAppearance.BorderSize = 4;
+            this.btnDangKy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDangKy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Image = global::QuanLyNhaTro.Properties.Resources.subscribe;
             this.btnDangKy.Location = new System.Drawing.Point(166, 98);

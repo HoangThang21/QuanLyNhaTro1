@@ -50,7 +50,7 @@
     <Compile Include="BusinessLogicLayer\BLLDienNuoc.cs" />
     <Compile Include="BusinessLogicLayer\BLLQLDSTro.cs" />
     <Compile Include="BusinessLogicLayer\BLLQuanLy.cs" />
-    <Compile Include="BusinessLogicLayer\BLLtest.cs" />
+    <Compile Include="BusinessLogicLayer\BLLTaiKhoan.cs" />
     <Compile Include="BusinessLogicLayer\BLLThanhToan.cs" />
     <Compile Include="ClassModle\Connec.cs" />
     <Compile Include="ClassModle\Modify.cs" />
@@ -60,7 +60,6 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangKycs.cs" />
     <Compile Include="DangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>

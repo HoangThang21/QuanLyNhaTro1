@@ -31,10 +31,10 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             {
                                 //MessageBox.Show(""+idKH+"" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " );
 
-                                MessageBox.Show("" + IDKH);
+                               
                                 DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
                                 DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);
-
+                                MessageBox.Show("Sửa thành công.");
                             }
                             else
                             {
@@ -73,6 +73,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 DAOThuePhong.DeleteThuePhong(id);
                 DAOPhong.UpdatePhongTrangThai(idPhong, "Trống");
                 DAOKH.DeleteKH(idKH);
+                MessageBox.Show("Xóa thành công!");
             }
             if(tmp>0)
             {
@@ -91,6 +92,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 }
                 DAOPhong.UpdatePhongTrangThai(idPhong, "Trống");
                 DAOKH.DeleteKH(idKH);
+                MessageBox.Show("Xóa thành công!");
             }
             
 

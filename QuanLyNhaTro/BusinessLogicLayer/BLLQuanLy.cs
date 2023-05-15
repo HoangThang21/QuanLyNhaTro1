@@ -26,8 +26,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else
-            {
-                
+            { 
                 if ( dao.selectTk ( tenTK,  matKhau) > 0)
                 {
                    

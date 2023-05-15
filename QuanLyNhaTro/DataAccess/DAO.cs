@@ -51,7 +51,7 @@ namespace QuanLyNhaTro.DataAccess
         }
         public DataTable loadKH_DN_DV()
         {
-            return modify.GetDataTable("select DISTINCT kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong group by kh.HoTen,p.TenPhong");
+            return modify.GetDataTable("select DISTINCT kh.IDKH ,kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong group by  kh.IDKH ,kh.HoTen,p.TenPhong");
         }
         public DataTable loadThongKe()
         {
@@ -59,7 +59,7 @@ namespace QuanLyNhaTro.DataAccess
         }
         public DataTable loadKHChuaDongTien()
         {
-            return modify.GetDataTable("select DISTINCT kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and kh.HoTen not in (select HoTenKH from ThongKe) group by kh.HoTen,p.TenPhong");
+            return modify.GetDataTable("select DISTINCT  kh.IDKH, kh.HoTen,p.TenPhong,sum (p.DonGia)as N'Đơn Giá Phòng', sum (dn.DonGia)as N'Đơn Giá Điện Nước'  from KhachHang kh, DienNuoc dn, DichVu dv, ThuePhong tp, Phong p where dn.IDKH=kh.IDKH and dv.IDDV=dn.IDDV and tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and kh.HoTen not in (select HoTenKH from ThongKe) group by  kh.IDKH ,kh.HoTen,p.TenPhong");
         }
         public int selectTk(String tenTK,String matKhau)
         {
@@ -74,10 +74,10 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetID("select chucvu from QuanLy where taikhoan='" + tenTK + "'");
         }
-        public String selectHoTen_Tk(String HoTen)
+        public String selectHoTen_Tk(String idkh)
         {
 
-            return modify.GetID("select DISTINCT HoTenKH from ThongKe where HoTenKH=N'" + HoTen + "'");
+            return modify.GetID("select DISTINCT IDKhachHang from ThongKe where IDKhachHang=N'" + idkh + "'");
         }
         
 

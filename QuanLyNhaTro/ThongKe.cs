@@ -42,7 +42,7 @@ namespace QuanLyNhaTro
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    series.Points.AddXY(dataReader.GetDateTime(3), dataReader.GetInt32(2));
+                    series.Points.AddXY(dataReader.GetDateTime(4), dataReader.GetInt32(3));
                 }
                 sqlConnection.Close();
             }

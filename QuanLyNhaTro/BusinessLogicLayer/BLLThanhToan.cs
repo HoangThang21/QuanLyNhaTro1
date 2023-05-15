@@ -17,27 +17,29 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DateTime d1 = DateTime.Now;
         DateTime ThangNam = DateTime.Now;
 
-        public void KTtext(String Hoten,String tienPhong, String tienDienNuoc)
+        public void KTtext(String maKH,String Hoten,String tienPhong, String tienDienNuoc)
         {
+            MessageBox.Show(""+Hoten+tienPhong+tienDienNuoc);
+
             String idThongKe = "TK";
-            int Tong=int.Parse(tienPhong)+int.Parse(tienDienNuoc);
+            int Tong = int.Parse(tienPhong) + int.Parse(tienDienNuoc);
             d1.ToString("yyyy / MM / dd");
-            String sqlHoTenThongKe =dao.selectHoTen_Tk(Hoten);
+            String sqlIDKH_ThongKe = dao.selectHoTen_Tk(maKH);
             String NgayThu = d1.ToShortDateString();
-            String thangnam=ThangNam.Year+"/"+ThangNam.Month;//Lấy tháng năm hiện tại của máy tính
-            String sqlThangNam =DAOThongKeThanhToan.selectyear()+"/"+DAOThongKeThanhToan.selectmonth();
+            String thangnam = ThangNam.Year + "/" + ThangNam.Month;//Lấy tháng năm hiện tại của máy tính
+            String sqlThangNam = DAOThongKeThanhToan.selectyear() + "/" + DAOThongKeThanhToan.selectmonth();
             try
             {
                 if (Hoten != "")
                 {
-                    if(tienPhong !="" && int.Parse(tienPhong.Trim()) > 0)
+                    if (tienPhong != "" && int.Parse(tienPhong.Trim()) > 0)
                     {
                         if (tienDienNuoc != "" && int.Parse(tienDienNuoc.Trim()) > 0)
                         {
-                            
-                            if(thangnam== sqlThangNam&&Hoten== sqlHoTenThongKe)
+
+                            if (thangnam == sqlThangNam && maKH == sqlIDKH_ThongKe)
                             {
-                                MessageBox.Show(Hoten+".Tháng này đã thu");
+                                MessageBox.Show(Hoten + ".Tháng này đã thu");
                             }
                             else
                             {
@@ -49,7 +51,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                                         Random r = new Random();
                                         int ID = r.Next(100, 1000);
                                         idThongKe += ID;
-                                        DAOThongKeThanhToan.InsertTKKH(idThongKe, Hoten, Tong, NgayThu, "Đã thu");
+                                        DAOThongKeThanhToan.InsertTKKH(idThongKe, maKH, Hoten, Tong, NgayThu, "Đã thu");
                                         break;
                                     }
                                     catch (Exception ex)
@@ -57,6 +59,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                                         idThongKe = "TK";
                                     }
                                 }
+                                MessageBox.Show("Thanh toán thành công");
                             }
 
                         }
@@ -75,8 +78,9 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                     MessageBox.Show("Dữ liệu Họ tên bị rỗng!");
                 }
             }
-            catch (Exception ex){
-            
+            catch (Exception ex)
+            {
+
             }
         }
     }

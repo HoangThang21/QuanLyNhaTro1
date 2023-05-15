@@ -44,5 +44,15 @@ namespace QuanLyNhaTro
             }
 
         }
+
+        private void DangKy_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuyDK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

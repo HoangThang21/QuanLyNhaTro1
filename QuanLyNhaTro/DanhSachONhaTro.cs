@@ -26,6 +26,7 @@ namespace QuanLyNhaTro
             dGVDSOTro.Columns[5].Visible = false;
             dGVDSOTro.Columns[6].Visible = false;
             dGVDSOTro.Columns[9].Visible = false;
+            dGVDSOTro.Columns[11].Visible = false;
             txtTenPhong.Enabled = false;
             txtLoaiPhong.Enabled=false;
             txtGia.Enabled = false;
@@ -36,7 +37,18 @@ namespace QuanLyNhaTro
             dGVDSOTro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dGVDSOTro.ReadOnly = true;
             dGVDSOTro.DataSource = dao.loadthuePhong();
-          
+            /* HeaderText*/
+            dGVDSOTro.Columns[1].HeaderText = "Tiền đặt cọc";
+            dGVDSOTro.Columns[2].HeaderText = "Ngày thuê";
+            dGVDSOTro.Columns[3].HeaderText = "Ngày trả";
+            dGVDSOTro.Columns[7].HeaderText = "Tên phòng";
+            dGVDSOTro.Columns[8].HeaderText = "Loại phòng";
+            dGVDSOTro.Columns[10].HeaderText = "Đơn giá";
+            dGVDSOTro.Columns[12].HeaderText = "Họ tên";
+            dGVDSOTro.Columns[15].HeaderText = "Ngày sinh";
+            dGVDSOTro.Columns[16].HeaderText = "Địa chỉ";
+            dGVDSOTro.Columns[17].HeaderText = "Giới tính";
+
         }
         public void anhxa()
         {

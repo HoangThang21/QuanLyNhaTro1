@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaTro.BusinessLogicLayer
 {
-    internal class BLLtest
+    internal class BLLTaiKhoan
     {
 
         DataAccess.DAOKH daokh = new DataAccess.DAOKH();
@@ -34,7 +34,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                             {
                                 if (TenPhong != "")
                                 {
-                                    MessageBox.Show("" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " + TenPhong + " " + LoaiPhong);
+                                    /*MessageBox.Show("" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " + TenPhong + " " + LoaiPhong);*/
                                     while (true)
                                     {
                                         try
@@ -195,7 +195,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             {
              
                 DAOPhong.DeletePhong(id);
-            
+                MessageBox.Show("Xóa thành công");
             }
             catch (Exception ex)
             {

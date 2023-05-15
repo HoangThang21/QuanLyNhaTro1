@@ -76,7 +76,7 @@ namespace QuanLyNhaTro
             }
         
         }
-        BusinessLogicLayer.BLLtest bll= new BusinessLogicLayer.BLLtest();
+        BusinessLogicLayer.BLLTaiKhoan bll= new BusinessLogicLayer.BLLTaiKhoan();
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
             bll.KTTextPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text,txtDonGia.Text);

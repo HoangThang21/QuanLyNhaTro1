@@ -40,7 +40,8 @@ namespace QuanLyNhaTro
             {
                 int i = dGVChuaDong.CurrentRow.Index;
 
-                BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[2].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString());
+                BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[1].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString(), dGVChuaDong.Rows[i].Cells[4].Value.ToString());
+               
             }
             else
             {

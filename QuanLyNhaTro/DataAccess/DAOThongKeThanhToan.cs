@@ -11,9 +11,9 @@ namespace QuanLyNhaTro.DataAccess
     internal class DAOThongKeThanhToan
     {
         ClassModle.Modify modify = new ClassModle.Modify();
-        public void InsertTKKH(String id, String HoTen, int TongTien,String NgayThu, String TrangThai)
+        public void InsertTKKH(String id, String IDKH, String HoTen, int TongTien,String NgayThu, String TrangThai)
         {
-            String query = "insert into ThongKe values('" + id + "',N'" + HoTen + "','" + TongTien + "','"+ NgayThu + "',N'" + TrangThai + "')";
+            String query = "insert into ThongKe values('" + id + "','"+ IDKH + "',N'" + HoTen + "','" + TongTien + "','"+ NgayThu + "',N'" + TrangThai + "')";
             modify.Command(query);
         }
         public void DeleteTKKH(String id)
@@ -21,9 +21,9 @@ namespace QuanLyNhaTro.DataAccess
             String query = "Delete From ThongKe where IDThongKeKH='" + id + "'";
             modify.Command(query);
         }
-        public void UpdateTKKH(String PositionID, String HoTen, int TongTien,String NgayThu, String TrangThai)
+        public void UpdateTKKH(String PositionID, String IDKH, String HoTen, int TongTien,String NgayThu, String TrangThai)
         {
-            String query = "Update ThongKe set HoTenKH=N'" + HoTen + "',TongTien='" + TongTien + "',NgayThu='" + NgayThu + "',TrangThai=N'" + TrangThai + "' where IDKH='" + PositionID + "'";
+            String query = "Update ThongKe set IDKhachHang='"+ IDKH + "',  HoTenKH=N'" + HoTen + "',TongTien='" + TongTien + "',NgayThu='" + NgayThu + "',TrangThai=N'" + TrangThai + "' where IDKH='" + PositionID + "'";
 
             modify.Command(query);
         }

@@ -19,7 +19,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
 
         public void KTtext(String maKH,String Hoten,String tienPhong, String tienDienNuoc)
         {
-            MessageBox.Show(""+Hoten+tienPhong+tienDienNuoc);
+            
 
             String idThongKe = "TK";
             int Tong = int.Parse(tienPhong) + int.Parse(tienDienNuoc);

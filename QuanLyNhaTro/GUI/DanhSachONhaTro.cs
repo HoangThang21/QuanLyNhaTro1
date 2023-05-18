@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaTro.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,7 @@ namespace QuanLyNhaTro
             txtTenPhong.Enabled = false;
             txtLoaiPhong.Enabled=false;
             txtGia.Enabled = false;
+            dGVDSOTro.ReadOnly = true;
         }
         DataAccess.DAO dao = new DataAccess.DAO();
         public void LoadDataGirView()

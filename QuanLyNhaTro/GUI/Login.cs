@@ -34,6 +34,13 @@ namespace QuanLyNhaTro
             {
                 MessageBox.Show("Đăng nhập thất bại.");
             }
+            anhxa();
+        }
+        public void anhxa()
+        {
+            txtUserName.Text = "";
+            txtPass.Text = "";
+            txtUserName.Focus();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

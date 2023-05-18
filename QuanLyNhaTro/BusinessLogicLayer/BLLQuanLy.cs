@@ -9,6 +9,10 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Text.RegularExpressions;
 using QuanLyNhaTro.DataAccess;
+using QuanLyNhaTro.DTO;
+using System.Data.SqlClient;
+using System.Data;
+using System.Xml.Linq;
 
 namespace QuanLyNhaTro.BusinessLogicLayer
 {
@@ -79,6 +83,58 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                     }
                 }
             }
+        }
+        public void KiemTraThemTk(String tk, String pass,String chucvu) {
+
+            if (tk.Trim() == "")
+            {
+                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (pass.Trim() == "")
+            {
+                MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else 
+            {
+                if (dao.selectTk_quanly(tk) > 0)
+                {
+                    MessageBox.Show("Tài khoản bị trùng vui lòng nhập tài khoản khác");
+                }
+                else
+                {
+                    DAOQuanLy.InsertQuanLy(tk, pass, chucvu);
+                    MessageBox.Show("Thêm Thành công tài khoản");
+                }
+              
+            }
+
+        }
+        DTOTaiKhoan DTOTaiKhoan =new DTOTaiKhoan();
+        public void KiemTraCapNhatTk(String tk, String pass, String chucvu)
+        {
+
+            if (tk.Trim() == "")
+            {
+                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (pass.Trim() == "")
+            {
+                MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else {
+                DTOTaiKhoan.TenTaiKhoan = tk;
+                DTOTaiKhoan.MatKhau = pass;
+                DTOTaiKhoan.ChucVu= chucvu;
+                if(DAOQuanLy.proc_updatequanly(DTOTaiKhoan)== "success")
+                    MessageBox.Show("Cập nhật Thành công tài khoản");
+                else
+                {
+                    MessageBox.Show("Cập nhật tài khoản thất bại");
+                }
+                
+
+            }
+
         }
     }
 }

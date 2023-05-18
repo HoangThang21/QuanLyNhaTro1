@@ -32,7 +32,6 @@
             System.Windows.Forms.Label label4;
             this.panel2 = new System.Windows.Forms.Panel();
             this.rBNhanVien = new System.Windows.Forms.RadioButton();
-            this.rBQuanLy = new System.Windows.Forms.RadioButton();
             this.txtXNMatKhau = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenTk = new System.Windows.Forms.TextBox();
@@ -73,7 +72,6 @@
             // 
             this.panel2.Controls.Add(label4);
             this.panel2.Controls.Add(this.rBNhanVien);
-            this.panel2.Controls.Add(this.rBQuanLy);
             this.panel2.Controls.Add(this.txtXNMatKhau);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.txtTenTk);
@@ -91,7 +89,7 @@
             // 
             this.rBNhanVien.AutoSize = true;
             this.rBNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rBNhanVien.Location = new System.Drawing.Point(486, 306);
+            this.rBNhanVien.Location = new System.Drawing.Point(305, 307);
             this.rBNhanVien.Name = "rBNhanVien";
             this.rBNhanVien.Size = new System.Drawing.Size(126, 29);
             this.rBNhanVien.TabIndex = 3;
@@ -99,19 +97,6 @@
             this.rBNhanVien.Text = "Nhân viên";
             this.rBNhanVien.UseVisualStyleBackColor = true;
             this.rBNhanVien.CheckedChanged += new System.EventHandler(this.rBNhanVien_CheckedChanged);
-            // 
-            // rBQuanLy
-            // 
-            this.rBQuanLy.AutoSize = true;
-            this.rBQuanLy.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rBQuanLy.Location = new System.Drawing.Point(268, 306);
-            this.rBQuanLy.Name = "rBQuanLy";
-            this.rBQuanLy.Size = new System.Drawing.Size(186, 29);
-            this.rBQuanLy.TabIndex = 2;
-            this.rBQuanLy.TabStop = true;
-            this.rBQuanLy.Text = "Quản lý (Admin)";
-            this.rBQuanLy.UseVisualStyleBackColor = true;
-            this.rBQuanLy.CheckedChanged += new System.EventHandler(this.rBQuanLy_CheckedChanged);
             // 
             // txtXNMatKhau
             // 
@@ -220,7 +205,6 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rBNhanVien;
-        private System.Windows.Forms.RadioButton rBQuanLy;
         private System.Windows.Forms.TextBox txtXNMatKhau;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenTk;

@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaTro.DataAccess;
+using QuanLyNhaTro.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,9 @@ namespace QuanLyNhaTro
              dGVPhongDat.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dGVPhongTrong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             loadagirview();
-           // txtMaPhong.Enabled = false;
+            dGVPhongDat.ReadOnly = true;
+            dGVPhongTrong.ReadOnly = true;
+            // txtMaPhong.Enabled = false;
         }
         public void loadagirview()
         {
@@ -76,7 +79,7 @@ namespace QuanLyNhaTro
             }
         
         }
-        BusinessLogicLayer.BLLTaiKhoan bll= new BusinessLogicLayer.BLLTaiKhoan();
+        BusinessLogicLayer.BLLDatPhong bll= new BusinessLogicLayer.BLLDatPhong();
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
             bll.KTTextPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text,txtDonGia.Text);

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaTro.BusinessLogicLayer
 {
-    internal class BLLTaiKhoan
+    internal class BLLDatPhong
     {
 
         DataAccess.DAOKH daokh = new DataAccess.DAOKH();

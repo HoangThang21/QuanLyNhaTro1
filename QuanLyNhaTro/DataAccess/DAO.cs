@@ -66,6 +66,11 @@ namespace QuanLyNhaTro.DataAccess
             string squery = "select * from QuanLy where taikhoan= '" + tenTK + "' and matkhau = '" + matKhau + "'";
             return modify.TaiKhoans(squery).Count;
         }
+        public int selectTk_quanly(String tenTK)
+        {
+            string squery = "select * from QuanLy where taikhoan= '" + tenTK + "'";
+            return modify.TaiKhoans(squery).Count;
+        }
         public String selectPass(String tenTK)
         {
             return modify.GetID("select matkhau from QuanLy where taikhoan='" + tenTK + "'");
@@ -79,7 +84,10 @@ namespace QuanLyNhaTro.DataAccess
 
             return modify.GetID("select DISTINCT IDKhachHang from ThongKe where IDKhachHang=N'" + idkh + "'");
         }
-        
+        public DataTable select_taikhoan()
+        {
+            return modify.GetDataTable("select * from QuanLy");
+        }
 
     }
 }

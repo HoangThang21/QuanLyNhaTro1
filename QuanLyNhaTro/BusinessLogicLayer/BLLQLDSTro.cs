@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhaTro.DataAccess;
 
 namespace QuanLyNhaTro.BusinessLogicLayer
 {
     internal class BLLQLDSTro
     {
-        DataAccess.DAOKH DAOKH=new DataAccess.DAOKH();
-        DataAccess.DAOPhong DAOPhong = new DAOPhong();
-        DataAccess.DAOThuePhong DAOThuePhong=new DataAccess.DAOThuePhong();
+        DAOKH DAOKH=new DAOKH();
+        DAOPhong DAOPhong = new DAOPhong();
+        DAOThuePhong DAOThuePhong=new DAOThuePhong();
+        DAOThongKeThanhToan DAOThongKeThanhToan =new DAOThongKeThanhToan();
         public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH)
         {
             //String idKH = DAOKH.getIDKH(IDTen);
@@ -34,6 +36,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                                
                                 DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
                                 DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);
+                                DAOThongKeThanhToan.UpdateTK_KH(IDKH,Ten);
                                 MessageBox.Show("Sửa thành công.");
                             }
                             else

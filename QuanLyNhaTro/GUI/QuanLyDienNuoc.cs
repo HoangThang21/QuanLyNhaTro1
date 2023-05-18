@@ -22,6 +22,8 @@ namespace QuanLyNhaTro
             load();
             txtGia.Enabled=false;
             txtKH.Enabled = false;
+            dGVKH.ReadOnly = true;
+            dGVDienNuoc.ReadOnly = true;
         }
         DataAccess.DAO dao = new DataAccess.DAO();
         public void load()

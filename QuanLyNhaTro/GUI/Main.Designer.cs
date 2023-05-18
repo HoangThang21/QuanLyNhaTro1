@@ -30,6 +30,8 @@
         {
             this.labelTen = new System.Windows.Forms.Label();
             this.labelChucVu = new System.Windows.Forms.Label();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnDSPhong = new System.Windows.Forms.Button();
@@ -55,6 +57,35 @@
             this.labelChucVu.Size = new System.Drawing.Size(96, 20);
             this.labelChucVu.TabIndex = 8;
             this.labelChucVu.Text = "label chucvu";
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Image = global::QuanLyNhaTro.Properties.Resources.exit;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(973, 681);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(610, 152);
+            this.btnDangXuat.TabIndex = 10;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(166, 681);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(557, 152);
+            this.btnTaiKhoan.TabIndex = 9;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // button1
             // 
@@ -149,7 +180,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
-            this.ClientSize = new System.Drawing.Size(1924, 641);
+            this.ClientSize = new System.Drawing.Size(1924, 861);
+            this.Controls.Add(this.btnDangXuat);
+            this.Controls.Add(this.btnTaiKhoan);
             this.Controls.Add(this.labelChucVu);
             this.Controls.Add(this.labelTen);
             this.Controls.Add(this.button1);
@@ -176,5 +209,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTen;
         private System.Windows.Forms.Label labelChucVu;
+        private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhaTro.ClassModle;
+using QuanLyNhaTro.DTO;
 
 namespace QuanLyNhaTro
 {
@@ -23,11 +25,20 @@ namespace QuanLyNhaTro
             InitializeComponent();
             
         }
-
+        Modify modify =new Modify();
+        
         private void btnDSPhong_Click(object sender, EventArgs e)
         {
-            QuanLyPhong qlphong = new QuanLyPhong();
-            qlphong.ShowDialog();
+            if (dao.selectChucVu(tenTk) == "Admin" || dao.selectChucVu(tenTk) == "Quản lý")
+            {
+                QuanLyPhong qlphong = new QuanLyPhong();
+                qlphong.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập.");
+            }
+           
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -60,12 +71,38 @@ namespace QuanLyNhaTro
             thongKe.ShowDialog();
         }
         DataAccess.DAO dao = new DataAccess.DAO();
+        List<DTOTaiKhoan> taikhoan;
         private void Main_Load(object sender, EventArgs e)
         {
+            if (tenTk == "")
+            {
+                this.Close();
+            }
             labelTen.Text = "Tên tài khoản: "+tenTk;
             labelChucVu.Text ="Chức vụ: "+ dao.selectChucVu(tenTk);
+            
+            taikhoan= modify.TaiKhoans("select * from QuanLy where TaiKhoan='" + tenTk + "'");
+            string a=taikhoan[0].ChucVu;
         }
 
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            if (dao.selectChucVu(tenTk) == "Admin"|| dao.selectChucVu(tenTk) == "Quản lý") {
+                QL_NhanVien qL_NhanVien = new QL_NhanVien();
+                qL_NhanVien.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập.");
+            }
+            
+        }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            tenTk = "";
+            this.Close();
+            
+        }
     }
 }

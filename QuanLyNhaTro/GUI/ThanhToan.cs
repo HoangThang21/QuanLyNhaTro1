@@ -23,6 +23,8 @@ namespace QuanLyNhaTro
             dGVDaDong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             loaddgvChuaDong();
             loaddgvDaDong();
+            dGVChuaDong.ReadOnly = true;
+            dGVDaDong.ReadOnly = true;
         }
         DataAccess.DAO dao=new DataAccess.DAO();
         public void loaddgvChuaDong() {

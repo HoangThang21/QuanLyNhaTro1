@@ -17,7 +17,7 @@ namespace QuanLyNhaTro
         {
             InitializeComponent();
         }
-        BusinessLogicLayer.BLLTaiKhoan bl = new BusinessLogicLayer.BLLTaiKhoan();
+        BusinessLogicLayer.BLLDatPhong bl = new BusinessLogicLayer.BLLDatPhong();
         DataAccess.DAO dao= new DataAccess.DAO();
         private void DangKyPhong_Load(object sender, EventArgs e)
         {

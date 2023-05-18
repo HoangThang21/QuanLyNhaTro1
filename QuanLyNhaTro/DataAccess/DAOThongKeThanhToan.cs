@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyNhaTro.DataAccess
 {
@@ -35,6 +36,15 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetInt32("select month(NgayThu) from ThongKe");
         }
-
+        public void UpdateTK_KH(String IDKH, String HoTen)
+        {
+            if(modify.ThongKes("select * from ThongKe where IDKhachHang='"+IDKH+"'").Count>0)
+            {
+     
+                String query = "Update ThongKe set   HoTenKH=N'" + HoTen + "' where IDKhachHang='" + IDKH + "'";
+                modify.Command(query);
+            }
+           
+        }
     }
 }

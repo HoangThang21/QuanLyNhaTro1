@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Data.Common;
 using System.Collections.ObjectModel;
 using QuanLyNhaTro.DTO;
+using System.Windows.Forms;
 
 namespace QuanLyNhaTro.ClassModle
 {
@@ -22,6 +23,17 @@ namespace QuanLyNhaTro.ClassModle
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand(squery, sqlConnection);
                 sqlCommand.ExecuteNonQuery(); 
+                sqlConnection.Close();
+            }
+        }
+        public void Command_proc(SqlCommand cmd) 
+        {
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                cmd.CommandType = CommandType.StoredProcedure ;
+                cmd.Connection = sqlConnection;
+                cmd.ExecuteNonQuery();
                 sqlConnection.Close();
             }
         }
@@ -81,11 +93,31 @@ namespace QuanLyNhaTro.ClassModle
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    taiKhoans.Add(new DTOTaiKhoan(dataReader.GetString(0), dataReader.GetString(1)));
+                    taiKhoans.Add(new DTOTaiKhoan(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2)));
                 }
                 sqlConnection.Close();
             }
             return taiKhoans;
+        }
+        public List<DTOThongKe> ThongKes(string query)
+        {
+            List<DTOThongKe> thongkes = new List<DTOThongKe>();
+           
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+              
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                
+                while (dataReader.Read())
+                {
+                    
+                    thongkes.Add(new DTOThongKe(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2), dataReader.GetInt32(3), dataReader.GetDateTime(4), dataReader.GetString(5)));
+                }
+                sqlConnection.Close();
+            }
+            return thongkes;
         }
 
     }

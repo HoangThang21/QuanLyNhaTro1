@@ -200,7 +200,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(610, 152);
             this.button3.TabIndex = 12;
-            this.button3.Text = "Quản Lý Thống Kê";
+            this.button3.Text = "Đổi mật khẩu";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             // 

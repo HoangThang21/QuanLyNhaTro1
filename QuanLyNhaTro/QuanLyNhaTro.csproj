@@ -75,12 +75,6 @@
     <Compile Include="BusinessLogicLayer\BLLThanhToan.cs" />
     <Compile Include="ClassModle\Connec.cs" />
     <Compile Include="ClassModle\Modify.cs" />
-    <Compile Include="GUI\DangKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DangKy.Designer.cs">
-      <DependentUpon>DangKy.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\DangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,12 +140,6 @@
     <Compile Include="GUI\QuanLyPhong.Designer.cs">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuenMK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuenMK.Designer.cs">
-      <DependentUpon>QuenMK.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\ThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,9 +157,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNhaTroDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\DangKy.resx">
-      <DependentUpon>DangKy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKyPhong.resx">
       <DependentUpon>DangKyPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanLyPhong.resx">
       <DependentUpon>QuanLyPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuenMK.resx">
-      <DependentUpon>QuenMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>

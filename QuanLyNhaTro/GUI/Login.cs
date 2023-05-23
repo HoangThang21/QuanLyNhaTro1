@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhaTro.ClassModle;
 
 namespace QuanLyNhaTro
 {
@@ -21,13 +22,13 @@ namespace QuanLyNhaTro
         {
             
         }
-
+        Modify modify = new Modify();
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (BLLQuanLy.Kttext(txtUserName.Text, txtPass.Text) == true)
             {
                 Main main = new Main(txtUserName.Text);
-
+                MessageBox.Show("Đăng nhập thành công với quyền "+modify.GetID("select chucvu from QuanLy where taikhoan='"+txtUserName.Text+"'"));
                 main.ShowDialog();
             }
             else
@@ -48,16 +49,8 @@ namespace QuanLyNhaTro
             Application.Exit();
         }
 
-        private void lblQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            QuenMK quenMK = new QuenMK();
-            quenMK.ShowDialog();
-        }
 
-        private void lblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DangKy dangKy = new DangKy();
-            dangKy.ShowDialog();
-        }
+
+       
     }
 }

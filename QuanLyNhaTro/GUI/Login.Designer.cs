@@ -35,8 +35,6 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.lblDangKy = new System.Windows.Forms.LinkLabel();
-            this.lblQuenMK = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtPass
@@ -125,39 +123,11 @@
             this.btnDangNhap.UseWaitCursor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // lblDangKy
-            // 
-            this.lblDangKy.AutoSize = true;
-            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDangKy.Location = new System.Drawing.Point(496, 584);
-            this.lblDangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDangKy.Name = "lblDangKy";
-            this.lblDangKy.Size = new System.Drawing.Size(103, 29);
-            this.lblDangKy.TabIndex = 12;
-            this.lblDangKy.TabStop = true;
-            this.lblDangKy.Text = "Đăng Ký";
-            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
-            // 
-            // lblQuenMK
-            // 
-            this.lblQuenMK.AutoSize = true;
-            this.lblQuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuenMK.Location = new System.Drawing.Point(48, 584);
-            this.lblQuenMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuenMK.Name = "lblQuenMK";
-            this.lblQuenMK.Size = new System.Drawing.Size(178, 29);
-            this.lblQuenMK.TabIndex = 13;
-            this.lblQuenMK.TabStop = true;
-            this.lblQuenMK.Text = "Quên Mật Khẩu";
-            this.lblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMK_LinkClicked);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 680);
-            this.Controls.Add(this.lblDangKy);
-            this.Controls.Add(this.lblQuenMK);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
@@ -182,8 +152,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.LinkLabel lblDangKy;
-        private System.Windows.Forms.LinkLabel lblQuenMK;
     }
 }
 

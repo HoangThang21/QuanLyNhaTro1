@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhaTro.ClassModle;
 using QuanLyNhaTro.DTO;
+using QuanLyNhaTro.GUI;
 
 namespace QuanLyNhaTro
 {
@@ -103,6 +104,19 @@ namespace QuanLyNhaTro
             tenTk = "";
             this.Close();
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dao.selectChucVu(tenTk) == "Admin" || dao.selectChucVu(tenTk) == "Quản lý")
+            {
+               rpThongKe rpThongKe = new rpThongKe();
+                rpThongKe.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập.");
+            }
         }
     }
 }

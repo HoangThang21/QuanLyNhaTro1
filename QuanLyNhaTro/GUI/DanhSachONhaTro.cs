@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using QuanLyNhaTro.DataAccess;
+
 
 namespace QuanLyNhaTro
 {
@@ -18,18 +20,20 @@ namespace QuanLyNhaTro
         {
             InitializeComponent();
         }
-
+        DAOPhong DAOPhong = new DAOPhong();
         private void DanhSachThueNhaTro_Load(object sender, EventArgs e)
         {
             LoadDataGirView();
+            cbTenPhong.DataSource = DAOPhong.select_TenPhong();
+            cbTenPhong.DisplayMember = "TenPhong";
             dGVDSOTro.Columns[0].Visible = false;
             dGVDSOTro.Columns[4].Visible = false;
             dGVDSOTro.Columns[5].Visible = false;
             dGVDSOTro.Columns[6].Visible = false;
             dGVDSOTro.Columns[9].Visible = false;
             dGVDSOTro.Columns[11].Visible = false;
-            txtTenPhong.Enabled = false;
-            txtLoaiPhong.Enabled=false;
+            cbTenPhong.Enabled = false;
+           
             txtGia.Enabled = false;
             dGVDSOTro.ReadOnly = true;
         }
@@ -70,9 +74,9 @@ namespace QuanLyNhaTro
                 txtTienDatCoc.Text = dGVDSOTro.Rows[i].Cells[1].Value.ToString();
                 dTPNgayThue.Text = dGVDSOTro.Rows[i].Cells[2].Value.ToString();
                 dTPNgayTra.Text = dGVDSOTro.Rows[i].Cells[3].Value.ToString();
-                txtTenPhong.Text = dGVDSOTro.Rows[i].Cells[7].Value.ToString();
-                txtLoaiPhong.Text = dGVDSOTro.Rows[i].Cells[8].Value.ToString();
-                txtGia.Text = dGVDSOTro.Rows[i].Cells[9].Value.ToString();
+                cbTenPhong.Text = dGVDSOTro.Rows[i].Cells[7].Value.ToString();
+               
+                txtGia.Text = dGVDSOTro.Rows[i].Cells[10].Value.ToString();
                 txtHoTen.Text = dGVDSOTro.Rows[i].Cells[12].Value.ToString();
                 txtCMND.Text = dGVDSOTro.Rows[i].Cells[13].Value.ToString();
                 txtSoDienThoai.Text = dGVDSOTro.Rows[i].Cells[14].Value.ToString();
@@ -90,7 +94,7 @@ namespace QuanLyNhaTro
         {
             if (dGVDSOTro.RowCount > 1) {
                 int i = dGVDSOTro.CurrentRow.Index;
-                BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text,txtTenPhong.Text, dGVDSOTro.Rows[i].Cells[11].Value.ToString());
+                BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text, cbTenPhong.Text, dGVDSOTro.Rows[i].Cells[11].Value.ToString(), dGVDSOTro.Rows[i].Cells[7].Value.ToString());
             }
             else
             {
@@ -118,5 +122,6 @@ namespace QuanLyNhaTro
         {
             this.Close();
         }
+
     }
 }

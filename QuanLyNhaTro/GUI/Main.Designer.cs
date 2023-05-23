@@ -38,6 +38,8 @@
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnDSOTro = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTen
@@ -175,12 +177,41 @@
             this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.button2.Location = new System.Drawing.Point(166, 886);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(557, 152);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Report Thống Kê";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.button3.Location = new System.Drawing.Point(973, 886);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(610, 152);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Quản Lý Thống Kê";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
-            this.ClientSize = new System.Drawing.Size(1924, 861);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnTaiKhoan);
             this.Controls.Add(this.labelChucVu);
@@ -211,5 +242,7 @@
         private System.Windows.Forms.Label labelChucVu;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

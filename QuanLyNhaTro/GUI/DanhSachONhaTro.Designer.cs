@@ -51,13 +51,11 @@
             this.dTPNgayThue = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTienDatCoc = new System.Windows.Forms.TextBox();
-            this.lable = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTenPhong = new System.Windows.Forms.TextBox();
-            this.txtLoaiPhong = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDong = new System.Windows.Forms.Button();
+            this.cbTenPhong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDSOTro)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -315,17 +313,6 @@
             this.txtTienDatCoc.Size = new System.Drawing.Size(304, 35);
             this.txtTienDatCoc.TabIndex = 25;
             // 
-            // lable
-            // 
-            this.lable.AutoSize = true;
-            this.lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable.Location = new System.Drawing.Point(68, 233);
-            this.lable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(141, 29);
-            this.lable.TabIndex = 32;
-            this.lable.Text = "Loại Phòng:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -336,22 +323,6 @@
             this.label9.Size = new System.Drawing.Size(138, 29);
             this.label9.TabIndex = 30;
             this.label9.Text = "Tên Phòng:";
-            // 
-            // txtTenPhong
-            // 
-            this.txtTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhong.Location = new System.Drawing.Point(73, 181);
-            this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(304, 35);
-            this.txtTenPhong.TabIndex = 33;
-            // 
-            // txtLoaiPhong
-            // 
-            this.txtLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiPhong.Location = new System.Drawing.Point(73, 269);
-            this.txtLoaiPhong.Name = "txtLoaiPhong";
-            this.txtLoaiPhong.Size = new System.Drawing.Size(304, 35);
-            this.txtLoaiPhong.TabIndex = 34;
             // 
             // txtGia
             // 
@@ -383,17 +354,24 @@
             this.btnDong.UseVisualStyleBackColor = true;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
+            // cbTenPhong
+            // 
+            this.cbTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenPhong.FormattingEnabled = true;
+            this.cbTenPhong.Location = new System.Drawing.Point(73, 179);
+            this.cbTenPhong.Name = "cbTenPhong";
+            this.cbTenPhong.Size = new System.Drawing.Size(313, 37);
+            this.cbTenPhong.TabIndex = 38;
+            // 
             // DanhSachThueNhaTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 935);
+            this.Controls.Add(this.cbTenPhong);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.txtGia);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtLoaiPhong);
-            this.Controls.Add(this.txtTenPhong);
-            this.Controls.Add(this.lable);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dTPNgayTra);
@@ -443,12 +421,10 @@
         private System.Windows.Forms.DateTimePicker dTPNgayThue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTienDatCoc;
-        private System.Windows.Forms.Label lable;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTenPhong;
-        private System.Windows.Forms.TextBox txtLoaiPhong;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDong;
+        private System.Windows.Forms.ComboBox cbTenPhong;
     }
 }

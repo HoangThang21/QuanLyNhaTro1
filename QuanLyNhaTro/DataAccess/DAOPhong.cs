@@ -36,5 +36,18 @@ namespace QuanLyNhaTro.DataAccess
             string query = "select DISTINCT P.IDPhong from Phong P where P.TenPhong=N'" + TenPhong + "'";
             return modify.GetID(query);
         }
+        public DataTable select_TenPhong()
+        {
+            return modify.GetDataTable("select TenPhong from Phong where TrangThai=N'Trống'");
+        }
+        public string select_tinhtrangphong(String tenphong)
+        {
+            return modify.GetID("select TrangThai from Phong where TenPhong =N'" + tenphong + "'");
+        }
+        public void UpdateTrangThai(String tenPhong, String TrangThai)
+        {
+            String query = "Update Phong set TrangThai=N'" + TrangThai + "' where TenPhong=N'" + tenPhong + "'";
+            modify.Command(query);
+        }
     }
 }

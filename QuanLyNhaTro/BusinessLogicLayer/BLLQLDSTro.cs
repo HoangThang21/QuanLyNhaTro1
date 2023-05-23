@@ -15,11 +15,12 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DAOPhong DAOPhong = new DAOPhong();
         DAOThuePhong DAOThuePhong=new DAOThuePhong();
         DAOThongKeThanhToan DAOThongKeThanhToan =new DAOThongKeThanhToan();
-        public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH)
+        public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH,string tenPhongcu)
         {
             //String idKH = DAOKH.getIDKH(IDTen);
             String idphong = DAOPhong.returnIDPhong(tenPhong);
             String idThuePhong = DAOThuePhong.GetIDThuePhong(IDKH);
+
             try
             {
                 if (TienDatCoc != "" && int.Parse(TienDatCoc.Trim()) > 0)
@@ -31,8 +32,12 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                         {
                             if (SDT != "" && SDT.All(char.IsDigit) == true)
                             {
-                                //MessageBox.Show(""+idKH+"" + TienDatCoc + " " + NgayThue + " " + NgayTra + " " + Ten + " " + CMND + " " + SDT + " " + NgaySinh + " " + DiaChi + " " + GioiTinh + " " );
-
+                                MessageBox.Show(""+ tenPhong);
+                                if (DAOPhong.select_tinhtrangphong(tenPhong).Trim() == "Trống")
+                                {
+                                    DAOPhong.UpdateTrangThai(tenPhong, "Đã Đặt");
+                                    DAOPhong.UpdateTrangThai(tenPhongcu, "Trống");
+                                }
                                
                                 DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
                                 DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);

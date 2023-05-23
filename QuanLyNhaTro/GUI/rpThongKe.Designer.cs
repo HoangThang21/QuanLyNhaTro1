@@ -28,16 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ThongKeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLNhaTroDataSet = new QuanLyNhaTro.QLNhaTroDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNhaTroDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(110, 81);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyNhaTro.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 43);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(1058, 584);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // ThongKeBindingSource
+            // 
+            this.ThongKeBindingSource.DataSource = this.qLNhaTroDataSet;
+            this.ThongKeBindingSource.Position = 0;
+            // 
+            // qLNhaTroDataSet
+            // 
+            this.qLNhaTroDataSet.DataSetName = "QLNhaTroDataSet";
+            this.qLNhaTroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpThongKe
             // 
@@ -48,6 +64,8 @@
             this.Name = "rpThongKe";
             this.Text = "rpThongKe";
             this.Load += new System.EventHandler(this.rpThongKe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNhaTroDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -55,5 +73,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource ThongKeBindingSource;
+        private QLNhaTroDataSet qLNhaTroDataSet;
     }
 }

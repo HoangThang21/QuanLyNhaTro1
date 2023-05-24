@@ -32,7 +32,7 @@ namespace QuanLyNhaTro
             dGVDSOTro.Columns[6].Visible = false;
             dGVDSOTro.Columns[9].Visible = false;
             dGVDSOTro.Columns[11].Visible = false;
-            cbTenPhong.Enabled = false;
+           
            
             txtGia.Enabled = false;
             dGVDSOTro.ReadOnly = true;
@@ -94,21 +94,68 @@ namespace QuanLyNhaTro
         {
             if (dGVDSOTro.RowCount > 1) {
                 int i = dGVDSOTro.CurrentRow.Index;
-                BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text, cbTenPhong.Text, dGVDSOTro.Rows[i].Cells[11].Value.ToString(), dGVDSOTro.Rows[i].Cells[7].Value.ToString());
+                try
+                {
+                    if (txtTienDatCoc.Text != "" && int.Parse(txtTienDatCoc.Text.Trim()) > 0)
+                    {
+
+                        if (txtHoTen.Text != "")
+                        {
+                            if (txtCMND.Text != "" && txtCMND.Text.All(char.IsDigit) == true)//Kiểm tra CMND all là số
+                            {
+                                if(BLLQLDSTro.KTtext(txtTienDatCoc.Text, dTPNgayThue.Text, dTPNgayTra.Text, txtHoTen.Text, txtCMND.Text, txtSoDienThoai.Text, dateSinh.Text, txtDiaChi.Text, cbBoxGioiTinh.Text, cbTenPhong.Text, dGVDSOTro.Rows[i].Cells[11].Value.ToString(), dGVDSOTro.Rows[i].Cells[7].Value.ToString()) == true)
+                                {
+                                    LoadDataGirView();
+                                    anhxa();
+                                    MessageBox.Show("Sửa thành công.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Sửa thất bại.");
+                                }
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("CMND/CCCD chỉ chứa số.Vui lòng nhập lại.");
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tên không được bỏ trống.Vui lòng nhập lại.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tiền đặt cọc:" + txtTienDatCoc.Text + " phải > 0.Vui lòng nhập lại.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Vui lòng nhập lại có dữ liệu nhập lỗi!");
+                }
+               
             }
             else
             {
                 MessageBox.Show("Chưa có Khách Hàng");
             }
-            LoadDataGirView();
-            anhxa();
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dGVDSOTro.RowCount > 1) {
                 int i = dGVDSOTro.CurrentRow.Index;
-                BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString(), dGVDSOTro.Rows[i].Cells[11].Value.ToString());
+                if(BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString(), dGVDSOTro.Rows[i].Cells[11].Value.ToString()) == true)
+                {
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                }
             }
             else
             {

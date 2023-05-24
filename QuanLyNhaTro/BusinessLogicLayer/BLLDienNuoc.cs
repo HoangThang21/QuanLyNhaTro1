@@ -15,7 +15,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DataAccess.DAODienNuoc DAODienNuoc = new DAODienNuoc();
         DataAccess.DAOKH DAOKH = new DAOKH();
 
-        public void KtText (String LoaiDv,String Cu , String Moi,String idKH)
+        public bool KtText (String LoaiDv,String Cu , String Moi,String idKH)
         {
             String IDDV = "DV";
             String IDDienNuoc = "DN";
@@ -24,74 +24,62 @@ namespace QuanLyNhaTro.BusinessLogicLayer
 
             try
             {
-                if (Cu != "" && Cu.All(char.IsDigit) == true)
+
+                if (LoaiDv == "Điện")
                 {
-                    if (Moi != "" && Moi.All(char.IsDigit) == true)
+                    Gia = (int.Parse(Moi) - int.Parse(Cu)) * 1500;
+                }
+                if (LoaiDv == "Nước")
+                {
+                    Gia = (int.Parse(Moi) - int.Parse(Cu)) * 5000;
+                }
+                if (int.Parse(Moi) > int.Parse(Cu))
+                {
+                    while (true)
                     {
-                        if (LoaiDv == "Điện")
+                        try
                         {
-                            Gia = (int.Parse(Moi) - int.Parse(Cu))*1500;
-                        }
-                        if (LoaiDv == "Nước")
-                        {
-                            Gia = (int.Parse(Moi) - int.Parse(Cu))*5000;
-                        }
-                        if (int.Parse(Moi) > int.Parse(Cu))
-                        {
-                            while (true)
-                            {
-                                try
-                                {
-                                    Random r = new Random();
-                                    int ID = r.Next(100, 1000);
-                                    IDDV += ID;
-                                    DAODichVu.InsertDichVu(IDDV, LoaiDv, int.Parse(Cu), (int.Parse(Moi)));
+                            Random r = new Random();
+                            int ID = r.Next(100, 1000);
+                            IDDV += ID;
+                            DAODichVu.InsertDichVu(IDDV, LoaiDv, int.Parse(Cu), (int.Parse(Moi)));
 
-                                    break;
-                                }
-                                catch (Exception ex)
-                                {
-                                    IDDV = "DV";
-                                }
-                            }
-                            while (true)
-                            {
-                                try
-                                {
-                                    Random r = new Random();
-                                    int ID = r.Next(100, 1000);
-                                    IDDienNuoc += ID;
-                                    DAODienNuoc.InsertDienNuoc(IDDienNuoc, IDDV, Gia, idKH);
-
-                                    break;
-                                }
-                                catch (Exception ex)
-                                {
-                                    IDDienNuoc = "DN";
-                                }
-                            }
+                            break;
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ");
+                            IDDV = "DV";
                         }
-                        
-
                     }
-                    else
+                    while (true)
                     {
-                        MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
+                        try
+                        {
+                            Random r = new Random();
+                            int ID = r.Next(100, 1000);
+                            IDDienNuoc += ID;
+                            DAODienNuoc.InsertDienNuoc(IDDienNuoc, IDDV, Gia, idKH);
+
+                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            IDDienNuoc = "DN";
+                        }
                     }
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
+                    MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ");
                 }
+                return true;
             }
             catch (Exception ex)
             {
 
             }
+            return false;
         }
         public void DeleteDN( string id)
         {
@@ -99,44 +87,29 @@ namespace QuanLyNhaTro.BusinessLogicLayer
 
         }
        
-        public void updateDN(String id,String loaiDV,String Cu , String Moi)
+        public bool updateDN(String id,String loaiDV,String Cu , String Moi)
         {
             int cu = Int32.Parse(Cu);
             int moi= Int32.Parse(Moi);
             String idDV=DAODichVu.GetiDDV_DN(id);
             try
             {
-                
-                if (Cu != "" && Cu.All(char.IsDigit) == true)
+
+                if (moi > cu)
                 {
-                    if (Moi != "" && Moi.All(char.IsDigit) == true)
-                    {
-
-                        if (moi > cu)
-                        {
-                            DAODichVu.UpdateDichVu(idDV, loaiDV, cu, moi);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
-                        }
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ. Vui lòng nhập lại!");
-                    }
+                    DAODichVu.UpdateDichVu(idDV, loaiDV, cu, moi);
+                    return true;
                 }
                 else
                 {
-                    MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                    MessageBox.Show("Chỉ chứa số và giá trị mới > giá trị cũ. Vui lòng nhập lại!");
                 }
             }
             catch (Exception ex)
             {
 
             }
+            return false;
         }
     }
 }

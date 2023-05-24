@@ -44,70 +44,30 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             }
             return false;
         }
-        public String LayPass(String tenTK)
-        {
-            String pass = "";
-            if (tenTK.Trim() == "")
-            {
-                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                return dao.selectPass(tenTK);
-            }
-            return pass;
-        }
+      
         public bool checkAccount(string ac) // check mật khẩu và tài khoản 
         {
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
         }
         DataAccess.DAOQuanLy DAOQuanLy = new DataAccess.DAOQuanLy();    
-        public void DangKyTk(String TenTk, String pass, String xnpass, String chucvu)
+        public bool DangKyTk(String TenTk, String passold, String passnew, String xnpass)
         {
-            if (!checkAccount(TenTk))
-            { MessageBox.Show("Tên Tài Khoản Không Hợp Lệ! Nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); return; }
-            else
+            try
             {
-                if (pass != xnpass) { MessageBox.Show("Vui Lòng Xác Nhận Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); return; }
-                else
-                {
-                    try
-                    {
-                        DAOQuanLy.InsertQuanLy(TenTk, pass,chucvu);
-                        MessageBox.Show("Đăng ký thành công.");
+                DAOQuanLy.UpdateQuanLy_DoiMatKhau(TenTk, passnew);
+                return true;
+                
 
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Tài Khoản Đã Tồn Tại, Vui Lòng Nhập Tên Tài Khoản Khác", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                    }
-                }
             }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return false;
         }
-        public void KiemTraThemTk(String tk, String pass,String chucvu) {
-
-            if (tk.Trim() == "")
-            {
-                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
-            else if (pass.Trim() == "")
-            {
-                MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
-            else 
-            {
-                if (dao.selectTk_quanly(tk) > 0)
-                {
-                    MessageBox.Show("Tài khoản bị trùng vui lòng nhập tài khoản khác");
-                }
-                else
-                {
-                    DAOQuanLy.InsertQuanLy(tk, pass, chucvu);
-                    MessageBox.Show("Thêm Thành công tài khoản");
-                }
-              
-            }
-
+        public bool KiemTraThemTk(String tk, String pass,String chucvu) {
+            DAOQuanLy.InsertQuanLy(tk, pass, chucvu);
+            return true;
         }
         DTOTaiKhoan DTOTaiKhoan =new DTOTaiKhoan();
         public void KiemTraCapNhatTk(String tk, String pass, String chucvu)

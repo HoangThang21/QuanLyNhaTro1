@@ -60,7 +60,32 @@ namespace QuanLyNhaTro
             if (dGVKH.RowCount > 1)
             {
                 int i = dGVKH.CurrentRow.Index;
-                BLLDienNuoc.KtText(cbDienNuoc.Text, txtCu.Text, txtMoi.Text, dGVKH.Rows[i].Cells[0].Value.ToString());
+                if (txtCu.Text != "" && txtCu.Text.All(char.IsDigit) == true)
+                {
+                    if (txtMoi.Text != "" && txtMoi.Text.All(char.IsDigit) == true)
+                    {
+                        if(BLLDienNuoc.KtText(cbDienNuoc.Text, txtCu.Text, txtMoi.Text, dGVKH.Rows[i].Cells[0].Value.ToString()) == true)
+                        {
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm thất bại");
+                        }
+                        
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chỉ chứa số và số lớn hơn 0. Vui lòng nhập lại!");
+                }
+               
             }
             else
             {
@@ -76,6 +101,7 @@ namespace QuanLyNhaTro
             {
                 int i = dGVDienNuoc.CurrentRow.Index;
                 BLLDienNuoc.DeleteDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString());
+                MessageBox.Show("Xóa thành công");
             }
             else
             {
@@ -113,7 +139,32 @@ namespace QuanLyNhaTro
             if (dGVKH.RowCount > 1)
             {
                 int i = dGVDienNuoc.CurrentRow.Index;
-                BLLDienNuoc.updateDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString(),cbDienNuoc.Text,txtCu.Text,txtMoi.Text);
+                if (txtCu.Text != "" && txtCu.Text.All(char.IsDigit) == true)
+                {
+                    if (txtMoi.Text != "" && txtMoi.Text.All(char.IsDigit) == true)
+                    {
+                        if(BLLDienNuoc.updateDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString(), cbDienNuoc.Text, txtCu.Text, txtMoi.Text))
+                        {
+                            MessageBox.Show("Cập nhật thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại");
+                        }
+                       
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Điện Nước Mới không được < Điện Nước cũ. Vui lòng nhập lại!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chỉ chứa số. Vui lòng nhập lại!");
+                }
+               
             }
             else
             {

@@ -15,65 +15,36 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DAOPhong DAOPhong = new DAOPhong();
         DAOThuePhong DAOThuePhong=new DAOThuePhong();
         DAOThongKeThanhToan DAOThongKeThanhToan =new DAOThongKeThanhToan();
-        public void KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH,string tenPhongcu)
+        public bool KTtext(String TienDatCoc, String NgayThue, String NgayTra, String Ten, String CMND, String SDT, String NgaySinh, String DiaChi, String GioiTinh,String tenPhong,String IDKH,string tenPhongcu)
         {
             //String idKH = DAOKH.getIDKH(IDTen);
             String idphong = DAOPhong.returnIDPhong(tenPhong);
             String idThuePhong = DAOThuePhong.GetIDThuePhong(IDKH);
-
-            try
+            if (SDT != "" && SDT.All(char.IsDigit) == true)
             {
-                if (TienDatCoc != "" && int.Parse(TienDatCoc.Trim()) > 0)
-                {
 
-                    if (Ten != "")
-                    {
-                        if (CMND != "" && CMND.All(char.IsDigit) == true)//Kiểm tra CMND all là số
-                        {
-                            if (SDT != "" && SDT.All(char.IsDigit) == true)
-                            {
-                                MessageBox.Show(""+ tenPhong);
-                                if (DAOPhong.select_tinhtrangphong(tenPhong).Trim() == "Trống")
-                                {
-                                    DAOPhong.UpdateTrangThai(tenPhong, "Đã Đặt");
-                                    DAOPhong.UpdateTrangThai(tenPhongcu, "Trống");
-                                }
-                               
-                                DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
-                                DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);
-                                DAOThongKeThanhToan.UpdateTK_KH(IDKH,Ten);
-                                MessageBox.Show("Sửa thành công.");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Số điện thoại chỉ chứa số.Vui lòng nhập lại.");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("CMND/CCCD chỉ chứa số.Vui lòng nhập lại.");
-                        }
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tên không được bỏ trống.Vui lòng nhập lại.");
-                    }
-                }
-                else
+                if (DAOPhong.select_tinhtrangphong(tenPhong).Trim() == "Trống")
                 {
-                    MessageBox.Show("Tiền đặt cọc:" + TienDatCoc + " phải > 0.Vui lòng nhập lại.");
+                    DAOPhong.UpdateTrangThai(tenPhong, "Đã Đặt");
+                    DAOPhong.UpdateTrangThai(tenPhongcu, "Trống");
                 }
+
+                DAOKH.UpdateKH(IDKH, Ten, CMND, SDT, NgaySinh, DiaChi, GioiTinh);
+                DAOThuePhong.UpdateThuePhong(idThuePhong, TienDatCoc, NgayThue, NgayTra, IDKH, idphong);
+                DAOThongKeThanhToan.UpdateTK_KH(IDKH, Ten);
+                return true;
+               
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Vui lòng nhập lại có dữ liệu nhập lỗi!");
+                MessageBox.Show("Số điện thoại chỉ chứa số.Vui lòng nhập lại.");
             }
 
+            return false;
         }
         DataAccess.DAODienNuoc DAODienNuoc=new DataAccess.DAODienNuoc();
         DataAccess.DAODichVu DAODichVu =new DataAccess.DAODichVu();
-        public void DeleteThuePhong(String id,String idPhong,String idKH)
+        public bool DeleteThuePhong(String id,String idPhong,String idKH)
         {
             int tmp = DAODienNuoc.getcountIDDN_KH(idKH);
             if (tmp == 0)
@@ -81,7 +52,8 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 DAOThuePhong.DeleteThuePhong(id);
                 DAOPhong.UpdatePhongTrangThai(idPhong, "Trống");
                 DAOKH.DeleteKH(idKH);
-                MessageBox.Show("Xóa thành công!");
+                return true;
+               
             }
             if(tmp>0)
             {
@@ -100,8 +72,10 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 }
                 DAOPhong.UpdatePhongTrangThai(idPhong, "Trống");
                 DAOKH.DeleteKH(idKH);
-                MessageBox.Show("Xóa thành công!");
+                return true;
+               
             }
+            return false;
             
 
         }

@@ -17,7 +17,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         DateTime d1 = DateTime.Now;
         DateTime ThangNam = DateTime.Now;
 
-        public void KTtext(String maKH,String Hoten,String tienPhong, String tienDienNuoc)
+        public bool KTtext(String maKH,String Hoten,String tienPhong, String tienDienNuoc)
         {
             
 
@@ -30,58 +30,38 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             String sqlThangNam = DAOThongKeThanhToan.selectyear() + "/" + DAOThongKeThanhToan.selectmonth();
             try
             {
-                if (Hoten != "")
+                if (thangnam == sqlThangNam && maKH == sqlIDKH_ThongKe)
                 {
-                    if (tienPhong != "" && int.Parse(tienPhong.Trim()) > 0)
-                    {
-                        if (tienDienNuoc != "" && int.Parse(tienDienNuoc.Trim()) > 0)
-                        {
-
-                            if (thangnam == sqlThangNam && maKH == sqlIDKH_ThongKe)
-                            {
-                                MessageBox.Show(Hoten + ".Tháng này đã thu");
-                            }
-                            else
-                            {
-
-                                while (true)
-                                {
-                                    try
-                                    {
-                                        Random r = new Random();
-                                        int ID = r.Next(100, 1000);
-                                        idThongKe += ID;
-                                        DAOThongKeThanhToan.InsertTKKH(idThongKe, maKH, Hoten, Tong, NgayThu, "Đã thu");
-                                        break;
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        idThongKe = "TK";
-                                    }
-                                }
-                                MessageBox.Show("Thanh toán thành công");
-                            }
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Dữ liệu Tiền Điện Nước bị lỗi!");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Dữ liệu Tiền Phòng bị lỗi!");
-                    }
+                    MessageBox.Show(Hoten + " .Tháng này đã thu");
                 }
                 else
                 {
-                    MessageBox.Show("Dữ liệu Họ tên bị rỗng!");
+                    while (true)
+                    {
+                        try
+                        {
+                            Random r = new Random();
+                            int ID = r.Next(100, 1000);
+                            idThongKe += ID;
+                            DAOThongKeThanhToan.InsertTKKH(idThongKe, maKH, Hoten, Tong, NgayThu, "Đã thu");
+                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            idThongKe = "TK";
+                        }
+                    }
+                    return true;
+                    
+
                 }
+               
             }
             catch (Exception ex)
             {
 
             }
+            return false;
         }
     }
 }

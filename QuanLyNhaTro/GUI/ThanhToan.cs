@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaTro.DataAccess;
+using QuanLyNhaTro.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,8 +43,38 @@ namespace QuanLyNhaTro
             if (dGVChuaDong.RowCount > 1)
             {
                 int i = dGVChuaDong.CurrentRow.Index;
+                if (dGVChuaDong.Rows[i].Cells[0].Value.ToString() != "")
+                {
+                    if (dGVChuaDong.Rows[i].Cells[3].Value.ToString() != "" && int.Parse(dGVChuaDong.Rows[i].Cells[3].Value.ToString().Trim()) > 0)
+                    {
+                        if (dGVChuaDong.Rows[i].Cells[4].Value.ToString() != "" && int.Parse(dGVChuaDong.Rows[i].Cells[4].Value.ToString().Trim()) > 0)
+                        {
+                            if (BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[1].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString(), dGVChuaDong.Rows[i].Cells[4].Value.ToString()) == true)
+                            {
+                                MessageBox.Show("Thu thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thanh toán thất bại");
+                            }
+                           
 
-                BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[1].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString(), dGVChuaDong.Rows[i].Cells[4].Value.ToString());
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu Tiền Điện Nước bị lỗi!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dữ liệu Tiền Phòng bị lỗi!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Dữ liệu Họ tên bị rỗng!");
+                }
+               
                
             }
             else

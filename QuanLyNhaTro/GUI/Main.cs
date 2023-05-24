@@ -106,17 +106,24 @@ namespace QuanLyNhaTro
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void btnThongKeThanhToan_Click(object sender, EventArgs e)
         {
-            if (dao.selectChucVu(tenTk) == "Admin" || dao.selectChucVu(tenTk) == "Quản lý")
-            {
-               rpThongKe rpThongKe = new rpThongKe();
-                rpThongKe.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Bạn không có quyền truy cập.");
-            }
+            rpThongKe rpThongKe = new rpThongKe();
+            rpThongKe.ShowDialog();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMatKhau = new DoiMatKhau(tenTk);
+            doiMatKhau.ShowDialog();
+        }
+
+        private void btnThongKeKhachHang_Click(object sender, EventArgs e)
+        {
+            FrmReportKhachHangOTro frmReportKhachHangOTro = new FrmReportKhachHangOTro();
+            frmReportKhachHangOTro.ShowDialog();
         }
     }
 }

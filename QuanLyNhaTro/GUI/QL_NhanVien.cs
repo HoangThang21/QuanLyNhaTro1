@@ -47,17 +47,49 @@ namespace QuanLyNhaTro
                 MessageBox.Show("Không có dữ liệu để chọn");
             }
         }
-
+        DAO dao = new DAO();
         private void btnThemTaiKhoan_Click(object sender, EventArgs e)
         {
-            BLLQuanLy.KiemTraThemTk(txtTenTK.Text,txtPass.Text,comboBoxChucVu.Text);
-            loadDGV();
+            if (txtTenTK.Text.Trim() == "")
+            {
+                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (txtPass.Text.Trim() == "")
+            {
+                MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (dao.selectTk_quanly(txtTenTK.Text) > 0)
+                {
+                    MessageBox.Show("Tài khoản bị trùng vui lòng nhập tài khoản khác");
+                }
+                else
+                {
+                    if(BLLQuanLy.KiemTraThemTk(txtTenTK.Text, txtPass.Text, comboBoxChucVu.Text) == true)
+                    {
+                        loadDGV();
+
+                        MessageBox.Show("Thêm Thành công tài khoản");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại tài khoản");
+                    }
+                    
+                }
+
+            }
+            
         }
 
         private void btnCapNhatTaiKhoan_Click(object sender, EventArgs e)
         {
-            BLLQuanLy.KiemTraCapNhatTk(txtTenTK.Text, txtPass.Text, comboBoxChucVu.Text);
-            loadDGV();
+            
+                BLLQuanLy.KiemTraCapNhatTk(txtTenTK.Text, txtPass.Text, comboBoxChucVu.Text);
+                loadDGV();
+           
+            
         }
 
         private void btnXoaTaiKhoan_Click(object sender, EventArgs e)

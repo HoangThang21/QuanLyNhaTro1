@@ -30,6 +30,8 @@
         {
             this.labelTen = new System.Windows.Forms.Label();
             this.labelChucVu = new System.Windows.Forms.Label();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
+            this.btnThongKeThanhToan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,8 +40,7 @@
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnDSOTro = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnThongKeKhachHang = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTen
@@ -60,13 +61,42 @@
             this.labelChucVu.TabIndex = 8;
             this.labelChucVu.Text = "label chucvu";
             // 
+            // btnDoiMatKhau
+            // 
+            this.btnDoiMatKhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(971, 840);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(610, 152);
+            this.btnDoiMatKhau.TabIndex = 12;
+            this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoiMatKhau.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            // 
+            // btnThongKeThanhToan
+            // 
+            this.btnThongKeThanhToan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnThongKeThanhToan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeThanhToan.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.btnThongKeThanhToan.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnThongKeThanhToan.Location = new System.Drawing.Point(164, 840);
+            this.btnThongKeThanhToan.Name = "btnThongKeThanhToan";
+            this.btnThongKeThanhToan.Size = new System.Drawing.Size(264, 152);
+            this.btnThongKeThanhToan.TabIndex = 11;
+            this.btnThongKeThanhToan.Text = "Report Thống Kê Thanh Toán";
+            this.btnThongKeThanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThongKeThanhToan.UseVisualStyleBackColor = false;
+            this.btnThongKeThanhToan.Click += new System.EventHandler(this.btnThongKeThanhToan_Click);
+            // 
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Image = global::QuanLyNhaTro.Properties.Resources.exit;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(973, 681);
+            this.btnDangXuat.Location = new System.Drawing.Point(971, 635);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(610, 152);
             this.btnDangXuat.TabIndex = 10;
@@ -80,7 +110,7 @@
             this.btnTaiKhoan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaiKhoan.Image = global::QuanLyNhaTro.Properties.Resources.user;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(166, 681);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(164, 635);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(557, 152);
             this.btnTaiKhoan.TabIndex = 9;
@@ -95,7 +125,7 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::QuanLyNhaTro.Properties.Resources.dn;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(973, 295);
+            this.button1.Location = new System.Drawing.Point(971, 249);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(610, 148);
             this.button1.TabIndex = 6;
@@ -108,7 +138,7 @@
             this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.Image = global::QuanLyNhaTro.Properties.Resources.tk;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(973, 491);
+            this.btnThongKe.Location = new System.Drawing.Point(971, 445);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(610, 148);
             this.btnThongKe.TabIndex = 5;
@@ -122,7 +152,7 @@
             this.btnDSPhong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSPhong.Image = global::QuanLyNhaTro.Properties.Resources.hous1;
             this.btnDSPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSPhong.Location = new System.Drawing.Point(166, 290);
+            this.btnDSPhong.Location = new System.Drawing.Point(164, 244);
             this.btnDSPhong.Name = "btnDSPhong";
             this.btnDSPhong.Size = new System.Drawing.Size(557, 159);
             this.btnDSPhong.TabIndex = 4;
@@ -136,7 +166,7 @@
             this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.Image = global::QuanLyNhaTro.Properties.Resources.p1;
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhToan.Location = new System.Drawing.Point(166, 489);
+            this.btnThanhToan.Location = new System.Drawing.Point(164, 443);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(557, 152);
             this.btnThanhToan.TabIndex = 3;
@@ -150,7 +180,7 @@
             this.btnDSOTro.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSOTro.Image = global::QuanLyNhaTro.Properties.Resources.ds4;
             this.btnDSOTro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSOTro.Location = new System.Drawing.Point(973, 98);
+            this.btnDSOTro.Location = new System.Drawing.Point(971, 52);
             this.btnDSOTro.Name = "btnDSOTro";
             this.btnDSOTro.Size = new System.Drawing.Size(610, 159);
             this.btnDSOTro.TabIndex = 2;
@@ -168,7 +198,7 @@
             this.btnDangKy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Image = global::QuanLyNhaTro.Properties.Resources.subscribe;
-            this.btnDangKy.Location = new System.Drawing.Point(166, 98);
+            this.btnDangKy.Location = new System.Drawing.Point(164, 52);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(557, 159);
             this.btnDangKy.TabIndex = 1;
@@ -177,32 +207,20 @@
             this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // button2
+            // btnThongKeKhachHang
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::QuanLyNhaTro.Properties.Resources.user;
-            this.button2.Location = new System.Drawing.Point(166, 886);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(557, 152);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Report Thống Kê";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::QuanLyNhaTro.Properties.Resources.user;
-            this.button3.Location = new System.Drawing.Point(973, 886);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(610, 152);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Đổi mật khẩu";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnThongKeKhachHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnThongKeKhachHang.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeKhachHang.Image = global::QuanLyNhaTro.Properties.Resources.user;
+            this.btnThongKeKhachHang.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnThongKeKhachHang.Location = new System.Drawing.Point(457, 840);
+            this.btnThongKeKhachHang.Name = "btnThongKeKhachHang";
+            this.btnThongKeKhachHang.Size = new System.Drawing.Size(264, 152);
+            this.btnThongKeKhachHang.TabIndex = 13;
+            this.btnThongKeKhachHang.Text = "Report Thống Kê Khách Hàng";
+            this.btnThongKeKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThongKeKhachHang.UseVisualStyleBackColor = false;
+            this.btnThongKeKhachHang.Click += new System.EventHandler(this.btnThongKeKhachHang_Click);
             // 
             // Main
             // 
@@ -210,8 +228,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnThongKeKhachHang);
+            this.Controls.Add(this.btnDoiMatKhau);
+            this.Controls.Add(this.btnThongKeThanhToan);
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnTaiKhoan);
             this.Controls.Add(this.labelChucVu);
@@ -242,7 +261,8 @@
         private System.Windows.Forms.Label labelChucVu;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnThongKeThanhToan;
+        private System.Windows.Forms.Button btnDoiMatKhau;
+        private System.Windows.Forms.Button btnThongKeKhachHang;
     }
 }

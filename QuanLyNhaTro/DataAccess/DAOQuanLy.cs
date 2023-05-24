@@ -57,5 +57,14 @@ namespace QuanLyNhaTro.DataAccess
                 return ex.Message;
             }
         }
+        public String selectmatkhau_tk(string taikhoan, string matkhau)
+        {
+            return modify.GetID("select matkhau from QuanLy where taikhoan='" + taikhoan + "' and matkhau='" + matkhau + "' ");
+        }
+        public void UpdateQuanLy_DoiMatKhau(String taikhoan, String matkhau)
+        {
+            String query = "Update QuanLy set matkhau='" + matkhau + "' where taikhoan='" + taikhoan + "'";
+            modify.Command(query);
+        }
     }
 }

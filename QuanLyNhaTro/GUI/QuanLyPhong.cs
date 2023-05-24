@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhaTro.BusinessLogicLayer;
 
 namespace QuanLyNhaTro
 {
@@ -79,27 +80,130 @@ namespace QuanLyNhaTro
             }
         
         }
-        BusinessLogicLayer.BLLDatPhong bll= new BusinessLogicLayer.BLLDatPhong();
+        BLLDatPhong bll= new BLLDatPhong();
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
-            bll.KTTextPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text,txtDonGia.Text);
-            loadagirview();
-            anhxa();
+            try
+            {
+                if (txtMaPhong.Text != "" && txtMaPhong.Text.All(char.IsDigit) == true)
+                {
+                    if (txtTenPhong.Text != "")
+                    {
+                        if (cbTrangThai.Text == "Trống")
+                        {
+                            if(bll.KTTextPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text, txtDonGia.Text) == true)
+                            {
+                                loadagirview();
+                                anhxa();
+                                MessageBox.Show("Thêm Phòng Thành công");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm Phòng Thất bại");
+                            }
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng chọn phòng Trống.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng không bỏ trống tên phòng!Vui lòng nhập lại.");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("ID Phòng Chứa Số. Vui lòng nhập lại.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng nhập lại có dữ liệu nhập lỗi!. Hoặc mã phòng không được trùng");
+            }
+            
         }
 
         private void btnCapNhatPhong_Click(object sender, EventArgs e)
         {
-            bll.KTTextUPDATEPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text, txtDonGia.Text);
-            loadagirview();
-            anhxa();
+            int i = dGVPhongTrong.CurrentRow.Index;
+            if(dGVPhongTrong.Rows[i].Cells[0].Value.ToString() == txtMaPhong.Text)
+            {
+                try
+                {
+                    if (txtMaPhong.Text != "" && txtMaPhong.Text.All(char.IsDigit) == true)
+                    {
+
+                        if (txtTenPhong.Text != "")
+                        {
+
+                            if (cbTrangThai.Text != "")
+                            {
+                                if(bll.KTTextUPDATEPhong(txtMaPhong.Text, txtTenPhong.Text, cbLoaiPhong.Text, cbTrangThai.Text, txtDonGia.Text) == true)
+                                {
+                                    loadagirview();
+                                    anhxa();
+                                    MessageBox.Show("Cập nhật Phòng Thành công");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Cập nhật Phòng Thất Bại");
+                                }
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("Vui lòng chọn phòng.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng không bỏ trống tên phòng!Vui lòng nhập lại.");
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ID Phòng chỉ chứa số. Vui lòng nhập lại.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Vui lòng nhập lại có dữ liệu nhập lỗi!.ID Phòng có thể bị trùng.");
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Không được đổi mã phòng khi cập nhật");
+            }
+            
         }
 
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
+            int i = dGVPhongTrong.CurrentRow.Index;
+            if (dGVPhongTrong.Rows[i].Cells[3].Value.ToString() == "Trống")
+            {
+                if (bll.KTTextDeletePhong(txtMaPhong.Text) == true)
+                {
+                    loadagirview();
+                    anhxa();
+                    MessageBox.Show("Xóa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn bảng phòng trống mới được xóa");
+            }
             
-            bll.KTTextDeletePhong(txtMaPhong.Text);
-            loadagirview();
-            anhxa();
         }
 
         private void btnDongDSPhong_Click(object sender, EventArgs e)

@@ -102,6 +102,18 @@
     <Compile Include="DTO\DTOThongKe.cs" />
     <Compile Include="DTO\DTOThuePhong.cs" />
     <Compile Include="DTO\DTO_DichVu.cs" />
+    <Compile Include="GUI\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmReportKhachHangOTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmReportKhachHangOTro.Designer.cs">
+      <DependentUpon>FrmReportKhachHangOTro.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     <EmbeddedResource Include="GUI\DanhSachONhaTro.resx">
       <DependentUpon>DanhSachONhaTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmReportKhachHangOTro.resx">
+      <DependentUpon>FrmReportKhachHangOTro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +216,9 @@
       <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />

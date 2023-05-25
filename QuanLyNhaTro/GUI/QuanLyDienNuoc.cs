@@ -100,8 +100,13 @@ namespace QuanLyNhaTro
             if (dGVDienNuoc.RowCount > 1)
             {
                 int i = dGVDienNuoc.CurrentRow.Index;
-                BLLDienNuoc.DeleteDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString());
-                MessageBox.Show("Xóa thành công");
+                if (MessageBox.Show("Bạn xóa Chỉ số điện nước của " + dGVDienNuoc.Rows[i].Cells[1].Value.ToString(), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                 
+                    BLLDienNuoc.DeleteDN(dGVDienNuoc.Rows[i].Cells[0].Value.ToString());
+                    MessageBox.Show("Xóa thành công");
+                }
+                    
             }
             else
             {

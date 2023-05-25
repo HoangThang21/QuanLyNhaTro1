@@ -185,24 +185,28 @@ namespace QuanLyNhaTro
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
             int i = dGVPhongTrong.CurrentRow.Index;
-            if (dGVPhongTrong.Rows[i].Cells[3].Value.ToString() == "Trống")
+            if (MessageBox.Show("Bạn xóa phòng " + dGVPhongTrong.Rows[i].Cells[1].Value.ToString(), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                if (bll.KTTextDeletePhong(txtMaPhong.Text) == true)
+                if (dGVPhongTrong.Rows[i].Cells[3].Value.ToString() == "Trống")
                 {
-                    loadagirview();
-                    anhxa();
-                    MessageBox.Show("Xóa thành công");
+                    if (bll.KTTextDeletePhong(txtMaPhong.Text) == true)
+                    {
+                        loadagirview();
+                        anhxa();
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại");
+                    MessageBox.Show("Vui lòng chọn bảng phòng trống mới được xóa");
                 }
+            }
                 
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn bảng phòng trống mới được xóa");
-            }
             
         }
 

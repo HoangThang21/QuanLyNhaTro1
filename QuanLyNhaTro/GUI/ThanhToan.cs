@@ -115,9 +115,6 @@ namespace QuanLyNhaTro
                     InHoaDon inHoaDon = new InHoaDon(dGVDaDong.Rows[i].Cells[1].Value.ToString());
                     inHoaDon.ShowDialog();
                 }
-               
-                
-
             }
             else
             {

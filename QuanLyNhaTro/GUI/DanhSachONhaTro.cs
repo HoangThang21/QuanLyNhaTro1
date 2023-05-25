@@ -148,14 +148,18 @@ namespace QuanLyNhaTro
         {
             if (dGVDSOTro.RowCount > 1) {
                 int i = dGVDSOTro.CurrentRow.Index;
-                if(BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString(), dGVDSOTro.Rows[i].Cells[11].Value.ToString()) == true)
+                if (MessageBox.Show("Bạn muốn xóa " + dGVDSOTro.Rows[i].Cells[12].Value.ToString(), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    MessageBox.Show("Xóa thành công!");
+                    if (BLLQLDSTro.DeleteThuePhong(dGVDSOTro.Rows[i].Cells[0].Value.ToString(), dGVDSOTro.Rows[i].Cells[5].Value.ToString(), dGVDSOTro.Rows[i].Cells[11].Value.ToString()) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại!");
-                }
+                    
             }
             else
             {

@@ -106,7 +106,7 @@ namespace QuanLyNhaTro.DataAccess
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             return false;
         }
@@ -122,7 +122,7 @@ namespace QuanLyNhaTro.DataAccess
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             return false;
         }

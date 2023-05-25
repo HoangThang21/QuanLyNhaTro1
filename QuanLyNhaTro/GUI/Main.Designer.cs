@@ -41,6 +41,8 @@
             this.btnDSOTro = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnThongKeKhachHang = new System.Windows.Forms.Button();
+            this.btnSaoLuu = new System.Windows.Forms.Button();
+            this.btnPhucHoi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTen
@@ -222,12 +224,34 @@
             this.btnThongKeKhachHang.UseVisualStyleBackColor = false;
             this.btnThongKeKhachHang.Click += new System.EventHandler(this.btnThongKeKhachHang_Click);
             // 
+            // btnSaoLuu
+            // 
+            this.btnSaoLuu.Location = new System.Drawing.Point(1638, 635);
+            this.btnSaoLuu.Name = "btnSaoLuu";
+            this.btnSaoLuu.Size = new System.Drawing.Size(232, 152);
+            this.btnSaoLuu.TabIndex = 14;
+            this.btnSaoLuu.Text = "Sao Lưu";
+            this.btnSaoLuu.UseVisualStyleBackColor = true;
+            this.btnSaoLuu.Click += new System.EventHandler(this.btnSaoLuu_Click);
+            // 
+            // btnPhucHoi
+            // 
+            this.btnPhucHoi.Location = new System.Drawing.Point(1638, 844);
+            this.btnPhucHoi.Name = "btnPhucHoi";
+            this.btnPhucHoi.Size = new System.Drawing.Size(232, 148);
+            this.btnPhucHoi.TabIndex = 15;
+            this.btnPhucHoi.Text = "Phục Hồi";
+            this.btnPhucHoi.UseVisualStyleBackColor = true;
+            this.btnPhucHoi.Click += new System.EventHandler(this.btnPhucHoi_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.btnPhucHoi);
+            this.Controls.Add(this.btnSaoLuu);
             this.Controls.Add(this.btnThongKeKhachHang);
             this.Controls.Add(this.btnDoiMatKhau);
             this.Controls.Add(this.btnThongKeThanhToan);
@@ -264,5 +288,7 @@
         private System.Windows.Forms.Button btnThongKeThanhToan;
         private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Button btnThongKeKhachHang;
+        private System.Windows.Forms.Button btnSaoLuu;
+        private System.Windows.Forms.Button btnPhucHoi;
     }
 }

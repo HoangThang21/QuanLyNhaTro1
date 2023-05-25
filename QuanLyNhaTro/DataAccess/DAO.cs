@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,43 @@ namespace QuanLyNhaTro.DataAccess
         public DataTable select_taikhoan()
         {
             return modify.GetDataTable("select * from QuanLy");
+        }
+        public  bool SaoLuu(string sDuongDan)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                string sTen = @"\QLNhaTro(" + DateTime.Now.Day.ToString() + "_" +
+                  DateTime.Now.Month.ToString() + "_" +
+                  DateTime.Now.Year.ToString() + "_" +
+                  DateTime.Now.Hour.ToString() + "_" +
+                  DateTime.Now.Minute.ToString() + ").bak";
+                string sql = "BACKUP DATABASE QLNhaTro TO DISK = N'" + sDuongDan +
+               sTen + "'";
+                modify.Command(sql);
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
+        }
+        public bool PhucHoiBH(string sDuongDan)
+        {
+            try
+            {
+                Modify modify = new Modify();
+                
+                string sql = "RESTORE DATABASE QLNhaTro From DISK = N'" + sDuongDan +"'";
+                modify.Command(sql);
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return false;
         }
 
     }

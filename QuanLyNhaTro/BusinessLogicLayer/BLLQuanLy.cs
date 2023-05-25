@@ -13,12 +13,16 @@ using QuanLyNhaTro.DTO;
 using System.Data.SqlClient;
 using System.Data;
 using System.Xml.Linq;
+using System.Security.Cryptography;
+using QuanLyNhaTro.DataAccess;
+using QuanLyNhaTro.ClassModle;
 
 namespace QuanLyNhaTro.BusinessLogicLayer
 {
     internal class BLLQuanLy
     {
-        DataAccess.DAO dao =new DataAccess.DAO();
+        DAO dao =new DAO();
+        Modify modify = new Modify();
         public bool Kttext(String tenTK, String matKhau)
         {
             if (tenTK.Trim() == "")
@@ -30,8 +34,9 @@ namespace QuanLyNhaTro.BusinessLogicLayer
                 MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else
-            { 
-                if ( dao.selectTk ( tenTK,  matKhau) > 0)
+            {
+                
+                if ( dao.selectTk ( tenTK, modify.GetMd5Hash(matKhau)) > 0)
                 {
                    
                    return true;
@@ -49,12 +54,13 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         {
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
         }
-        DataAccess.DAOQuanLy DAOQuanLy = new DataAccess.DAOQuanLy();    
+        DataAccess.DAOQuanLy DAOQuanLy = new DataAccess.DAOQuanLy();  
+        
         public bool DangKyTk(String TenTk, String passold, String passnew, String xnpass)
         {
             try
             {
-                DAOQuanLy.UpdateQuanLy_DoiMatKhau(TenTk, passnew);
+                DAOQuanLy.UpdateQuanLy_DoiMatKhau(TenTk, modify.GetMd5Hash( passnew));
                 return true;
                 
 
@@ -66,7 +72,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             return false;
         }
         public bool KiemTraThemTk(String tk, String pass,String chucvu) {
-            DAOQuanLy.InsertQuanLy(tk, pass, chucvu);
+            DAOQuanLy.InsertQuanLy(tk, modify.GetMd5Hash( pass), chucvu);
             return true;
         }
         DTOTaiKhoan DTOTaiKhoan =new DTOTaiKhoan();
@@ -83,7 +89,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             }
             else {
                 DTOTaiKhoan.TenTaiKhoan = tk;
-                DTOTaiKhoan.MatKhau = pass;
+                DTOTaiKhoan.MatKhau = modify.GetMd5Hash( pass);
                 DTOTaiKhoan.ChucVu= chucvu;
                 if(DAOQuanLy.proc_updatequanly(DTOTaiKhoan)== "success")
                     MessageBox.Show("Cập nhật Thành công tài khoản");

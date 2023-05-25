@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QuanLyNhaTro.ClassModle;
 using QuanLyNhaTro.DTO;
 using QuanLyNhaTro.GUI;
+using QuanLyNhaTro.DataAccess;
 
 namespace QuanLyNhaTro
 {
@@ -84,6 +85,17 @@ namespace QuanLyNhaTro
             
             taikhoan= modify.TaiKhoans("select * from QuanLy where TaiKhoan='" + tenTk + "'");
             string a=taikhoan[0].ChucVu;
+            if (dao.selectChucVu(tenTk) == "Admin" || dao.selectChucVu(tenTk) == "Quản lý")
+            {
+               
+            }
+            else
+            {
+                btnDSPhong.Enabled = false;
+                btnTaiKhoan.Enabled = false;
+                btnSaoLuu.Enabled = false;
+                btnPhucHoi.Enabled = false;
+            }
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
@@ -124,6 +136,36 @@ namespace QuanLyNhaTro
         {
             FrmReportKhachHangOTro frmReportKhachHangOTro = new FrmReportKhachHangOTro();
             frmReportKhachHangOTro.ShowDialog();
+        }
+
+        private void btnSaoLuu_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog saoluuFolder = new FolderBrowserDialog();
+            saoluuFolder.Description = "Chọn thư mục lưu trữ";
+            if (saoluuFolder.ShowDialog() == DialogResult.OK)
+            {
+                string sDuongDan = saoluuFolder.SelectedPath;
+                if (dao.SaoLuu(sDuongDan) == true)
+                    MessageBox.Show("Đã sao lưu dữ liệu vào " + sDuongDan);
+                else
+                    MessageBox.Show("Thao tác không thành công");
+            }
+        }
+
+        private void btnPhucHoi_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog phuchoiFile = new OpenFileDialog();
+            phuchoiFile.Filter = "*.bak|*.bak";
+            phuchoiFile.Title = "Chọn tập tin phục hồi (.bak)";
+            if (phuchoiFile.ShowDialog() == DialogResult.OK &&
+           phuchoiFile.CheckFileExists == true)
+            {
+                string sDuongDan = phuchoiFile.FileName;
+                if (dao.PhucHoiBH(sDuongDan) == true)
+                    MessageBox.Show("Thành công");
+                else
+                    MessageBox.Show("Thất bại");
+            }
         }
     }
 }

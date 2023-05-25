@@ -34,9 +34,10 @@
             this.dGVDaDong = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnKHChuaDong = new System.Windows.Forms.Button();
             this.btnTroLai = new System.Windows.Forms.Button();
+            this.btnKHChuaDong = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnInHoaDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVChuaDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDaDong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -105,16 +106,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức Năng tìm kiếm khách hàng";
             // 
-            // btnKHChuaDong
-            // 
-            this.btnKHChuaDong.Location = new System.Drawing.Point(33, 40);
-            this.btnKHChuaDong.Name = "btnKHChuaDong";
-            this.btnKHChuaDong.Size = new System.Drawing.Size(514, 65);
-            this.btnKHChuaDong.TabIndex = 2;
-            this.btnKHChuaDong.Text = "Tìm kiếm Khách Hàng Chưa Đóng Tiền";
-            this.btnKHChuaDong.UseVisualStyleBackColor = true;
-            this.btnKHChuaDong.Click += new System.EventHandler(this.btnKHChuaDong_Click);
-            // 
             // btnTroLai
             // 
             this.btnTroLai.Location = new System.Drawing.Point(33, 121);
@@ -124,6 +115,16 @@
             this.btnTroLai.Text = "Reset";
             this.btnTroLai.UseVisualStyleBackColor = true;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
+            // 
+            // btnKHChuaDong
+            // 
+            this.btnKHChuaDong.Location = new System.Drawing.Point(33, 40);
+            this.btnKHChuaDong.Name = "btnKHChuaDong";
+            this.btnKHChuaDong.Size = new System.Drawing.Size(514, 65);
+            this.btnKHChuaDong.TabIndex = 2;
+            this.btnKHChuaDong.Text = "Tìm kiếm Khách Hàng Chưa Đóng Tiền";
+            this.btnKHChuaDong.UseVisualStyleBackColor = true;
+            this.btnKHChuaDong.Click += new System.EventHandler(this.btnKHChuaDong_Click);
             // 
             // button2
             // 
@@ -136,11 +137,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnInHoaDon
+            // 
+            this.btnInHoaDon.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHoaDon.Location = new System.Drawing.Point(1164, 853);
+            this.btnInHoaDon.Name = "btnInHoaDon";
+            this.btnInHoaDon.Size = new System.Drawing.Size(304, 74);
+            this.btnInHoaDon.TabIndex = 15;
+            this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            // 
             // ThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1801, 1038);
+            this.Controls.Add(this.btnInHoaDon);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dGVDaDong);
@@ -171,5 +184,6 @@
         private System.Windows.Forms.Button btnKHChuaDong;
         private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInHoaDon;
     }
 }

@@ -28,16 +28,18 @@ namespace QuanLyNhaTro
             dGVChuaDong.ReadOnly = true;
             dGVDaDong.ReadOnly = true;
         }
-        DataAccess.DAO dao=new DataAccess.DAO();
-        public void loaddgvChuaDong() {
-           
-            dGVChuaDong.DataSource=dao.loadKH_DN_DV();
+        DataAccess.DAO dao = new DataAccess.DAO();
+        public void loaddgvChuaDong()
+        {
+
+            dGVChuaDong.DataSource = dao.loadKH_DN_DV();
         }
-        public void loaddgvDaDong() {
-            
+        public void loaddgvDaDong()
+        {
+
             dGVDaDong.DataSource = dao.loadThongKe();
         }
-        BusinessLogicLayer.BLLThanhToan BLLThanhToan=new BusinessLogicLayer.BLLThanhToan(); 
+        BusinessLogicLayer.BLLThanhToan BLLThanhToan = new BusinessLogicLayer.BLLThanhToan();
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             if (dGVChuaDong.RowCount > 1)
@@ -57,7 +59,7 @@ namespace QuanLyNhaTro
                             {
                                 MessageBox.Show("Thanh toán thất bại");
                             }
-                           
+
 
                         }
                         else
@@ -74,22 +76,22 @@ namespace QuanLyNhaTro
                 {
                     MessageBox.Show("Dữ liệu Họ tên bị rỗng!");
                 }
-               
-               
+
+
             }
             else
             {
                 MessageBox.Show("Không có Khách Hàng hoặc chưa ghi điện nước cho khách hàng.");
 
-              
+
             }
-  
+
             loaddgvDaDong();
         }
 
         private void btnKHChuaDong_Click(object sender, EventArgs e)
         {
-            dGVChuaDong.DataSource=dao.loadKHChuaDongTien();
+            dGVChuaDong.DataSource = dao.loadKHChuaDongTien();
         }
 
         private void btnTroLai_Click(object sender, EventArgs e)
@@ -101,6 +103,26 @@ namespace QuanLyNhaTro
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            if (dGVDaDong.RowCount > 1)
+            {
+                int i = dGVDaDong.CurrentRow.Index;
+                if(MessageBox.Show("Bạn muốn in hóa đơn của "+ dGVDaDong.Rows[i].Cells[2].Value.ToString(),"Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    InHoaDon inHoaDon = new InHoaDon(dGVDaDong.Rows[i].Cells[1].Value.ToString());
+                    inHoaDon.ShowDialog();
+                }
+               
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để chọn");
+            }
         }
     }
 }

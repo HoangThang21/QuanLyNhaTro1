@@ -179,7 +179,9 @@ namespace QuanLyNhaTro
             load();
         }
 
-        private void btnSearchDn_Click(object sender, EventArgs e)
+       
+
+        private void btnSearchDn_Click_1(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
             {
@@ -189,12 +191,6 @@ namespace QuanLyNhaTro
             {
                 dGVDienNuoc.DataSource = dao.loadDienNuocSearch_tenkh(txtSearch.Text.Trim());
             }
-           
-        }
-
-        private void btnDongDSPhong_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

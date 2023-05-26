@@ -782,7 +782,7 @@
         <DataSetName>DataSetDichVu</DataSetName>
         <Left>9.61111in</Left>
         <Height>0.5in</Height>
-        <Width>3.64583in</Width>
+        <Width>3.64584in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -794,7 +794,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>13.25694in</Width>
+  <Width>13.25695in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

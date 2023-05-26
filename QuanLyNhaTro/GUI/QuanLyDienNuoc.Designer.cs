@@ -47,9 +47,18 @@
             this.btnDongDSP = new System.Windows.Forms.Button();
             this.btnCapNhatDn = new System.Windows.Forms.Button();
             this.btnThemDn = new System.Windows.Forms.Button();
+            this.btnSearchDn = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXoaPhong = new System.Windows.Forms.Button();
+            this.btnDongDSPhong = new System.Windows.Forms.Button();
+            this.btnCapNhatPhong = new System.Windows.Forms.Button();
+            this.btnThemPhong = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienNuoc)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -196,6 +205,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.btnXoaDN);
             this.groupBox3.Controls.Add(this.btnDongDSP);
             this.groupBox3.Controls.Add(this.btnCapNhatDn);
@@ -204,7 +214,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(691, 215);
+            this.groupBox3.Size = new System.Drawing.Size(691, 323);
             this.groupBox3.TabIndex = 70;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -261,6 +271,105 @@
             this.btnThemDn.UseVisualStyleBackColor = true;
             this.btnThemDn.Click += new System.EventHandler(this.btnThemDn_Click);
             // 
+            // btnSearchDn
+            // 
+            this.btnSearchDn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchDn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchDn.ImageIndex = 6;
+            this.btnSearchDn.Location = new System.Drawing.Point(375, 256);
+            this.btnSearchDn.Name = "btnSearchDn";
+            this.btnSearchDn.Size = new System.Drawing.Size(298, 60);
+            this.btnSearchDn.TabIndex = 29;
+            this.btnSearchDn.Text = "Tìm Kiếm ";
+            this.btnSearchDn.UseVisualStyleBackColor = true;
+            this.btnSearchDn.Click += new System.EventHandler(this.btnSearchDn_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(34, 256);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(303, 46);
+            this.txtSearch.TabIndex = 24;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnXoaPhong);
+            this.groupBox1.Controls.Add(this.btnDongDSPhong);
+            this.groupBox1.Controls.Add(this.btnCapNhatPhong);
+            this.groupBox1.Controls.Add(this.btnSearchDn);
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.btnThemPhong);
+            this.groupBox1.Location = new System.Drawing.Point(0, -8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(691, 338);
+            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
+            // btnXoaPhong
+            // 
+            this.btnXoaPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaPhong.ImageIndex = 2;
+            this.btnXoaPhong.Location = new System.Drawing.Point(27, 110);
+            this.btnXoaPhong.Name = "btnXoaPhong";
+            this.btnXoaPhong.Size = new System.Drawing.Size(310, 52);
+            this.btnXoaPhong.TabIndex = 28;
+            this.btnXoaPhong.Text = "Xóa Phòng";
+            this.btnXoaPhong.UseVisualStyleBackColor = true;
+            // 
+            // btnDongDSPhong
+            // 
+            this.btnDongDSPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDongDSPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDongDSPhong.ImageIndex = 0;
+            this.btnDongDSPhong.Location = new System.Drawing.Point(376, 108);
+            this.btnDongDSPhong.Name = "btnDongDSPhong";
+            this.btnDongDSPhong.Size = new System.Drawing.Size(297, 54);
+            this.btnDongDSPhong.TabIndex = 30;
+            this.btnDongDSPhong.Text = "Đóng Danh Sách Phòng";
+            this.btnDongDSPhong.UseVisualStyleBackColor = true;
+            this.btnDongDSPhong.Click += new System.EventHandler(this.btnDongDSPhong_Click);
+            // 
+            // btnCapNhatPhong
+            // 
+            this.btnCapNhatPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhatPhong.ImageIndex = 7;
+            this.btnCapNhatPhong.Location = new System.Drawing.Point(376, 28);
+            this.btnCapNhatPhong.Name = "btnCapNhatPhong";
+            this.btnCapNhatPhong.Size = new System.Drawing.Size(297, 52);
+            this.btnCapNhatPhong.TabIndex = 26;
+            this.btnCapNhatPhong.Text = "Cập Nhật Phòng";
+            this.btnCapNhatPhong.UseVisualStyleBackColor = true;
+            // 
+            // btnThemPhong
+            // 
+            this.btnThemPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemPhong.ImageIndex = 6;
+            this.btnThemPhong.Location = new System.Drawing.Point(27, 28);
+            this.btnThemPhong.Name = "btnThemPhong";
+            this.btnThemPhong.Size = new System.Drawing.Size(310, 52);
+            this.btnThemPhong.TabIndex = 27;
+            this.btnThemPhong.Text = "Thêm Phòng";
+            this.btnThemPhong.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(528, 32);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Tìm Kiếm điện nước theo tên khách hàng";
+            // 
             // QuanLyDienNuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -289,6 +398,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienNuoc)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +425,13 @@
         private System.Windows.Forms.Button btnDongDSP;
         private System.Windows.Forms.Button btnCapNhatDn;
         private System.Windows.Forms.Button btnThemDn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnXoaPhong;
+        private System.Windows.Forms.Button btnDongDSPhong;
+        private System.Windows.Forms.Button btnCapNhatPhong;
+        private System.Windows.Forms.Button btnSearchDn;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnThemPhong;
+        private System.Windows.Forms.Label label1;
     }
 }

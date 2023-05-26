@@ -36,13 +36,6 @@ namespace QuanLyNhaTro
            
             txtGia.Enabled = false;
             dGVDSOTro.ReadOnly = true;
-        }
-        DataAccess.DAO dao = new DataAccess.DAO();
-        public void LoadDataGirView()
-        {
-            dGVDSOTro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dGVDSOTro.ReadOnly = true;
-            dGVDSOTro.DataSource = dao.loadthuePhong();
             /* HeaderText*/
             dGVDSOTro.Columns[1].HeaderText = "Tiền đặt cọc";
             dGVDSOTro.Columns[2].HeaderText = "Ngày thuê";
@@ -54,6 +47,14 @@ namespace QuanLyNhaTro
             dGVDSOTro.Columns[15].HeaderText = "Ngày sinh";
             dGVDSOTro.Columns[16].HeaderText = "Địa chỉ";
             dGVDSOTro.Columns[17].HeaderText = "Giới tính";
+        }
+        DataAccess.DAO dao = new DataAccess.DAO();
+        public void LoadDataGirView()
+        {
+            dGVDSOTro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dGVDSOTro.ReadOnly = true;
+            dGVDSOTro.DataSource = dao.loadthuePhong();
+           
 
         }
         public void anhxa()
@@ -174,5 +175,17 @@ namespace QuanLyNhaTro
             this.Close();
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimKiemKhachHang.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng muốn tìm");
+            }
+            else
+            {
+                dGVDSOTro.DataSource = dao.loadthuephong_SearchTenKH(txtTimKiemKhachHang.Text.Trim());
+            }
+            
+        }
     }
 }

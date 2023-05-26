@@ -56,6 +56,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDong = new System.Windows.Forms.Button();
             this.cbTenPhong = new System.Windows.Forms.ComboBox();
+            this.txtTimKiemKhachHang = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDSOTro)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -363,11 +365,32 @@
             this.cbTenPhong.Size = new System.Drawing.Size(313, 37);
             this.cbTenPhong.TabIndex = 38;
             // 
+            // txtTimKiemKhachHang
+            // 
+            this.txtTimKiemKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemKhachHang.Location = new System.Drawing.Point(78, 347);
+            this.txtTimKiemKhachHang.Name = "txtTimKiemKhachHang";
+            this.txtTimKiemKhachHang.Size = new System.Drawing.Size(299, 39);
+            this.txtTimKiemKhachHang.TabIndex = 39;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Location = new System.Drawing.Point(403, 342);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(256, 52);
+            this.btnTimKiem.TabIndex = 40;
+            this.btnTimKiem.Text = "Tìm kiếm tên khách hàng";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // DanhSachThueNhaTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 935);
+            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.txtTimKiemKhachHang);
             this.Controls.Add(this.cbTenPhong);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.txtGia);
@@ -426,5 +449,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.ComboBox cbTenPhong;
+        private System.Windows.Forms.TextBox txtTimKiemKhachHang;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

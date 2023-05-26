@@ -112,14 +112,14 @@
             // 
             // btnTimKiemPhong
             // 
-            this.btnTimKiemPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiemPhong.ImageIndex = 6;
             this.btnTimKiemPhong.Location = new System.Drawing.Point(357, 192);
             this.btnTimKiemPhong.Name = "btnTimKiemPhong";
-            this.btnTimKiemPhong.Size = new System.Drawing.Size(178, 60);
+            this.btnTimKiemPhong.Size = new System.Drawing.Size(298, 60);
             this.btnTimKiemPhong.TabIndex = 29;
-            this.btnTimKiemPhong.Text = "Tìm Kiếm";
+            this.btnTimKiemPhong.Text = "Tìm Kiếm Tên Phòng";
             this.btnTimKiemPhong.UseVisualStyleBackColor = true;
             this.btnTimKiemPhong.Click += new System.EventHandler(this.btnTimKiemPhong_Click);
             // 

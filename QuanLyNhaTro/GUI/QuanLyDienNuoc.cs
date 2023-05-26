@@ -178,5 +178,23 @@ namespace QuanLyNhaTro
 
             load();
         }
+
+        private void btnSearchDn_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng muốn tìm");
+            }
+            else
+            {
+                dGVDienNuoc.DataSource = dao.loadDienNuocSearch_tenkh(txtSearch.Text.Trim());
+            }
+           
+        }
+
+        private void btnDongDSPhong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QuanLyNhaTro.BusinessLogicLayer;
 using QuanLyNhaTro.DataAccess;
 using static System.Net.Mime.MediaTypeNames;
+using QuanLyNhaTro.ClassModle;
 
 namespace QuanLyNhaTro.GUI
 {
@@ -28,9 +29,10 @@ namespace QuanLyNhaTro.GUI
             txtTaiKhoan.Enabled=false;
         }
         DAOQuanLy DAOQuanLy = new DAOQuanLy();
+        Modify modify = new Modify();
         private void button1_Click(object sender, EventArgs e)
         {
-            if (DAOQuanLy.selectmatkhau_tk(tentk, txtMKCu.Text).Trim() != txtMKCu.Text)
+            if (DAOQuanLy.selectmatkhau_tk(tentk, modify.GetMd5Hash(txtMKCu.Text)).Trim() != modify.GetMd5Hash( txtMKCu.Text))
             { MessageBox.Show("Mật khẩu không đúng. Vui lòng nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); return; }
             else
             {

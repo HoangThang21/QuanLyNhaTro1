@@ -26,17 +26,22 @@ namespace QuanLyNhaTro.DataAccess
         {
             return modify.GetDataTable("select * from ThuePhong tp,Phong p, KhachHang kh where tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong");
         }
+        public DataTable loadthuephong_SearchTenKH(String tenkh)
+        {
+            return modify.GetDataTable("select * from ThuePhong tp,Phong p, KhachHang kh where tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and kh.HoTen like N'%"+tenkh+"%'");
+        }
         public DataTable loadPhongDaDat()
         {
             return modify.GetDataTable("Select * from Phong where TrangThai=N'Đã đặt'");
         }
+      
         public DataTable loadPhongTrong()
         {
             return modify.GetDataTable("Select * from Phong where TrangThai=N'Trống'");
         }
         public DataTable loadPhongDaDatSearch(String word)
         {
-            return modify.GetDataTable("Select * from Phong where TrangThai=N'Đã đặt' and TenPhong like '%"+word+"%'");
+            return modify.GetDataTable("Select * from Phong where TrangThai=N'Đã đặt' and TenPhong like N'%"+word+"%'");
         }
         public DataTable loadPhongSearch(String word)
         {
@@ -49,6 +54,10 @@ namespace QuanLyNhaTro.DataAccess
         public DataTable loadDienNuoc()
         {
             return modify.GetDataTable("select dn.IDDienNuoc, kh.HoTen,dv.IDLoaiDV,dv.Cu,dv.Moi,dn.DonGia from DienNuoc dn,DichVu dv,KhachHang kh where kh.IDKH=dn.IDKH and dn.IDDV=dv.IDDV");
+        }
+        public DataTable loadDienNuocSearch_tenkh(String tenKH)
+        {
+            return modify.GetDataTable("select dn.IDDienNuoc, kh.HoTen,dv.IDLoaiDV,dv.Cu,dv.Moi,dn.DonGia from DienNuoc dn,DichVu dv,KhachHang kh where kh.IDKH=dn.IDKH and dn.IDDV=dv.IDDV and kh.HoTen like N'%"+tenKH+"%'");
         }
         public DataTable loadKH_DN_DV()
         {

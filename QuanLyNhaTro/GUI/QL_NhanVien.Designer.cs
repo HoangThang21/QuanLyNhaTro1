@@ -135,11 +135,11 @@
             // DGVTaiKhoan
             // 
             this.DGVTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVTaiKhoan.Location = new System.Drawing.Point(722, 109);
+            this.DGVTaiKhoan.Location = new System.Drawing.Point(507, 47);
             this.DGVTaiKhoan.Name = "DGVTaiKhoan";
             this.DGVTaiKhoan.RowHeadersWidth = 62;
             this.DGVTaiKhoan.RowTemplate.Height = 28;
-            this.DGVTaiKhoan.Size = new System.Drawing.Size(673, 541);
+            this.DGVTaiKhoan.Size = new System.Drawing.Size(563, 362);
             this.DGVTaiKhoan.TabIndex = 2;
             this.DGVTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTaiKhoan_CellClick);
             // 
@@ -147,7 +147,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(717, 55);
+            this.label1.Location = new System.Drawing.Point(502, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 29);
             this.label1.TabIndex = 3;
@@ -163,7 +163,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(715, 285);
+            this.groupBox1.Size = new System.Drawing.Size(715, 182);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1446, 693);
+            this.ClientSize = new System.Drawing.Size(1149, 625);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGVTaiKhoan);

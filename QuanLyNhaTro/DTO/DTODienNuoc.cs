@@ -10,16 +10,19 @@ namespace QuanLyNhaTro.DTO
     {
         public DTODienNuoc() { }
         private string iddiennuoc, iddv, dongia, idkh;
+
+        public string Iddiennuoc { get => iddiennuoc; set => iddiennuoc = value; }
+        public string Iddv { get => iddv; set => iddv = value; }
+        public string Dongia { get => dongia; set => dongia = value; }
+        public string Idkh { get => idkh; set => idkh = value; }
+
         public DTODienNuoc(string iddiennuoc, string iddv, string dongia, string idkh)
         {
-            this.iddiennuoc = iddiennuoc;
-            this.iddv = iddv;
-            this.dongia = dongia;
-            this.idkh = idkh;
+            this.Iddiennuoc = iddiennuoc;
+            this.Iddv = iddv;
+            this.Dongia = dongia;
+            this.Idkh = idkh;
         }
-        public string Iddiennuoc { get ; set ; }
-        public string Iddv { get ; set ; }
-        public string Dongia { get ; set ;}
-        public string Idkh { get ; set ; }
+    
     }
 }

@@ -156,7 +156,7 @@
             this.cbTrangThai.Location = new System.Drawing.Point(118, 317);
             this.cbTrangThai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(434, 37);
+            this.cbTrangThai.Size = new System.Drawing.Size(424, 37);
             this.cbTrangThai.TabIndex = 41;
             // 
             // txtMaPhong
@@ -164,7 +164,7 @@
             this.txtMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhong.Location = new System.Drawing.Point(123, 54);
             this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(434, 35);
+            this.txtMaPhong.Size = new System.Drawing.Size(424, 35);
             this.txtMaPhong.TabIndex = 39;
             // 
             // txtDonGia
@@ -172,7 +172,7 @@
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(118, 409);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(434, 35);
+            this.txtDonGia.Size = new System.Drawing.Size(424, 35);
             this.txtDonGia.TabIndex = 40;
             // 
             // label6
@@ -242,7 +242,7 @@
             this.txtTenPhong.Location = new System.Drawing.Point(118, 140);
             this.txtTenPhong.Multiline = true;
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(434, 37);
+            this.txtTenPhong.Size = new System.Drawing.Size(424, 37);
             this.txtTenPhong.TabIndex = 49;
             // 
             // label5
@@ -266,7 +266,7 @@
             this.cbLoaiPhong.Location = new System.Drawing.Point(118, 230);
             this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(434, 37);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(424, 37);
             this.cbLoaiPhong.TabIndex = 50;
             // 
             // label7
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 976);
+            this.ClientSize = new System.Drawing.Size(1690, 976);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dGVPhongTrong);
             this.Controls.Add(this.cbLoaiPhong);

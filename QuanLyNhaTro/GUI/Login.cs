@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhaTro.ClassModle;
+using QuanLyNhaTro.GUI;
 
 namespace QuanLyNhaTro
 {
@@ -27,15 +28,20 @@ namespace QuanLyNhaTro
         {
             if (BLLQuanLy.Kttext(txtUserName.Text, txtPass.Text) == true)
             {
-                Main main = new Main(txtUserName.Text);
+                frmMain main = new frmMain(txtUserName.Text) { Width= 1946,Height= 1106 };
                 MessageBox.Show("Đăng nhập thành công với quyền "+modify.GetID("select chucvu from QuanLy where taikhoan='"+txtUserName.Text+"'"));
+                /*main.TopLevel = false;*/
+                main.FormBorderStyle = FormBorderStyle.None;
+                main.Dock = DockStyle.Fill;
+                
+                main.BringToFront();
                 main.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại.");
             }
-            anhxa();
+           //anhxa();
         }
         public void anhxa()
         {

@@ -9,23 +9,26 @@ namespace QuanLyNhaTro.DTO
     internal class DTOKhachHang
     {
         public DTOKhachHang() { }
-        private string idkh, hoten, cmnd, sdt, ngaysinh, diachi, gioitinh;
-        public DTOKhachHang(string idkh, string hoten, string cmnd, string sdt, string ngaysinh, string diachi, string gioitinh)
+        private string idkh, hoten, cmnd, sdt, diachi, gioitinh;
+        private DateTime ngaysinh;
+
+        public string Idkh { get => idkh; set => idkh = value; }
+        public string Hoten { get => hoten; set => hoten = value; }
+        public string Cmnd { get => cmnd; set => cmnd = value; }
+        public string Sdt { get => sdt; set => sdt = value; }
+        public string Diachi { get => diachi; set => diachi = value; }
+        public string Gioitinh { get => gioitinh; set => gioitinh = value; }
+        public DateTime Ngaysinh { get => ngaysinh; set => ngaysinh = value; }
+        public DTOKhachHang(string idkh, string hoten, string cmnd, string sdt, DateTime ngaysinh, string diachi, string gioitinh)
         {
-            this.idkh = idkh;
-            this.hoten = hoten;
-            this.cmnd = cmnd;
-            this.sdt = sdt;
-            this.ngaysinh = ngaysinh;
-            this.diachi = diachi;
-            this.gioitinh = gioitinh;
+            this.Idkh = idkh;
+            this.Hoten = hoten;
+            this.Cmnd = cmnd;
+            this.Sdt = sdt;
+            this.Diachi = diachi;
+            this.Gioitinh = gioitinh;
+            this.Ngaysinh = ngaysinh;
+            
         }
-        public string Idkh { get;set; }
-        public string Hoten { get;set; }
-        public string Cmd { get; set; }
-        public string Sdt { get; set; }
-        public string Ngaysinh { get; set; }
-        public string Diachi { get; set; }
-        public string Gioitinh { get; set; }
     }
 }

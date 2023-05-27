@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaTro.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -49,5 +50,6 @@ namespace QuanLyNhaTro.DataAccess
             String query = "Update Phong set TrangThai=N'" + TrangThai + "' where TenPhong=N'" + tenPhong + "'";
             modify.Command(query);
         }
+       
     }
 }

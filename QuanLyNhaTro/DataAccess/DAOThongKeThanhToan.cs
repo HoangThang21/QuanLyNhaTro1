@@ -12,9 +12,9 @@ namespace QuanLyNhaTro.DataAccess
     internal class DAOThongKeThanhToan
     {
         ClassModle.Modify modify = new ClassModle.Modify();
-        public void InsertTKKH(String id, String IDKH, String HoTen, int TongTien,String NgayThu, String TrangThai)
+        public void InsertTKKH(String id, String IDKH, String HoTen, int TongTien,String NgayThu, String TrangThai,int tienthu)
         {
-            String query = "insert into ThongKe values('" + id + "','"+ IDKH + "',N'" + HoTen + "','" + TongTien + "','"+ NgayThu + "',N'" + TrangThai + "')";
+            String query = "insert into ThongKe values('" + id + "','"+ IDKH + "',N'" + HoTen + "','" + TongTien + "','"+ NgayThu + "',N'" + TrangThai + "','" + tienthu + "')";
             modify.Command(query);
         }
         public void DeleteTKKH(String id)
@@ -45,6 +45,13 @@ namespace QuanLyNhaTro.DataAccess
                 modify.Command(query);
             }
            
+        }
+        public void UpdateTKKH_thutien(String IDTk, String TrangThai,int tienthu)
+        {
+           
+            String query = "Update ThongKe set TrangThai=N'" + TrangThai + "',TienThu='"+tienthu+"' where IDThonKeKH='" + IDTk + "'";
+
+            modify.Command(query);
         }
     }
 }

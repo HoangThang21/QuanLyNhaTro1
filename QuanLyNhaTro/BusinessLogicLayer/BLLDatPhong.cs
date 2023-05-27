@@ -81,7 +81,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
         }
         public bool KTTextUPDATEPhong(String id, String TenPhong, String LoaiPhong, String TrangThai, String DonGia)
         {
-            if (DonGia != "" && int.Parse(DonGia.Trim()) > 0)
+            if (DonGia != "")
             {
 
                 DAOPhong.UpdatePhong(id, TenPhong, LoaiPhong, TrangThai, DonGia);
@@ -90,7 +90,7 @@ namespace QuanLyNhaTro.BusinessLogicLayer
             }
             else
             {
-                MessageBox.Show("Đơn Giá phải > 0.Vui lòng nhập lại.");
+                MessageBox.Show("Đơn Giá không được bỏ trống.Vui lòng nhập lại.");
             }
             return false;
         }

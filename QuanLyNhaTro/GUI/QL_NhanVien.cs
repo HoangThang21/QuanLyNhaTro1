@@ -11,7 +11,7 @@ using QuanLyNhaTro.DataAccess;
 using QuanLyNhaTro.BusinessLogicLayer;
 namespace QuanLyNhaTro
 {
-    public partial class QL_NhanVien : Form
+    public partial class QL_NhanVien:Form
     {
         public QL_NhanVien()
         {

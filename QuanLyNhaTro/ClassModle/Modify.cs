@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using QuanLyNhaTro.DTO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.Collections;
 
 namespace QuanLyNhaTro.ClassModle
 {
@@ -132,6 +133,63 @@ namespace QuanLyNhaTro.ClassModle
                 sBuilder.Append(data[i].ToString("x2"));
             }
             return sBuilder.ToString();
+        }
+        public List<DTOPhong> listphong(String query)
+        {
+            List<DTOPhong> dTOPhongs = new List<DTOPhong>();
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    dTOPhongs.Add(new DTOPhong(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2), dataReader.GetString(3), dataReader.GetInt32(4)));
+                }
+                sqlConnection.Close();
+            }
+            return dTOPhongs;
+        }
+        public List<DTOKhachHang> listkh(String query)
+        {
+            List<DTOKhachHang> dTOkhs = new List<DTOKhachHang>();
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    dTOkhs.Add(new DTOKhachHang(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2), dataReader.GetString(3), dataReader.GetDateTime(4), dataReader.GetString(5), dataReader.GetString(6)));
+                }
+                sqlConnection.Close();
+            }
+            return dTOkhs;
+        }
+        public List<DTOThuePhong> listthuephong(String query)
+        {
+            List<DTOThuePhong> dTOtps = new List<DTOThuePhong>();
+            using (SqlConnection sqlConnection = Connec.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+
+                    dTOtps.Add(new DTOThuePhong(dataReader.GetString(0), dataReader.GetInt32(1), dataReader.GetDateTime(2), dataReader.GetDateTime(3), dataReader.GetString(4), dataReader.GetString(5)));
+                }
+                sqlConnection.Close();
+            }
+            return dTOtps;
         }
 
     }

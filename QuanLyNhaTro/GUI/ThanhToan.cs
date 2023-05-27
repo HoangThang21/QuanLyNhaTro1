@@ -51,14 +51,14 @@ namespace QuanLyNhaTro
                     {
                         if (dGVChuaDong.Rows[i].Cells[4].Value.ToString() != "" && int.Parse(dGVChuaDong.Rows[i].Cells[4].Value.ToString().Trim()) > 0)
                         {
-                            if (BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[1].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString(), dGVChuaDong.Rows[i].Cells[4].Value.ToString()) == true)
+                            /*if (BLLThanhToan.KTtext(dGVChuaDong.Rows[i].Cells[0].Value.ToString(), dGVChuaDong.Rows[i].Cells[1].Value.ToString(), dGVChuaDong.Rows[i].Cells[3].Value.ToString(), dGVChuaDong.Rows[i].Cells[4].Value.ToString()) == true)
                             {
                                 MessageBox.Show("Thu thành công!");
                             }
                             else
                             {
                                 MessageBox.Show("Thanh toán thất bại");
-                            }
+                            }*/
 
 
                         }

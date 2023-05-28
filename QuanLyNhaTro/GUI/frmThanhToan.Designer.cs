@@ -62,33 +62,42 @@
             // 
             // btnTroLai
             // 
+            this.btnTroLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnTroLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTroLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTroLai.Location = new System.Drawing.Point(204, 52);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(216, 59);
             this.btnTroLai.TabIndex = 3;
             this.btnTroLai.Text = "Reset";
-            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.UseVisualStyleBackColor = false;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // btnKHChuaDong
             // 
+            this.btnKHChuaDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnKHChuaDong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKHChuaDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKHChuaDong.Location = new System.Drawing.Point(6, 38);
             this.btnKHChuaDong.Name = "btnKHChuaDong";
             this.btnKHChuaDong.Size = new System.Drawing.Size(192, 148);
             this.btnKHChuaDong.TabIndex = 2;
             this.btnKHChuaDong.Text = "Tìm kiếm Khách Hàng Chưa Đóng Tiền";
-            this.btnKHChuaDong.UseVisualStyleBackColor = true;
+            this.btnKHChuaDong.UseVisualStyleBackColor = false;
             this.btnKHChuaDong.Click += new System.EventHandler(this.btnKHChuaDong_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(204, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 60);
             this.button2.TabIndex = 22;
             this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dGVDaDong
@@ -114,13 +123,16 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.Location = new System.Drawing.Point(1060, 703);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(243, 74);
             this.btnThanhToan.TabIndex = 18;
             this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // dGVChuaDong
@@ -146,13 +158,16 @@
             // 
             // btnInHoaDon
             // 
-            this.btnInHoaDon.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnInHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInHoaDon.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHoaDon.Location = new System.Drawing.Point(1314, 603);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(243, 74);
             this.btnInHoaDon.TabIndex = 23;
             this.btnInHoaDon.Text = "In hóa đơn";
-            this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.UseVisualStyleBackColor = false;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // label3
@@ -194,6 +209,7 @@
             // frmThanhToan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
             this.Controls.Add(this.txtTienThu);
             this.Controls.Add(this.label4);
@@ -206,6 +222,8 @@
             this.Controls.Add(this.dGVChuaDong);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInHoaDon);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.Name = "frmThanhToan";
             this.Text = "Thanh Toán";
             this.Load += new System.EventHandler(this.frmThanhToan_Load);

@@ -93,10 +93,9 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(684, 338);
+            this.groupBox3.Size = new System.Drawing.Size(684, 273);
             this.groupBox3.TabIndex = 60;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Chức năng";
             // 
             // btnXoaPhong
             // 
@@ -255,6 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 881);
             this.Controls.Add(this.flpPhong);
             this.Controls.Add(this.cbLoaiPhong);
@@ -268,6 +268,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.label6);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.Name = "frmQLPhong";
             this.Text = "Quản Lý Phòng";
             this.Load += new System.EventHandler(this.frmQLPhong_Load);

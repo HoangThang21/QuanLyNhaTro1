@@ -28,36 +28,26 @@ namespace QuanLyNhaTro.GUI
         {
             InitializeComponent();
             leftBorderBtnadmin = new Panel();
-            leftBorderBtnadmin.Size = new Size(7, 30);
+            leftBorderBtnadmin.Size = new Size(7, 60);
             siderbaradmin.Controls.Add(leftBorderBtnadmin);
             /* siderNV.Controls.Add(leftBorderBtn);*/
             leftBorderBtNV = new Panel();
-            leftBorderBtNV.Size = new Size(7, 30);
+            leftBorderBtNV.Size = new Size(7, 60);
             siderNV.Controls.Add(leftBorderBtNV);
             //report
             leftBorderBtReport = new Panel();
-            leftBorderBtReport.Size = new Size(7, 30);
+            leftBorderBtReport.Size = new Size(7, 60);
             pnReport.Controls.Add(leftBorderBtReport);
-            TK = "Tên: "+tk;
-            ChucVu = "Chức vụ: " + dao.selectChucVu(tk); ;
+            TK = tk;
+            ChucVu =dao.selectChucVu(tk); ;
         }
-        public frmMain()
-        {
-            InitializeComponent();
-            leftBorderBtnadmin = new Panel();
-            leftBorderBtnadmin.Size = new Size(7, 30);
-            siderbaradmin.Controls.Add(leftBorderBtnadmin);
-            /* siderNV.Controls.Add(leftBorderBtn);*/
-            leftBorderBtNV = new Panel();
-            leftBorderBtNV.Size = new Size(7, 30);
-            siderNV.Controls.Add(leftBorderBtNV);
-        }
+        
 
         DAO dao = new DAO();
         private void Form1_Load(object sender, EventArgs e)
         {
             //this.FormBorderStyle = FormBorderStyle.None;
-            btnten.Text = TK +"|"+ ChucVu;
+            btnten.Text ="Tên: "+ TK +" | Chức vụ: "+ ChucVu;
             siderbaradmin.Height = siderbaradmin.MinimumSize.Height;
             
         }
@@ -213,21 +203,7 @@ namespace QuanLyNhaTro.GUI
                 leftBorderBtNV.BackColor = Color.Transparent;
                 leftBorderBtnadmin.BackColor = Color.Transparent;
                 leftBorderBtReport.BackColor = color;
-                 /*MessageBox.Show(currentBtnReport.Location.Y+""+ currentBtnReport.Text);*/
-                /*if (currentBtnReport.Text == "Hóa Đơn")
-                {*/
-                    leftBorderBtReport.Location = new Point(0, currentBtnReport.Location.Y);
-               /* }
-                else if (currentBtnReport.Text == "Khách Hàng")
-                {
-
-                    leftBorderBtReport.Location = new Point(0, currentBtnReport.Location.Y);
-                }
-                else if (currentBtnReport.Text == "Phòng")
-                {
-
-                    leftBorderBtReport.Location = new Point(0, currentBtnReport.Location.Y);
-                }*/
+                leftBorderBtReport.Location = new Point(0, currentBtnReport.Location.Y);
                 
                 leftBorderBtReport.Visible = true;
                 leftBorderBtReport.BringToFront();
@@ -439,6 +415,7 @@ namespace QuanLyNhaTro.GUI
         private void btnRPThongKe_Click(object sender, EventArgs e)
         {
             ActivateButtonReport(sender, RGBColors.color5, 3);
+            loadfrom_label(new QuanLyNhaTro.GUI.frmThongKe());
         }
 
         private void btnRPKhachHang_Click(object sender, EventArgs e)
@@ -453,7 +430,7 @@ namespace QuanLyNhaTro.GUI
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            loadfrom_label(new QuanLyNhaTro.GUI.DoiMatKhau(TK));
+            loadfrom_label(new QuanLyNhaTro.GUI.frmDoiMatKhau(TK));
         }
     }
 }

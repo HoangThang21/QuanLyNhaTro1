@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelheader = new System.Windows.Forms.Panel();
+            this.flpuser = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnten = new FontAwesome.Sharp.IconButton();
+            this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
+            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.labeltile = new System.Windows.Forms.Label();
             this.bodyContainer = new System.Windows.Forms.Panel();
             this.siderBarControler = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,6 +47,11 @@
             this.btnPhong = new FontAwesome.Sharp.IconButton();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
+            this.pnReport = new System.Windows.Forms.Panel();
+            this.btnRPPhong = new FontAwesome.Sharp.IconButton();
+            this.btnRPKhachHang = new FontAwesome.Sharp.IconButton();
+            this.btnRPThongKe = new FontAwesome.Sharp.IconButton();
+            this.btnThongKeBaoCao = new FontAwesome.Sharp.IconButton();
             this.siderNV = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -55,29 +64,20 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timeradmin = new System.Windows.Forms.Timer(this.components);
             this.timerUser = new System.Windows.Forms.Timer(this.components);
-            this.flpuser = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThoat = new FontAwesome.Sharp.IconButton();
-            this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
-            this.btnten = new FontAwesome.Sharp.IconButton();
-            this.pnReport = new System.Windows.Forms.Panel();
-            this.btnRPPhong = new FontAwesome.Sharp.IconButton();
-            this.btnRPKhachHang = new FontAwesome.Sharp.IconButton();
-            this.btnRPThongKe = new FontAwesome.Sharp.IconButton();
-            this.btnThongKeBaoCao = new FontAwesome.Sharp.IconButton();
             this.timereport = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panelheader.SuspendLayout();
+            this.flpuser.SuspendLayout();
             this.siderBarControler.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.siderbaradmin.SuspendLayout();
+            this.pnReport.SuspendLayout();
             this.siderNV.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.flpuser.SuspendLayout();
-            this.pnReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,6 +101,75 @@
             this.panelheader.Name = "panelheader";
             this.panelheader.Size = new System.Drawing.Size(1593, 109);
             this.panelheader.TabIndex = 1;
+            // 
+            // flpuser
+            // 
+            this.flpuser.Controls.Add(this.btnten);
+            this.flpuser.Controls.Add(this.btnDoiMatKhau);
+            this.flpuser.Controls.Add(this.btnThoat);
+            this.flpuser.Location = new System.Drawing.Point(553, 24);
+            this.flpuser.MaximumSize = new System.Drawing.Size(1030, 101);
+            this.flpuser.MinimumSize = new System.Drawing.Size(595, 101);
+            this.flpuser.Name = "flpuser";
+            this.flpuser.Size = new System.Drawing.Size(595, 101);
+            this.flpuser.TabIndex = 10;
+            // 
+            // btnten
+            // 
+            this.btnten.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnten.FlatAppearance.BorderSize = 0;
+            this.btnten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnten.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnten.ForeColor = System.Drawing.Color.White;
+            this.btnten.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnten.IconColor = System.Drawing.Color.White;
+            this.btnten.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnten.Location = new System.Drawing.Point(3, 3);
+            this.btnten.Name = "btnten";
+            this.btnten.Size = new System.Drawing.Size(534, 67);
+            this.btnten.TabIndex = 7;
+            this.btnten.Text = "Tên";
+            this.btnten.UseVisualStyleBackColor = true;
+            this.btnten.Click += new System.EventHandler(this.btnten_Click);
+            // 
+            // btnDoiMatKhau
+            // 
+            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoiMatKhau.FlatAppearance.BorderSize = 0;
+            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
+            this.btnDoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            this.btnDoiMatKhau.IconColor = System.Drawing.Color.White;
+            this.btnDoiMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(3, 76);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(273, 67);
+            this.btnDoiMatKhau.TabIndex = 8;
+            this.btnDoiMatKhau.Text = "Đổi Mật Khẩu";
+            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.CircleArrowRight;
+            this.btnThoat.IconColor = System.Drawing.Color.White;
+            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(282, 76);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(168, 67);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // labeltile
             // 
@@ -277,6 +346,91 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
+            // pnReport
+            // 
+            this.pnReport.Controls.Add(this.btnRPPhong);
+            this.pnReport.Controls.Add(this.btnRPKhachHang);
+            this.pnReport.Controls.Add(this.btnRPThongKe);
+            this.pnReport.Controls.Add(this.btnThongKeBaoCao);
+            this.pnReport.Location = new System.Drawing.Point(3, 205);
+            this.pnReport.MaximumSize = new System.Drawing.Size(333, 317);
+            this.pnReport.MinimumSize = new System.Drawing.Size(333, 81);
+            this.pnReport.Name = "pnReport";
+            this.pnReport.Size = new System.Drawing.Size(333, 317);
+            this.pnReport.TabIndex = 7;
+            // 
+            // btnRPPhong
+            // 
+            this.btnRPPhong.FlatAppearance.BorderSize = 0;
+            this.btnRPPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRPPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRPPhong.ForeColor = System.Drawing.Color.White;
+            this.btnRPPhong.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnRPPhong.IconColor = System.Drawing.Color.White;
+            this.btnRPPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRPPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRPPhong.Location = new System.Drawing.Point(0, 236);
+            this.btnRPPhong.Name = "btnRPPhong";
+            this.btnRPPhong.Size = new System.Drawing.Size(333, 67);
+            this.btnRPPhong.TabIndex = 5;
+            this.btnRPPhong.Text = "Phòng";
+            this.btnRPPhong.UseVisualStyleBackColor = true;
+            this.btnRPPhong.Click += new System.EventHandler(this.btnRPPhong_Click);
+            // 
+            // btnRPKhachHang
+            // 
+            this.btnRPKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnRPKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRPKhachHang.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRPKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btnRPKhachHang.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
+            this.btnRPKhachHang.IconColor = System.Drawing.Color.White;
+            this.btnRPKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRPKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRPKhachHang.Location = new System.Drawing.Point(0, 163);
+            this.btnRPKhachHang.Name = "btnRPKhachHang";
+            this.btnRPKhachHang.Size = new System.Drawing.Size(333, 67);
+            this.btnRPKhachHang.TabIndex = 4;
+            this.btnRPKhachHang.Text = "Khách Hàng";
+            this.btnRPKhachHang.UseVisualStyleBackColor = true;
+            this.btnRPKhachHang.Click += new System.EventHandler(this.btnRPKhachHang_Click);
+            // 
+            // btnRPThongKe
+            // 
+            this.btnRPThongKe.FlatAppearance.BorderSize = 0;
+            this.btnRPThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRPThongKe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRPThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnRPThongKe.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnRPThongKe.IconColor = System.Drawing.Color.White;
+            this.btnRPThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRPThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRPThongKe.Location = new System.Drawing.Point(0, 90);
+            this.btnRPThongKe.Name = "btnRPThongKe";
+            this.btnRPThongKe.Size = new System.Drawing.Size(333, 67);
+            this.btnRPThongKe.TabIndex = 3;
+            this.btnRPThongKe.Text = "Hóa Đơn";
+            this.btnRPThongKe.UseVisualStyleBackColor = true;
+            this.btnRPThongKe.Click += new System.EventHandler(this.btnRPThongKe_Click);
+            // 
+            // btnThongKeBaoCao
+            // 
+            this.btnThongKeBaoCao.FlatAppearance.BorderSize = 0;
+            this.btnThongKeBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeBaoCao.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeBaoCao.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnThongKeBaoCao.IconColor = System.Drawing.Color.White;
+            this.btnThongKeBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKeBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeBaoCao.Location = new System.Drawing.Point(-3, 13);
+            this.btnThongKeBaoCao.Name = "btnThongKeBaoCao";
+            this.btnThongKeBaoCao.Size = new System.Drawing.Size(333, 67);
+            this.btnThongKeBaoCao.TabIndex = 0;
+            this.btnThongKeBaoCao.Text = "Thống Kê Báo Cáo";
+            this.btnThongKeBaoCao.UseVisualStyleBackColor = true;
+            this.btnThongKeBaoCao.Click += new System.EventHandler(this.btnThongKeBaoCao_Click);
+            // 
             // siderNV
             // 
             this.siderNV.Controls.Add(this.panel3);
@@ -415,160 +569,6 @@
             this.timerUser.Interval = 10;
             this.timerUser.Tick += new System.EventHandler(this.timerUser_Tick);
             // 
-            // flpuser
-            // 
-            this.flpuser.Controls.Add(this.btnten);
-            this.flpuser.Controls.Add(this.btnDoiMatKhau);
-            this.flpuser.Controls.Add(this.btnThoat);
-            this.flpuser.Location = new System.Drawing.Point(738, 24);
-            this.flpuser.MaximumSize = new System.Drawing.Size(801, 101);
-            this.flpuser.MinimumSize = new System.Drawing.Size(391, 101);
-            this.flpuser.Name = "flpuser";
-            this.flpuser.Size = new System.Drawing.Size(801, 101);
-            this.flpuser.TabIndex = 10;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.btnThoat.IconColor = System.Drawing.Color.White;
-            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(627, 3);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(164, 67);
-            this.btnThoat.TabIndex = 9;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnDoiMatKhau
-            // 
-            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoiMatKhau.FlatAppearance.BorderSize = 0;
-            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
-            this.btnDoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.btnDoiMatKhau.IconColor = System.Drawing.Color.White;
-            this.btnDoiMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(349, 3);
-            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(272, 67);
-            this.btnDoiMatKhau.TabIndex = 8;
-            this.btnDoiMatKhau.Text = "Đổi Mật Khẩu";
-            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
-            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
-            // 
-            // btnten
-            // 
-            this.btnten.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnten.FlatAppearance.BorderSize = 0;
-            this.btnten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnten.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnten.ForeColor = System.Drawing.Color.White;
-            this.btnten.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.btnten.IconColor = System.Drawing.Color.White;
-            this.btnten.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnten.Location = new System.Drawing.Point(3, 3);
-            this.btnten.Name = "btnten";
-            this.btnten.Size = new System.Drawing.Size(340, 67);
-            this.btnten.TabIndex = 7;
-            this.btnten.Text = "Tên";
-            this.btnten.UseVisualStyleBackColor = true;
-            this.btnten.Click += new System.EventHandler(this.btnten_Click);
-            // 
-            // pnReport
-            // 
-            this.pnReport.Controls.Add(this.btnRPPhong);
-            this.pnReport.Controls.Add(this.btnRPKhachHang);
-            this.pnReport.Controls.Add(this.btnRPThongKe);
-            this.pnReport.Controls.Add(this.btnThongKeBaoCao);
-            this.pnReport.Location = new System.Drawing.Point(3, 205);
-            this.pnReport.MaximumSize = new System.Drawing.Size(333, 317);
-            this.pnReport.MinimumSize = new System.Drawing.Size(333, 81);
-            this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(333, 317);
-            this.pnReport.TabIndex = 7;
-            // 
-            // btnRPPhong
-            // 
-            this.btnRPPhong.FlatAppearance.BorderSize = 0;
-            this.btnRPPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRPPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRPPhong.ForeColor = System.Drawing.Color.White;
-            this.btnRPPhong.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnRPPhong.IconColor = System.Drawing.Color.White;
-            this.btnRPPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRPPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRPPhong.Location = new System.Drawing.Point(0, 236);
-            this.btnRPPhong.Name = "btnRPPhong";
-            this.btnRPPhong.Size = new System.Drawing.Size(333, 67);
-            this.btnRPPhong.TabIndex = 5;
-            this.btnRPPhong.Text = "Phòng";
-            this.btnRPPhong.UseVisualStyleBackColor = true;
-            this.btnRPPhong.Click += new System.EventHandler(this.btnRPPhong_Click);
-            // 
-            // btnRPKhachHang
-            // 
-            this.btnRPKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnRPKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRPKhachHang.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRPKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnRPKhachHang.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.btnRPKhachHang.IconColor = System.Drawing.Color.White;
-            this.btnRPKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRPKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRPKhachHang.Location = new System.Drawing.Point(0, 163);
-            this.btnRPKhachHang.Name = "btnRPKhachHang";
-            this.btnRPKhachHang.Size = new System.Drawing.Size(333, 67);
-            this.btnRPKhachHang.TabIndex = 4;
-            this.btnRPKhachHang.Text = "Khách Hàng";
-            this.btnRPKhachHang.UseVisualStyleBackColor = true;
-            this.btnRPKhachHang.Click += new System.EventHandler(this.btnRPKhachHang_Click);
-            // 
-            // btnRPThongKe
-            // 
-            this.btnRPThongKe.FlatAppearance.BorderSize = 0;
-            this.btnRPThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRPThongKe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRPThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnRPThongKe.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnRPThongKe.IconColor = System.Drawing.Color.White;
-            this.btnRPThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRPThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRPThongKe.Location = new System.Drawing.Point(0, 90);
-            this.btnRPThongKe.Name = "btnRPThongKe";
-            this.btnRPThongKe.Size = new System.Drawing.Size(333, 67);
-            this.btnRPThongKe.TabIndex = 3;
-            this.btnRPThongKe.Text = "Hóa Đơn";
-            this.btnRPThongKe.UseVisualStyleBackColor = true;
-            this.btnRPThongKe.Click += new System.EventHandler(this.btnRPThongKe_Click);
-            // 
-            // btnThongKeBaoCao
-            // 
-            this.btnThongKeBaoCao.FlatAppearance.BorderSize = 0;
-            this.btnThongKeBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeBaoCao.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeBaoCao.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnThongKeBaoCao.IconColor = System.Drawing.Color.White;
-            this.btnThongKeBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKeBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeBaoCao.Location = new System.Drawing.Point(-3, 13);
-            this.btnThongKeBaoCao.Name = "btnThongKeBaoCao";
-            this.btnThongKeBaoCao.Size = new System.Drawing.Size(333, 67);
-            this.btnThongKeBaoCao.TabIndex = 0;
-            this.btnThongKeBaoCao.Text = "Thống Kê Báo Cáo";
-            this.btnThongKeBaoCao.UseVisualStyleBackColor = true;
-            this.btnThongKeBaoCao.Click += new System.EventHandler(this.btnThongKeBaoCao_Click);
-            // 
             // timereport
             // 
             this.timereport.Interval = 10;
@@ -586,18 +586,18 @@
             this.panel1.ResumeLayout(false);
             this.panelheader.ResumeLayout(false);
             this.panelheader.PerformLayout();
+            this.flpuser.ResumeLayout(false);
             this.siderBarControler.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.siderbaradmin.ResumeLayout(false);
+            this.pnReport.ResumeLayout(false);
             this.siderNV.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.flpuser.ResumeLayout(false);
-            this.pnReport.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

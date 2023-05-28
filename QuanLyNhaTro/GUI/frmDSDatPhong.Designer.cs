@@ -201,6 +201,7 @@
             // 
             // txtCMND
             // 
+            this.txtCMND.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(19, 217);
             this.txtCMND.Name = "txtCMND";
@@ -228,13 +229,16 @@
             // 
             // btnDong
             // 
+            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Location = new System.Drawing.Point(1244, 696);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(304, 74);
             this.btnDong.TabIndex = 55;
             this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.UseVisualStyleBackColor = false;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label5
@@ -260,7 +264,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(340, 357);
+            this.btnTimKiem.Location = new System.Drawing.Point(340, 352);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(256, 52);
             this.btnTimKiem.TabIndex = 58;
@@ -312,7 +316,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.label3.Location = new System.Drawing.Point(398, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 45);
@@ -321,24 +327,30 @@
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(1244, 593);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(304, 74);
             this.btnSua.TabIndex = 45;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(1244, 491);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(304, 74);
             this.btnXoa.TabIndex = 44;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // groupBox4
@@ -361,7 +373,6 @@
             this.groupBox4.Size = new System.Drawing.Size(798, 444);
             this.groupBox4.TabIndex = 43;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin khách hàng";
             // 
             // dGVDSOTro
             // 
@@ -387,6 +398,7 @@
             // frmDSDatPhong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dTPNgayThue);
@@ -406,6 +418,8 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.dGVDSOTro);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.MinimumSize = new System.Drawing.Size(1591, 958);
             this.Name = "frmDSDatPhong";
             this.Text = "Danh Sách Phòng";

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using QuanLyNhaTro.BusinessLogicLayer;
+using QuanLyNhaTro.ClassModle;
+using QuanLyNhaTro.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,39 +10,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyNhaTro.BusinessLogicLayer;
-using QuanLyNhaTro.DataAccess;
 using static System.Net.Mime.MediaTypeNames;
-using QuanLyNhaTro.ClassModle;
 
 namespace QuanLyNhaTro.GUI
 {
-    public partial class DoiMatKhau : Form
+    public partial class frmDoiMatKhau : Form
     {
-        String tentk;
-        public DoiMatKhau(String TenTK)
+        public frmDoiMatKhau(String TenTK)
         {
             InitializeComponent();
             tentk = TenTK;
         }
-        BLLQuanLy BLLQuanLy = new BLLQuanLy();
-        private void DoiMatKhau_Load(object sender, EventArgs e)
+
+        private void btnDoi_Click(object sender, EventArgs e)
         {
-            txtTaiKhoan.Text = tentk;
-            txtTaiKhoan.Enabled=false;
-        }
-        DAOQuanLy DAOQuanLy = new DAOQuanLy();
-        Modify modify = new Modify();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (DAOQuanLy.selectmatkhau_tk(tentk, modify.GetMd5Hash(txtMKCu.Text)).Trim() != modify.GetMd5Hash( txtMKCu.Text))
+            if (DAOQuanLy.selectmatkhau_tk(tentk, modify.GetMd5Hash(txtMKCu.Text)).Trim() != modify.GetMd5Hash(txtMKCu.Text))
             { MessageBox.Show("Mật khẩu không đúng. Vui lòng nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); return; }
             else
             {
                 if (txtMKnew.Text != txtmkxnNew.Text) { MessageBox.Show("Mật Khẩu không trùng khớp ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); return; }
                 else
                 {
-                   if( BLLQuanLy.DangKyTk(tentk, txtMKCu.Text, txtMKnew.Text, txtmkxnNew.Text) == true)
+                    if (BLLQuanLy.DangKyTk(tentk, txtMKCu.Text, txtMKnew.Text, txtmkxnNew.Text) == true)
                     {
                         MessageBox.Show("Đổi mật khẩu thành công");
                     }
@@ -47,13 +39,23 @@ namespace QuanLyNhaTro.GUI
                     {
                         MessageBox.Show("Đổi mật khẩu thất bại");
                     }
-                   
+
                 }
             }
-           
+        }
+        String tentk;
+        BLLQuanLy BLLQuanLy = new BLLQuanLy();
+        DAOQuanLy DAOQuanLy = new DAOQuanLy();
+        Modify modify = new Modify();
+    
+
+        private void frmDoiMatKhau_Load(object sender, EventArgs e)
+        {
+            txtTaiKhoan.Text = tentk;
+            txtTaiKhoan.Enabled = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
             this.Close();
         }

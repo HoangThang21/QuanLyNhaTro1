@@ -62,13 +62,16 @@
             // 
             // btnDong
             // 
+            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Location = new System.Drawing.Point(1171, 560);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(194, 61);
             this.btnDong.TabIndex = 28;
             this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.UseVisualStyleBackColor = false;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label4
@@ -140,12 +143,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTienDatCoc);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(719, 376);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thuê Phòng";
             // 
             // txtTienDatCoc
             // 
@@ -157,13 +160,16 @@
             // 
             // btnNhanPhong
             // 
+            this.btnNhanPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnNhanPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanPhong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanPhong.Location = new System.Drawing.Point(899, 560);
             this.btnNhanPhong.Name = "btnNhanPhong";
             this.btnNhanPhong.Size = new System.Drawing.Size(182, 61);
             this.btnNhanPhong.TabIndex = 26;
             this.btnNhanPhong.Text = "Nhận phòng";
-            this.btnNhanPhong.UseVisualStyleBackColor = true;
+            this.btnNhanPhong.UseVisualStyleBackColor = false;
             this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
             // 
             // cbLoaiPhong
@@ -180,6 +186,7 @@
             // 
             this.lable.AutoSize = true;
             this.lable.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.lable.Location = new System.Drawing.Point(406, 36);
             this.lable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lable.Name = "lable";
@@ -202,6 +209,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.label3.Location = new System.Drawing.Point(47, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -224,7 +232,6 @@
             this.groupBox5.Size = new System.Drawing.Size(686, 231);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Danh sách phòng trống";
             // 
             // label13
             // 
@@ -366,17 +373,18 @@
             this.groupBox4.Size = new System.Drawing.Size(804, 473);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin khách hàng";
             // 
             // frmDatPhong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNhanPhong);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.Name = "frmDatPhong";
             this.Text = "Đặt phòng";
             this.Load += new System.EventHandler(this.frmDatPhong_Load);

@@ -8,12 +8,13 @@ namespace QuanLyNhaTro.DTO
 {
     internal class DTOThongKe
     {
-        String IDThongKe { get; set; }
-        String IDKhachHang { get; set; }
-        String HoTen { get; set; }
-        int TongTien { get; set; }
-        DateTime NgayThu { get; set; }
-        String TrangThai { get; set; }
+        public String IDThongKe { get; set; }
+        public String IDKhachHang { get; set; }
+        public String HoTen { get; set; }
+        public int TongTien { get; set; }
+        public DateTime NgayThu { get; set; }
+         public String TrangThai { get; set; }
+        public int TienThu { get; set; }
         public DTOThongKe(String idThongKe,String idkhachhang, String hoten, int tongtien, DateTime ngaythu, String trangthai)
         {
             IDThongKe = idThongKe;

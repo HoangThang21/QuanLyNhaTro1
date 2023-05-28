@@ -54,10 +54,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(425, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 29);
+            this.label4.Size = new System.Drawing.Size(113, 32);
             this.label4.TabIndex = 44;
             this.label4.Text = "Ngày Trả:";
             // 
@@ -69,20 +69,20 @@
             this.dTPNgayTra.CalendarTitleForeColor = System.Drawing.SystemColors.HotTrack;
             this.dTPNgayTra.CalendarTrailingForeColor = System.Drawing.SystemColors.HotTrack;
             this.dTPNgayTra.CustomFormat = "yyyy/MM/dd";
-            this.dTPNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dTPNgayTra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTPNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTPNgayTra.Location = new System.Drawing.Point(425, 179);
             this.dTPNgayTra.Name = "dTPNgayTra";
-            this.dTPNgayTra.Size = new System.Drawing.Size(306, 35);
+            this.dTPNgayTra.Size = new System.Drawing.Size(306, 39);
             this.dTPNgayTra.TabIndex = 45;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(430, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 29);
+            this.label3.Size = new System.Drawing.Size(136, 32);
             this.label3.TabIndex = 40;
             this.label3.Text = "Ngày Thuê:";
             // 
@@ -94,29 +94,29 @@
             this.dTPNgayThue.CalendarTitleForeColor = System.Drawing.SystemColors.HotTrack;
             this.dTPNgayThue.CalendarTrailingForeColor = System.Drawing.SystemColors.HotTrack;
             this.dTPNgayThue.CustomFormat = "yyyy/MM/dd";
-            this.dTPNgayThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dTPNgayThue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTPNgayThue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTPNgayThue.Location = new System.Drawing.Point(430, 84);
             this.dTPNgayThue.Name = "dTPNgayThue";
-            this.dTPNgayThue.Size = new System.Drawing.Size(306, 35);
+            this.dTPNgayThue.Size = new System.Drawing.Size(306, 39);
             this.dTPNgayThue.TabIndex = 42;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(46, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 29);
+            this.label5.Size = new System.Drawing.Size(149, 32);
             this.label5.TabIndex = 43;
             this.label5.Text = "Tiền đặt cọc:";
             // 
             // txtTienDatCoc
             // 
-            this.txtTienDatCoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienDatCoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienDatCoc.Location = new System.Drawing.Point(46, 86);
             this.txtTienDatCoc.Name = "txtTienDatCoc";
-            this.txtTienDatCoc.Size = new System.Drawing.Size(304, 35);
+            this.txtTienDatCoc.Size = new System.Drawing.Size(304, 39);
             this.txtTienDatCoc.TabIndex = 41;
             // 
             // groupBox4
@@ -139,33 +139,32 @@
             this.groupBox4.Size = new System.Drawing.Size(722, 308);
             this.groupBox4.TabIndex = 39;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin khách hàng";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(393, 123);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 29);
+            this.label13.Size = new System.Drawing.Size(92, 32);
             this.label13.TabIndex = 19;
             this.label13.Text = "Địa chỉ:";
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(393, 165);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(306, 35);
+            this.txtDiaChi.Size = new System.Drawing.Size(306, 39);
             this.txtDiaChi.TabIndex = 12;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(393, 31);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 29);
+            this.label12.Size = new System.Drawing.Size(126, 32);
             this.label12.TabIndex = 9;
             this.label12.Text = "Ngày sinh:";
             // 
@@ -177,88 +176,88 @@
             this.dateSinh.CalendarTitleForeColor = System.Drawing.SystemColors.HotTrack;
             this.dateSinh.CalendarTrailingForeColor = System.Drawing.SystemColors.HotTrack;
             this.dateSinh.CustomFormat = "yyyy/MM/dd";
-            this.dateSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateSinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateSinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateSinh.Location = new System.Drawing.Point(393, 72);
             this.dateSinh.Name = "dateSinh";
-            this.dateSinh.Size = new System.Drawing.Size(306, 35);
+            this.dateSinh.Size = new System.Drawing.Size(306, 39);
             this.dateSinh.TabIndex = 11;
             // 
             // cbBoxGioiTinh
             // 
             this.cbBoxGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBoxGioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxGioiTinh.FormattingEnabled = true;
             this.cbBoxGioiTinh.Items.AddRange(new object[] {
             "Nam ",
             "Nữ"});
             this.cbBoxGioiTinh.Location = new System.Drawing.Point(393, 257);
             this.cbBoxGioiTinh.Name = "cbBoxGioiTinh";
-            this.cbBoxGioiTinh.Size = new System.Drawing.Size(306, 37);
+            this.cbBoxGioiTinh.Size = new System.Drawing.Size(306, 40);
             this.cbBoxGioiTinh.TabIndex = 13;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(393, 215);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 29);
+            this.label10.Size = new System.Drawing.Size(110, 32);
             this.label10.TabIndex = 14;
             this.label10.Text = "Giới tính:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(16, 215);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 29);
+            this.label8.Size = new System.Drawing.Size(161, 32);
             this.label8.TabIndex = 13;
             this.label8.Text = "Số điện thoại:";
             // 
             // txtSoDienThoai
             // 
-            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienThoai.Location = new System.Drawing.Point(16, 258);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(304, 35);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(304, 39);
             this.txtSoDienThoai.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(16, 126);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 29);
+            this.label7.Size = new System.Drawing.Size(248, 32);
             this.label7.TabIndex = 11;
             this.label7.Text = "Thẻ căn cước/ CMND:";
             // 
             // txtCMND
             // 
-            this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(16, 169);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(304, 35);
+            this.txtCMND.Size = new System.Drawing.Size(304, 39);
             this.txtCMND.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(16, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 29);
+            this.label6.Size = new System.Drawing.Size(123, 32);
             this.label6.TabIndex = 9;
             this.label6.Text = "Họ và tên:";
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(16, 74);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(304, 35);
+            this.txtHoTen.Size = new System.Drawing.Size(304, 39);
             this.txtHoTen.TabIndex = 7;
             // 
             // panel1
@@ -275,6 +274,7 @@
             // frmKhachHangView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(823, 650);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
@@ -284,6 +284,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTienDatCoc);
             this.Controls.Add(this.groupBox4);
+            this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.Name = "frmKhachHangView";
             this.Text = "frmKhachHangView";
             this.Load += new System.EventHandler(this.frmKhachHangView_Load);

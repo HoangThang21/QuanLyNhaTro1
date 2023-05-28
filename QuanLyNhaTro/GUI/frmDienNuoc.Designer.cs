@@ -328,7 +328,7 @@
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.Location = new System.Drawing.Point(1483, -1);
             this.iconButton4.Name = "iconButton4";
@@ -340,6 +340,7 @@
             // frmDienNuoc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.groupBox1);
@@ -348,6 +349,7 @@
             this.Controls.Add(this.dGVDienNuoc);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dGVKH);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.MinimumSize = new System.Drawing.Size(970, 478);
             this.Name = "frmDienNuoc";
             this.Text = "Quản lý điện Nước";

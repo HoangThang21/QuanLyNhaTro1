@@ -82,23 +82,12 @@
     <Compile Include="BusinessLogicLayer\BLLThanhToan.cs" />
     <Compile Include="ClassModle\Connec.cs" />
     <Compile Include="ClassModle\Modify.cs" />
+    <Compile Include="DTO\DTOreportThongKe.cs" />
     <Compile Include="GUI\Account.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DangKyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DangKyPhong.Designer.cs">
-      <DependentUpon>DangKyPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DanhSachONhaTro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DanhSachONhaTro.Designer.cs">
-      <DependentUpon>DanhSachONhaTro.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DAO.cs" />
     <Compile Include="DataAccess\DAODichVu.cs" />
@@ -115,12 +104,6 @@
     <Compile Include="DTO\DTOThongKe.cs" />
     <Compile Include="DTO\DTOThuePhong.cs" />
     <Compile Include="DTO\DTO_DichVu.cs" />
-    <Compile Include="GUI\DoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DoiMatKhau.Designer.cs">
-      <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +115,12 @@
     </Compile>
     <Compile Include="GUI\frmDienNuoc.Designer.cs">
       <DependentUpon>frmDienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDSDatPhong.cs">
       <SubType>Form</SubType>
@@ -169,6 +158,12 @@
     <Compile Include="GUI\frmThanhToan.Designer.cs">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmThuTienNo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,12 +182,6 @@
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\rpThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,36 +190,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GUI\QL_NhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QL_NhanVien.Designer.cs">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLyDienNuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyDienNuoc.Designer.cs">
-      <DependentUpon>QuanLyDienNuoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\QuanLyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\QuanLyPhong.Designer.cs">
-      <DependentUpon>QuanLyPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ThanhToan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThanhToan.Designer.cs">
-      <DependentUpon>ThanhToan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThongKe.Designer.cs">
-      <DependentUpon>ThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLNhaTroDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,20 +198,14 @@
     <EmbeddedResource Include="GUI\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangKyPhong.resx">
-      <DependentUpon>DangKyPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DanhSachONhaTro.resx">
-      <DependentUpon>DanhSachONhaTro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DoiMatKhau.resx">
-      <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDatPhong.resx">
       <DependentUpon>frmDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDienNuoc.resx">
       <DependentUpon>frmDienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDSDatPhong.resx">
       <DependentUpon>frmDSDatPhong.cs</DependentUpon>
@@ -272,6 +225,9 @@
     <EmbeddedResource Include="GUI\frmThanhToan.resx">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmThuTienNo.resx">
       <DependentUpon>frmThuTienNo.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpThongKe.resx">
       <DependentUpon>rpThongKe.cs</DependentUpon>
@@ -297,21 +250,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="GUI\QL_NhanVien.resx">
-      <DependentUpon>QL_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyDienNuoc.resx">
-      <DependentUpon>QuanLyDienNuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyPhong.resx">
-      <DependentUpon>QuanLyPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThanhToan.resx">
-      <DependentUpon>ThanhToan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongKe.resx">
-      <DependentUpon>ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -371,6 +309,8 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\salary.png" />
+    <None Include="Resources\rating.png" />
     <None Include="Resources\loupe1.png" />
     <None Include="Resources\loupe.png" />
     <None Include="Resources\plus %281%29.png" />
@@ -381,6 +321,7 @@
     <None Include="Resources\exit1.png" />
     <None Include="Resources\accept.png" />
     <None Include="Resources\delete-button.png" />
+    <None Include="Resources\coins.png" />
     <Content Include="Resources\Light1.png" />
     <None Include="Resources\user1.png" />
     <None Include="Resources\menu %281%29.png" />

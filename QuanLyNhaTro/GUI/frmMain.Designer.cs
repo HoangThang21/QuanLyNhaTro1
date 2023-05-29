@@ -36,7 +36,6 @@
             this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.labeltile = new System.Windows.Forms.Label();
-            this.bodyContainer = new System.Windows.Forms.Panel();
             this.siderBarControler = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.timeradmin = new System.Windows.Forms.Timer(this.components);
             this.timerUser = new System.Windows.Forms.Timer(this.components);
             this.timereport = new System.Windows.Forms.Timer(this.components);
+            this.bodyContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelheader.SuspendLayout();
             this.flpuser.SuspendLayout();
@@ -180,18 +180,6 @@
             this.labeltile.Size = new System.Drawing.Size(361, 60);
             this.labeltile.TabIndex = 0;
             this.labeltile.Text = "                            ";
-            // 
-            // bodyContainer
-            // 
-            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
-            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
-            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
-            this.bodyContainer.Name = "bodyContainer";
-            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.TabIndex = 2;
             // 
             // siderBarControler
             // 
@@ -574,6 +562,18 @@
             this.timereport.Interval = 10;
             this.timereport.Tick += new System.EventHandler(this.timereport_Tick);
             // 
+            // bodyContainer
+            // 
+            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
+            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
+            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
+            this.bodyContainer.Name = "bodyContainer";
+            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.TabIndex = 2;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -614,7 +614,6 @@
         private System.Windows.Forms.Timer timeradmin;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelheader;
-        private System.Windows.Forms.Panel bodyContainer;
         private FontAwesome.Sharp.IconButton btnAdmin;
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private FontAwesome.Sharp.IconButton btnPhong;
@@ -640,5 +639,6 @@
         private FontAwesome.Sharp.IconButton btnRPThongKe;
         private FontAwesome.Sharp.IconButton btnThongKeBaoCao;
         private System.Windows.Forms.Timer timereport;
+        private System.Windows.Forms.Panel bodyContainer;
     }
 }

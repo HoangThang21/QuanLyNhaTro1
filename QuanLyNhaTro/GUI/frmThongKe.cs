@@ -38,6 +38,7 @@ namespace QuanLyNhaTro.GUI
             dgvThongKe.Columns[1].Width = 200;
             dgvThongKe.Columns[2].Width = 120;
             dgvThongKe.Columns[3].Width = 300;
+            dgvThongKe.ReadOnly = true;
 
         }
         
@@ -65,10 +66,7 @@ namespace QuanLyNhaTro.GUI
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void labelStart_Click(object sender, EventArgs e)
         {
@@ -107,12 +105,18 @@ namespace QuanLyNhaTro.GUI
 
         private void btn30day_Click(object sender, EventArgs e)
         {
-            loadcharttoday("SELECT NgayThu, TongTien, TienThu FROM ThongKe where Month(NgayThu)='" + DateTime.Now.Month + "'");
+            loadchart("SELECT NgayThu, TongTien, TienThu FROM ThongKe where Month(NgayThu)='" + DateTime.Now.Month + "'");
         }
 
         private void btnTìm_Click(object sender, EventArgs e)
         {
-            loadcharttoday("SELECT NgayThu, TongTien, TienThu FROM ThongKe where NgayThu between '"+dtpcu.Text+"' and '"+dtpmoi.Text+"'");
+            loadchart("SELECT NgayThu, TongTien, TienThu FROM ThongKe where NgayThu between '" + dtpcu.Text+"' and '"+dtpmoi.Text+"'");
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            rpThongKe rpThongKe = new rpThongKe();
+            rpThongKe.Show();
         }
     }
 }

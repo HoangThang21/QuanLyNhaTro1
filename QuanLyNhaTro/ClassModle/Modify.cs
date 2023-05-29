@@ -147,6 +147,32 @@ namespace QuanLyNhaTro.ClassModle
 
             return thongKes;
         }
+        public List<DTOThongKe> ThongKes_report_thangthu(string query)
+        {
+            List<DTOThongKe> thongKes = new List<DTOThongKe>();
+
+            using (SqlConnection connection = Connec.GetSqlConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    DTOThongKe thongKe = new DTOThongKe();
+                    thongKe.thangthu = reader.GetInt32(0);
+                    thongKe.TongTien = reader.GetInt32(1);
+                    thongKe.TienThu = reader.GetInt32(1) - reader.GetInt32(2);
+
+                    thongKes.Add(thongKe);
+                }
+
+                reader.Close();
+            }
+
+            return thongKes;
+        }
         public string GetMd5Hash( string input)
         {
             MD5 md5Hash = MD5.Create();

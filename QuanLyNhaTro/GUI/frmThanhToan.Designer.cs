@@ -162,7 +162,7 @@
             this.btnInHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHoaDon.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHoaDon.Location = new System.Drawing.Point(1314, 603);
+            this.btnInHoaDon.Location = new System.Drawing.Point(1314, 613);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(243, 74);
             this.btnInHoaDon.TabIndex = 23;
@@ -223,6 +223,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInHoaDon);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.Name = "frmThanhToan";
             this.Text = "Thanh Toán";

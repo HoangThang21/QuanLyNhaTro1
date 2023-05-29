@@ -27,6 +27,7 @@ namespace QuanLyNhaTro.GUI
             ReportDataSource reportDataSource = new ReportDataSource("DataSet_ThongKe", table);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
         }
 
@@ -37,6 +38,7 @@ namespace QuanLyNhaTro.GUI
             ReportDataSource reportDataSource = new ReportDataSource("DataSet_ThongKe", table);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
         }
     }

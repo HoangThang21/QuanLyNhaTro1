@@ -136,8 +136,12 @@ namespace QuanLyNhaTro.GUI
                 int i = dGVDaDong.CurrentRow.Index;
                 if (MessageBox.Show("Bạn muốn in hóa đơn của " + dGVDaDong.Rows[i].Cells[2].Value.ToString(), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    InHoaDon inHoaDon = new InHoaDon(dGVDaDong.Rows[i].Cells[1].Value.ToString());
-                    inHoaDon.ShowDialog();
+
+                    frmInHoaDon inHoaDon = new frmInHoaDon(dGVDaDong.Rows[i].Cells[1].Value.ToString());
+                   
+                    inHoaDon.Show();
+                    /*      rpThongKe rpThongKe = new rpThongKe();
+                          rpThongKe.Show();*/
                 }
             }
             else

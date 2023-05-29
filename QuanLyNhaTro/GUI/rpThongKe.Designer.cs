@@ -44,11 +44,12 @@
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyNhaTro.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 69);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 135);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1058, 558);
+            this.reportViewer1.Size = new System.Drawing.Size(1545, 755);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomPercent = 75;
             // 
             // ThongKeBindingSource
             // 
@@ -63,44 +64,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(121, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Từ Ngày";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 21);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(444, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(136, 38);
             this.label2.TabIndex = 2;
             this.label2.Text = "Đến ngày";
             // 
             // dtpin
             // 
             this.dtpin.CustomFormat = "yyyy/MM/dd";
+            this.dtpin.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpin.Location = new System.Drawing.Point(107, 22);
+            this.dtpin.Location = new System.Drawing.Point(163, 22);
             this.dtpin.Name = "dtpin";
-            this.dtpin.Size = new System.Drawing.Size(200, 26);
+            this.dtpin.Size = new System.Drawing.Size(200, 50);
             this.dtpin.TabIndex = 3;
             // 
             // dtpout
             // 
             this.dtpout.CustomFormat = "yyyy/MM/dd";
+            this.dtpout.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpout.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpout.Location = new System.Drawing.Point(427, 21);
+            this.dtpout.Location = new System.Drawing.Point(586, 32);
             this.dtpout.Name = "dtpout";
-            this.dtpout.Size = new System.Drawing.Size(200, 26);
+            this.dtpout.Size = new System.Drawing.Size(200, 50);
             this.dtpout.TabIndex = 4;
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(763, 18);
+            this.btnTim.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Location = new System.Drawing.Point(1052, 22);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(199, 30);
+            this.btnTim.Size = new System.Drawing.Size(266, 66);
             this.btnTim.TabIndex = 5;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -110,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 639);
+            this.ClientSize = new System.Drawing.Size(1596, 962);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dtpout);
             this.Controls.Add(this.dtpin);

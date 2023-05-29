@@ -12,6 +12,7 @@ namespace QuanLyNhaTro.DTO
         private string idthuephong,  idkh, idphong;
         private int tendatcoc;
         private DateTime ngaythue, ngaytra;
+       
 
         public string Idthuephong { get => idthuephong; set => idthuephong = value; }
         public string Idkh { get => idkh; set => idkh = value; }
@@ -19,6 +20,7 @@ namespace QuanLyNhaTro.DTO
         public int Tendatcoc { get => tendatcoc; set => tendatcoc = value; }
         public DateTime Ngaythue { get => ngaythue; set => ngaythue = value; }
         public DateTime Ngaytra { get => ngaytra; set => ngaytra = value; }
+     
 
         public DTOThuePhong(string idthuephong, int tendatcoc, DateTime ngaythue, DateTime ngaytra, string idkh, string idphong)
         {

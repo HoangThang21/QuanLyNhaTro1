@@ -15,6 +15,7 @@ namespace QuanLyNhaTro.DTO
         public DateTime NgayThu { get; set; }
          public String TrangThai { get; set; }
         public int TienThu { get; set; }
+        public int thangthu { get; set; }
         public DTOThongKe(String idThongKe,String idkhachhang, String hoten, int tongtien, DateTime ngaythu, String trangthai)
         {
             IDThongKe = idThongKe;

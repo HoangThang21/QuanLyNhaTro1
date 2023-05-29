@@ -24,12 +24,8 @@ namespace QuanLyNhaTro.GUI
         Modify modify = new Modify();
         private void InHoaDon_Load(object sender, EventArgs e)
         {
-            DataTable table = modify.GetDataTable("select * from ThongKe where IDKhachHang='"+idkh+"' ");
-            reportViewer1.LocalReport.ReportPath = "Report3.rdlc";
-            ReportDataSource reportDataSource = new ReportDataSource("DataSetHoaDon", table);
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-            this.reportViewer1.RefreshReport();
+            MessageBox.Show(idkh);
+
             this.reportViewer1.RefreshReport();
         }
     }

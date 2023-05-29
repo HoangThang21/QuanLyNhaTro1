@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
 using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 using Color = System.Drawing.Color;
 
 namespace QuanLyNhaTro.GUI
@@ -39,7 +40,7 @@ namespace QuanLyNhaTro.GUI
             leftBorderBtReport.Size = new Size(7, 60);
             pnReport.Controls.Add(leftBorderBtReport);
             TK = tk;
-            ChucVu =dao.selectChucVu(tk); ;
+            ChucVu =dao.selectChucVu(tk); 
         }
         
 
@@ -421,6 +422,10 @@ namespace QuanLyNhaTro.GUI
         private void btnRPKhachHang_Click(object sender, EventArgs e)
         {
             ActivateButtonReport(sender, RGBColors.color5, 3);
+            /* FrmReportKhachHangOTro frmReportKhachHangOTro =new FrmReportKhachHangOTro();
+             frmReportKhachHangOTro.Show();*/
+           
+            loadfrom_label(new QuanLyNhaTro.GUI.FrmReportKhachHangOTro());
         }
 
         private void btnRPPhong_Click(object sender, EventArgs e)

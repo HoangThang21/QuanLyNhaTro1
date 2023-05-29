@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.dtpmoi = new System.Windows.Forms.DateTimePicker();
             this.dtpcu = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.labelTongHoaDon = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.labelTongTienKhachHangNo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.labeltienthu = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -56,11 +59,9 @@
             this.labelStart = new System.Windows.Forms.Label();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnTìm = new FontAwesome.Sharp.IconButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btn30day = new FontAwesome.Sharp.IconButton();
             this.btnToday = new FontAwesome.Sharp.IconButton();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnReport = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,6 +105,15 @@
             this.panel1.Size = new System.Drawing.Size(332, 96);
             this.panel1.TabIndex = 12;
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.rating;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(25, 41);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(48, 45);
+            this.panel5.TabIndex = 2;
+            // 
             // labelTongHoaDon
             // 
             this.labelTongHoaDon.AutoSize = true;
@@ -134,6 +144,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(532, 96);
             this.panel2.TabIndex = 13;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.salary;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Location = new System.Drawing.Point(25, 41);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(48, 45);
+            this.panel6.TabIndex = 3;
             // 
             // labelTongTienKhachHangNo
             // 
@@ -166,6 +185,15 @@
             this.panel3.Size = new System.Drawing.Size(555, 96);
             this.panel3.TabIndex = 14;
             // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.coins;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel7.Location = new System.Drawing.Point(25, 41);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(48, 45);
+            this.panel7.TabIndex = 4;
+            // 
             // labeltienthu
             // 
             this.labeltienthu.AutoSize = true;
@@ -191,61 +219,61 @@
             this.chartThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.chartThongKe.BackSecondaryColor = System.Drawing.Color.White;
             this.chartThongKe.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineWidth = 0;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.MajorGrid.LineWidth = 0;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.MajorTickMark.LineWidth = 5;
-            chartArea2.AxisX.MajorTickMark.Size = 3F;
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisY.LabelStyle.Format = "${0:0,}K";
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartThongKe.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend2.Name = "Tổng tiền";
-            this.chartThongKe.Legends.Add(legend2);
+            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineWidth = 0;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorTickMark.LineWidth = 5;
+            chartArea1.AxisX.MajorTickMark.Size = 3F;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea1.AxisY.LabelStyle.Format = "${0:0,}K";
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea1.Name = "ChartArea1";
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend1.Name = "Tổng tiền";
+            this.chartThongKe.Legends.Add(legend1);
             this.chartThongKe.Location = new System.Drawing.Point(32, 187);
             this.chartThongKe.Name = "chartThongKe";
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series3.Legend = "Tổng tiền";
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series3.MarkerSize = 10;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Tổng tiền";
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series4.Legend = "Tổng tiền";
-            series4.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series4.MarkerSize = 10;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Tiền nợ";
-            this.chartThongKe.Series.Add(series3);
-            this.chartThongKe.Series.Add(series4);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series1.Legend = "Tổng tiền";
+            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series1.MarkerSize = 10;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Tổng tiền";
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series2.Legend = "Tổng tiền";
+            series2.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series2.MarkerSize = 10;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Tiền nợ";
+            this.chartThongKe.Series.Add(series1);
+            this.chartThongKe.Series.Add(series2);
             this.chartThongKe.Size = new System.Drawing.Size(1511, 300);
             this.chartThongKe.TabIndex = 15;
             this.chartThongKe.Text = "chartThongKe";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            title2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            title2.Name = "Title1";
-            title2.Text = "Statistic";
-            this.chartThongKe.Titles.Add(title2);
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            title1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            title1.Name = "Title1";
+            title1.Text = "Statistic";
+            this.chartThongKe.Titles.Add(title1);
             // 
             // panel4
             // 
@@ -372,24 +400,6 @@
             this.btnTìm.UseVisualStyleBackColor = false;
             this.btnTìm.Click += new System.EventHandler(this.btnTìm_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.salary;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(25, 41);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(48, 45);
-            this.panel6.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.rating;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(25, 41);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(48, 45);
-            this.panel5.TabIndex = 2;
-            // 
             // btn30day
             // 
             this.btn30day.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
@@ -422,20 +432,28 @@
             this.btnToday.UseVisualStyleBackColor = false;
             this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
-            // panel7
+            // btnReport
             // 
-            this.panel7.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.coins;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Location = new System.Drawing.Point(25, 41);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(48, 45);
-            this.panel7.TabIndex = 4;
+            this.btnReport.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.seo_report;
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReport.IconColor = System.Drawing.Color.Black;
+            this.btnReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReport.Location = new System.Drawing.Point(1373, 525);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(106, 99);
+            this.btnReport.TabIndex = 20;
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // frmThongKe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.labelStart);
             this.Controls.Add(this.btnTìm);
@@ -499,5 +517,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private FontAwesome.Sharp.IconButton btnReport;
     }
 }

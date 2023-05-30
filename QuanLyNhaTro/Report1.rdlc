@@ -348,7 +348,7 @@
         <Top>1.12972in</Top>
         <Left>0.85417in</Left>
         <Height>0.70833in</Height>
-        <Width>6.82639in</Width>
+        <Width>6.82638in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -364,6 +364,8 @@
               <TextRun>
                 <Value>=Sum(Fields!TienThu.Value, "DataSet_ThongKe")</Value>
                 <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>14pt</FontSize>
                   <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
@@ -372,10 +374,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.15972in</Top>
-        <Left>4.95139in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Top>2.05555in</Top>
+        <Left>4.81597in</Left>
+        <Height>0.35417in</Height>
+        <Width>1.61459in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -428,17 +430,20 @@
             <TextRuns>
               <TextRun>
                 <Value>Tổng tiền:</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>2.15972in</Top>
-        <Left>3.75222in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Top>2.05555in</Top>
+        <Left>3.39805in</Left>
+        <Height>0.35417in</Height>
+        <Width>1.35417in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>

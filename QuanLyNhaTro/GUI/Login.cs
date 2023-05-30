@@ -28,13 +28,13 @@ namespace QuanLyNhaTro
         {
             if (BLLQuanLy.Kttext(txtUserName.Text, txtPass.Text) == true)
             {
-                frmMain main = new frmMain(txtUserName.Text) { Width= 1946,Height= 1106 };
+                frmMain main = new frmMain(txtUserName.Text) ;
                 MessageBox.Show("Đăng nhập thành công với quyền "+modify.GetID("select chucvu from QuanLy where taikhoan='"+txtUserName.Text+"'"));
                 /*main.TopLevel = false;*/
-                main.FormBorderStyle = FormBorderStyle.None;
-                main.Dock = DockStyle.Fill;
-                
-                main.BringToFront();
+                /*   main.FormBorderStyle = FormBorderStyle.None;
+                   main.Dock = DockStyle.Fill;
+                   { Width= 1946,Height= 1106 }
+                   main.BringToFront();*/
                 main.ShowDialog();
             }
             else

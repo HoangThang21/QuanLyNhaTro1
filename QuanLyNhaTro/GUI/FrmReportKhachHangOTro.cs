@@ -24,26 +24,26 @@ namespace QuanLyNhaTro.GUI
         {
             DataTable table = modify.GetDataTable("select * from Phong p , ThuePhong tp, KhachHang kh, DienNuoc dn, DichVu dv where tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and  dn.IDDV=dv.IDDV and dn.IDKH=kh.IDKH");
             reportViewer1.LocalReport.ReportPath = "Report2.rdlc";
-            ReportDataSource reportDataSource1 = new ReportDataSource("DataSetThongKe", table);
-            /*ReportDataSource reportDataSource2 = new ReportDataSource("DataSetThuePhong", table);
+            ReportDataSource reportDataSource1 = new ReportDataSource("DataSetPhong", table);
+            ReportDataSource reportDataSource2 = new ReportDataSource("DataSetThuePhong", table);
             ReportDataSource reportDataSource3 = new ReportDataSource("DataSetKhachHang", table);
             ReportDataSource reportDataSource4 = new ReportDataSource("DataSetDienNuoc", table);
-            ReportDataSource reportDataSource5 = new ReportDataSource("DataSetDichVu", table);*/
+            ReportDataSource reportDataSource5 = new ReportDataSource("DataSetDichVu", table);
             reportViewer1.LocalReport.DataSources.Clear();
-           /* reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);*/
+            reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-          /*  reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource5);*/
+            reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
 
             this.reportViewer1.RefreshReport();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-     /*       DataTable table = modify.GetDataTable("select * from Phong p , ThuePhong tp, KhachHang kh, DienNuoc dn, DichVu dv where tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and  dn.IDDV=dv.IDDV and dn.IDKH=kh.IDKH and tp.NgayTraPhong >='"+dtpin.Text+"' and tp.NgayTraPhong <= '"+dtpout.Text+"'");
+            DataTable table = modify.GetDataTable("select * from Phong p , ThuePhong tp, KhachHang kh, DienNuoc dn, DichVu dv where tp.IDKH=kh.IDKH and tp.IDPhong=p.IDPhong and  dn.IDDV=dv.IDDV and dn.IDKH=kh.IDKH and tp.NgayTraPhong >='" + dtpin.Text + "' and tp.NgayTraPhong <= '" + dtpout.Text + "'");
             reportViewer1.LocalReport.ReportPath = "Report2.rdlc";
             ReportDataSource reportDataSource1 = new ReportDataSource("DataSetPhong", table);
             ReportDataSource reportDataSource2 = new ReportDataSource("DataSetThuePhong", table);
@@ -59,7 +59,7 @@ namespace QuanLyNhaTro.GUI
             reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
 
-            this.reportViewer1.RefreshReport();*/
+            this.reportViewer1.RefreshReport();
         }
     }
 }

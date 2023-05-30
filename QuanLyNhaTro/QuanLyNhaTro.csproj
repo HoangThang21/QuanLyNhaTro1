@@ -142,9 +142,11 @@
     </Compile>
     <Compile Include="GUI\frmMain.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="GUI\frmQLPhong.cs">
       <SubType>Form</SubType>
@@ -224,6 +226,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQLPhong.resx">
       <DependentUpon>frmQLPhong.cs</DependentUpon>
@@ -318,6 +321,7 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\phongtrochothue0001.jpg" />
     <None Include="Resources\seo-report.png" />
     <None Include="Resources\salary.png" />
     <None Include="Resources\rating.png" />

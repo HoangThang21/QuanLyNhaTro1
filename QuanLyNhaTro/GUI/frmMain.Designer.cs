@@ -36,6 +36,7 @@
             this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.labeltile = new System.Windows.Forms.Label();
+            this.bodyContainer = new System.Windows.Forms.Panel();
             this.siderBarControler = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.pnReport = new System.Windows.Forms.Panel();
-            this.btnRPPhong = new FontAwesome.Sharp.IconButton();
             this.btnRPKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnRPThongKe = new FontAwesome.Sharp.IconButton();
             this.btnThongKeBaoCao = new FontAwesome.Sharp.IconButton();
@@ -64,7 +64,6 @@
             this.timeradmin = new System.Windows.Forms.Timer(this.components);
             this.timerUser = new System.Windows.Forms.Timer(this.components);
             this.timereport = new System.Windows.Forms.Timer(this.components);
-            this.bodyContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelheader.SuspendLayout();
             this.flpuser.SuspendLayout();
@@ -180,6 +179,18 @@
             this.labeltile.Size = new System.Drawing.Size(361, 60);
             this.labeltile.TabIndex = 0;
             this.labeltile.Text = "                            ";
+            // 
+            // bodyContainer
+            // 
+            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
+            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
+            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
+            this.bodyContainer.Name = "bodyContainer";
+            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.TabIndex = 2;
             // 
             // siderBarControler
             // 
@@ -336,34 +347,15 @@
             // 
             // pnReport
             // 
-            this.pnReport.Controls.Add(this.btnRPPhong);
             this.pnReport.Controls.Add(this.btnRPKhachHang);
             this.pnReport.Controls.Add(this.btnRPThongKe);
             this.pnReport.Controls.Add(this.btnThongKeBaoCao);
             this.pnReport.Location = new System.Drawing.Point(3, 205);
-            this.pnReport.MaximumSize = new System.Drawing.Size(333, 317);
+            this.pnReport.MaximumSize = new System.Drawing.Size(333, 245);
             this.pnReport.MinimumSize = new System.Drawing.Size(333, 81);
             this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(333, 317);
+            this.pnReport.Size = new System.Drawing.Size(333, 245);
             this.pnReport.TabIndex = 7;
-            // 
-            // btnRPPhong
-            // 
-            this.btnRPPhong.FlatAppearance.BorderSize = 0;
-            this.btnRPPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRPPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRPPhong.ForeColor = System.Drawing.Color.White;
-            this.btnRPPhong.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnRPPhong.IconColor = System.Drawing.Color.White;
-            this.btnRPPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRPPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRPPhong.Location = new System.Drawing.Point(0, 236);
-            this.btnRPPhong.Name = "btnRPPhong";
-            this.btnRPPhong.Size = new System.Drawing.Size(333, 67);
-            this.btnRPPhong.TabIndex = 5;
-            this.btnRPPhong.Text = "Phòng";
-            this.btnRPPhong.UseVisualStyleBackColor = true;
-            this.btnRPPhong.Click += new System.EventHandler(this.btnRPPhong_Click);
             // 
             // btnRPKhachHang
             // 
@@ -371,7 +363,7 @@
             this.btnRPKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRPKhachHang.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRPKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnRPKhachHang.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
+            this.btnRPKhachHang.IconChar = FontAwesome.Sharp.IconChar.HouseChimneyUser;
             this.btnRPKhachHang.IconColor = System.Drawing.Color.White;
             this.btnRPKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRPKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,7 +381,7 @@
             this.btnRPThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRPThongKe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRPThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnRPThongKe.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnRPThongKe.IconChar = FontAwesome.Sharp.IconChar.AmazonPay;
             this.btnRPThongKe.IconColor = System.Drawing.Color.White;
             this.btnRPThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRPThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -407,7 +399,7 @@
             this.btnThongKeBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKeBaoCao.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKeBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeBaoCao.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnThongKeBaoCao.IconChar = FontAwesome.Sharp.IconChar.UsersBetweenLines;
             this.btnThongKeBaoCao.IconColor = System.Drawing.Color.White;
             this.btnThongKeBaoCao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKeBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -425,7 +417,7 @@
             this.siderNV.Controls.Add(this.panel5);
             this.siderNV.Controls.Add(this.panel6);
             this.siderNV.Controls.Add(this.panel4);
-            this.siderNV.Location = new System.Drawing.Point(3, 528);
+            this.siderNV.Location = new System.Drawing.Point(3, 456);
             this.siderNV.Name = "siderNV";
             this.siderNV.Size = new System.Drawing.Size(330, 499);
             this.siderNV.TabIndex = 2;
@@ -562,18 +554,6 @@
             this.timereport.Interval = 10;
             this.timereport.Tick += new System.EventHandler(this.timereport_Tick);
             // 
-            // bodyContainer
-            // 
-            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
-            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
-            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
-            this.bodyContainer.Name = "bodyContainer";
-            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.TabIndex = 2;
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -634,7 +614,6 @@
         private FontAwesome.Sharp.IconButton btnDoiMatKhau;
         private FontAwesome.Sharp.IconButton btnThoat;
         private System.Windows.Forms.Panel pnReport;
-        private FontAwesome.Sharp.IconButton btnRPPhong;
         private FontAwesome.Sharp.IconButton btnRPKhachHang;
         private FontAwesome.Sharp.IconButton btnRPThongKe;
         private FontAwesome.Sharp.IconButton btnThongKeBaoCao;

@@ -50,6 +50,14 @@ namespace QuanLyNhaTro.GUI
             //this.FormBorderStyle = FormBorderStyle.None;
             btnten.Text ="Tên: "+ TK +" | Chức vụ: "+ ChucVu;
             siderbaradmin.Height = siderbaradmin.MinimumSize.Height;
+            if(ChucVu=="Admin"||ChucVu=="Quản lý")
+            {
+
+            }
+            else
+            {
+                siderbaradmin.Visible= false;
+            }
             
         }
         bool sibarex;
@@ -422,8 +430,7 @@ namespace QuanLyNhaTro.GUI
         private void btnRPKhachHang_Click(object sender, EventArgs e)
         {
             ActivateButtonReport(sender, RGBColors.color5, 3);
-            /* FrmReportKhachHangOTro frmReportKhachHangOTro =new FrmReportKhachHangOTro();
-             frmReportKhachHangOTro.Show();*/
+       
            
             loadfrom_label(new QuanLyNhaTro.GUI.FrmReportKhachHangOTro());
         }

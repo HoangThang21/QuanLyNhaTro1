@@ -243,7 +243,7 @@
             this.btnXoaPhong.Name = "btnXoaPhong";
             this.btnXoaPhong.Size = new System.Drawing.Size(313, 52);
             this.btnXoaPhong.TabIndex = 68;
-            this.btnXoaPhong.Text = "Xóa Tài Khoản";
+            this.btnXoaPhong.Text = "Xóa Phòng";
             this.btnXoaPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaPhong.UseVisualStyleBackColor = false;
             this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
@@ -260,7 +260,7 @@
             this.btnThemPhong.Name = "btnThemPhong";
             this.btnThemPhong.Size = new System.Drawing.Size(313, 52);
             this.btnThemPhong.TabIndex = 67;
-            this.btnThemPhong.Text = "   Thêm Tài Khoản";
+            this.btnThemPhong.Text = "   Thêm Phòng";
             this.btnThemPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemPhong.UseVisualStyleBackColor = false;
             this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);

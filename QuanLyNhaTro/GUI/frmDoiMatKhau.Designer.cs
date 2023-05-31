@@ -124,6 +124,7 @@
             this.btnDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.btnDoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoi.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDoi.Location = new System.Drawing.Point(62, 425);
             this.btnDoi.Name = "btnDoi";
@@ -138,6 +139,7 @@
             this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.btnback.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnback.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnback.ForeColor = System.Drawing.SystemColors.Control;
             this.btnback.Location = new System.Drawing.Point(472, 425);
             this.btnback.Name = "btnback";

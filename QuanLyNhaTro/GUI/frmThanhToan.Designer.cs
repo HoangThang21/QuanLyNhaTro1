@@ -42,6 +42,7 @@
             this.txtTongTienThang = new System.Windows.Forms.TextBox();
             this.txtTienThu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnQR = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDaDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVChuaDong)).BeginInit();
@@ -206,11 +207,26 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Tiền thu";
             // 
+            // btnQR
+            // 
+            this.btnQR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnQR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQR.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQR.Location = new System.Drawing.Point(1314, 702);
+            this.btnQR.Name = "btnQR";
+            this.btnQR.Size = new System.Drawing.Size(243, 74);
+            this.btnQR.TabIndex = 28;
+            this.btnQR.Text = "Quét QR";
+            this.btnQR.UseVisualStyleBackColor = false;
+            this.btnQR.Click += new System.EventHandler(this.btnQR_Click);
+            // 
             // frmThanhToan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
+            this.Controls.Add(this.btnQR);
             this.Controls.Add(this.txtTienThu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTongTienThang);
@@ -252,5 +268,6 @@
         private System.Windows.Forms.TextBox txtTongTienThang;
         private System.Windows.Forms.TextBox txtTienThu;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnQR;
     }
 }

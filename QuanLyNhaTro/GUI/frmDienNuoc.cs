@@ -115,14 +115,6 @@ namespace QuanLyNhaTro.GUI
         private void btnSearchDn_Click(object sender, EventArgs e)
         {
 
-            if (txtSearch.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên khách hàng muốn tìm");
-            }
-            else
-            {
-                dGVDienNuoc.DataSource = dao.loadDienNuocSearch_tenkh(txtSearch.Text.Trim());
-            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -203,6 +195,19 @@ namespace QuanLyNhaTro.GUI
             }
 
             load();
+        }
+
+        private void btnSearchDn_Click_1(object sender, EventArgs e)
+        {
+
+            if (txtSearch.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng muốn tìm");
+            }
+            else
+            {
+                dGVDienNuoc.DataSource = dao.loadDienNuocSearch_tenkh(txtSearch.Text.Trim());
+            }
         }
     }
 }

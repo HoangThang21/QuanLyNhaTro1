@@ -32,12 +32,8 @@
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnXoaPhong = new System.Windows.Forms.Button();
-            this.btnDongDSPhong = new System.Windows.Forms.Button();
-            this.btnCapNhatPhong = new System.Windows.Forms.Button();
             this.btnTimKiemPhong = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnThemPhong = new System.Windows.Forms.Button();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +42,10 @@
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.flpPhong = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDongDSPhong = new FontAwesome.Sharp.IconButton();
+            this.btnCapNhatPhong = new FontAwesome.Sharp.IconButton();
+            this.btnXoaPhong = new FontAwesome.Sharp.IconButton();
+            this.btnThemPhong = new FontAwesome.Sharp.IconButton();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,12 +83,12 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnXoaPhong);
-            this.groupBox3.Controls.Add(this.btnDongDSPhong);
             this.groupBox3.Controls.Add(this.btnCapNhatPhong);
+            this.groupBox3.Controls.Add(this.btnDongDSPhong);
+            this.groupBox3.Controls.Add(this.btnXoaPhong);
+            this.groupBox3.Controls.Add(this.btnThemPhong);
             this.groupBox3.Controls.Add(this.btnTimKiemPhong);
             this.groupBox3.Controls.Add(this.txtSearch);
-            this.groupBox3.Controls.Add(this.btnThemPhong);
             this.groupBox3.Location = new System.Drawing.Point(7, 359);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
@@ -96,45 +96,6 @@
             this.groupBox3.Size = new System.Drawing.Size(684, 273);
             this.groupBox3.TabIndex = 60;
             this.groupBox3.TabStop = false;
-            // 
-            // btnXoaPhong
-            // 
-            this.btnXoaPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaPhong.ImageIndex = 2;
-            this.btnXoaPhong.Location = new System.Drawing.Point(27, 110);
-            this.btnXoaPhong.Name = "btnXoaPhong";
-            this.btnXoaPhong.Size = new System.Drawing.Size(310, 52);
-            this.btnXoaPhong.TabIndex = 28;
-            this.btnXoaPhong.Text = "Xóa Phòng";
-            this.btnXoaPhong.UseVisualStyleBackColor = true;
-            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
-            // 
-            // btnDongDSPhong
-            // 
-            this.btnDongDSPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDongDSPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDongDSPhong.ImageIndex = 0;
-            this.btnDongDSPhong.Location = new System.Drawing.Point(376, 108);
-            this.btnDongDSPhong.Name = "btnDongDSPhong";
-            this.btnDongDSPhong.Size = new System.Drawing.Size(297, 54);
-            this.btnDongDSPhong.TabIndex = 30;
-            this.btnDongDSPhong.Text = "Đóng Danh Sách Phòng";
-            this.btnDongDSPhong.UseVisualStyleBackColor = true;
-            this.btnDongDSPhong.Click += new System.EventHandler(this.btnDongDSPhong_Click);
-            // 
-            // btnCapNhatPhong
-            // 
-            this.btnCapNhatPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhatPhong.ImageIndex = 7;
-            this.btnCapNhatPhong.Location = new System.Drawing.Point(376, 28);
-            this.btnCapNhatPhong.Name = "btnCapNhatPhong";
-            this.btnCapNhatPhong.Size = new System.Drawing.Size(297, 52);
-            this.btnCapNhatPhong.TabIndex = 26;
-            this.btnCapNhatPhong.Text = "Cập Nhật Phòng";
-            this.btnCapNhatPhong.UseVisualStyleBackColor = true;
-            this.btnCapNhatPhong.Click += new System.EventHandler(this.btnCapNhatPhong_Click);
             // 
             // btnTimKiemPhong
             // 
@@ -157,19 +118,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(303, 46);
             this.txtSearch.TabIndex = 24;
-            // 
-            // btnThemPhong
-            // 
-            this.btnThemPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemPhong.ImageIndex = 6;
-            this.btnThemPhong.Location = new System.Drawing.Point(27, 28);
-            this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(310, 52);
-            this.btnThemPhong.TabIndex = 27;
-            this.btnThemPhong.Text = "Thêm Phòng";
-            this.btnThemPhong.UseVisualStyleBackColor = true;
-            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
             // 
             // txtMaPhong
             // 
@@ -250,6 +198,73 @@
             this.flpPhong.Size = new System.Drawing.Size(816, 856);
             this.flpPhong.TabIndex = 66;
             // 
+            // btnDongDSPhong
+            // 
+            this.btnDongDSPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnDongDSPhong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDongDSPhong.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.btnDongDSPhong.IconColor = System.Drawing.Color.Yellow;
+            this.btnDongDSPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDongDSPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDongDSPhong.Location = new System.Drawing.Point(345, 105);
+            this.btnDongDSPhong.Name = "btnDongDSPhong";
+            this.btnDongDSPhong.Size = new System.Drawing.Size(298, 52);
+            this.btnDongDSPhong.TabIndex = 70;
+            this.btnDongDSPhong.Text = "Đóng";
+            this.btnDongDSPhong.UseVisualStyleBackColor = false;
+            this.btnDongDSPhong.Click += new System.EventHandler(this.btnDongDSPhong_Click);
+            // 
+            // btnCapNhatPhong
+            // 
+            this.btnCapNhatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnCapNhatPhong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatPhong.IconChar = FontAwesome.Sharp.IconChar.TurnUp;
+            this.btnCapNhatPhong.IconColor = System.Drawing.Color.Blue;
+            this.btnCapNhatPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCapNhatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhatPhong.Location = new System.Drawing.Point(345, 28);
+            this.btnCapNhatPhong.Name = "btnCapNhatPhong";
+            this.btnCapNhatPhong.Size = new System.Drawing.Size(310, 52);
+            this.btnCapNhatPhong.TabIndex = 69;
+            this.btnCapNhatPhong.Text = "Cập Nhật Phòng";
+            this.btnCapNhatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCapNhatPhong.UseVisualStyleBackColor = false;
+            this.btnCapNhatPhong.Click += new System.EventHandler(this.btnCapNhatPhong_Click);
+            // 
+            // btnXoaPhong
+            // 
+            this.btnXoaPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnXoaPhong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaPhong.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnXoaPhong.IconColor = System.Drawing.Color.Red;
+            this.btnXoaPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoaPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaPhong.Location = new System.Drawing.Point(24, 105);
+            this.btnXoaPhong.Name = "btnXoaPhong";
+            this.btnXoaPhong.Size = new System.Drawing.Size(313, 52);
+            this.btnXoaPhong.TabIndex = 68;
+            this.btnXoaPhong.Text = "Xóa Tài Khoản";
+            this.btnXoaPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoaPhong.UseVisualStyleBackColor = false;
+            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
+            // 
+            // btnThemPhong
+            // 
+            this.btnThemPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.btnThemPhong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemPhong.IconChar = FontAwesome.Sharp.IconChar.NotesMedical;
+            this.btnThemPhong.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThemPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThemPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemPhong.Location = new System.Drawing.Point(24, 28);
+            this.btnThemPhong.Name = "btnThemPhong";
+            this.btnThemPhong.Size = new System.Drawing.Size(313, 52);
+            this.btnThemPhong.TabIndex = 67;
+            this.btnThemPhong.Text = "   Thêm Tài Khoản";
+            this.btnThemPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemPhong.UseVisualStyleBackColor = false;
+            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
+            // 
             // frmQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,12 +299,8 @@
         private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnXoaPhong;
-        private System.Windows.Forms.Button btnDongDSPhong;
-        private System.Windows.Forms.Button btnCapNhatPhong;
         private System.Windows.Forms.Button btnTimKiemPhong;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnThemPhong;
         private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label1;
@@ -298,5 +309,9 @@
         private System.Windows.Forms.ComboBox cbTrangThai;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.FlowLayoutPanel flpPhong;
+        private FontAwesome.Sharp.IconButton btnThemPhong;
+        private FontAwesome.Sharp.IconButton btnDongDSPhong;
+        private FontAwesome.Sharp.IconButton btnCapNhatPhong;
+        private FontAwesome.Sharp.IconButton btnXoaPhong;
     }
 }

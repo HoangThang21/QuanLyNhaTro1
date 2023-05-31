@@ -32,44 +32,42 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelheader = new System.Windows.Forms.Panel();
             this.flpuser = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnten = new FontAwesome.Sharp.IconButton();
-            this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
-            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.labeltile = new System.Windows.Forms.Label();
             this.bodyContainer = new System.Windows.Forms.Panel();
             this.siderBarControler = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.siderbaradmin = new System.Windows.Forms.Panel();
+            this.pnReport = new System.Windows.Forms.Panel();
+            this.siderNV = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timeradmin = new System.Windows.Forms.Timer(this.components);
+            this.timerUser = new System.Windows.Forms.Timer(this.components);
+            this.timereport = new System.Windows.Forms.Timer(this.components);
+            this.btnten = new FontAwesome.Sharp.IconButton();
+            this.btnDoiMatKhau = new FontAwesome.Sharp.IconButton();
+            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnPhucHoi = new FontAwesome.Sharp.IconButton();
             this.btnsaoLuu = new FontAwesome.Sharp.IconButton();
             this.btnPhong = new FontAwesome.Sharp.IconButton();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
-            this.pnReport = new System.Windows.Forms.Panel();
             this.btnRPKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnRPThongKe = new FontAwesome.Sharp.IconButton();
             this.btnThongKeBaoCao = new FontAwesome.Sharp.IconButton();
-            this.siderNV = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.btnDSDatPhong = new FontAwesome.Sharp.IconButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timeradmin = new System.Windows.Forms.Timer(this.components);
-            this.timerUser = new System.Windows.Forms.Timer(this.components);
-            this.timereport = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelheader.SuspendLayout();
             this.flpuser.SuspendLayout();
             this.siderBarControler.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.siderbaradmin.SuspendLayout();
             this.pnReport.SuspendLayout();
             this.siderNV.SuspendLayout();
@@ -112,6 +110,147 @@
             this.flpuser.Name = "flpuser";
             this.flpuser.Size = new System.Drawing.Size(595, 101);
             this.flpuser.TabIndex = 10;
+            // 
+            // labeltile
+            // 
+            this.labeltile.AutoSize = true;
+            this.labeltile.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltile.Location = new System.Drawing.Point(28, 24);
+            this.labeltile.Name = "labeltile";
+            this.labeltile.Size = new System.Drawing.Size(361, 60);
+            this.labeltile.TabIndex = 0;
+            this.labeltile.Text = "                            ";
+            // 
+            // bodyContainer
+            // 
+            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
+            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
+            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
+            this.bodyContainer.Name = "bodyContainer";
+            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
+            this.bodyContainer.TabIndex = 2;
+            // 
+            // siderBarControler
+            // 
+            this.siderBarControler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.siderBarControler.Controls.Add(this.panel2);
+            this.siderBarControler.Controls.Add(this.siderbaradmin);
+            this.siderBarControler.Controls.Add(this.pnReport);
+            this.siderBarControler.Controls.Add(this.siderNV);
+            this.siderBarControler.Location = new System.Drawing.Point(0, 3);
+            this.siderBarControler.MaximumSize = new System.Drawing.Size(336, 1049);
+            this.siderBarControler.MinimumSize = new System.Drawing.Size(100, 1049);
+            this.siderBarControler.Name = "siderBarControler";
+            this.siderBarControler.Size = new System.Drawing.Size(336, 1049);
+            this.siderBarControler.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(333, 109);
+            this.panel2.TabIndex = 0;
+            // 
+            // siderbaradmin
+            // 
+            this.siderbaradmin.Controls.Add(this.btnPhucHoi);
+            this.siderbaradmin.Controls.Add(this.btnsaoLuu);
+            this.siderbaradmin.Controls.Add(this.btnPhong);
+            this.siderbaradmin.Controls.Add(this.btnTaiKhoan);
+            this.siderbaradmin.Controls.Add(this.btnAdmin);
+            this.siderbaradmin.Location = new System.Drawing.Point(3, 118);
+            this.siderbaradmin.MaximumSize = new System.Drawing.Size(333, 381);
+            this.siderbaradmin.MinimumSize = new System.Drawing.Size(333, 81);
+            this.siderbaradmin.Name = "siderbaradmin";
+            this.siderbaradmin.Size = new System.Drawing.Size(333, 381);
+            this.siderbaradmin.TabIndex = 1;
+            // 
+            // pnReport
+            // 
+            this.pnReport.Controls.Add(this.btnRPKhachHang);
+            this.pnReport.Controls.Add(this.btnRPThongKe);
+            this.pnReport.Controls.Add(this.btnThongKeBaoCao);
+            this.pnReport.Location = new System.Drawing.Point(3, 505);
+            this.pnReport.MaximumSize = new System.Drawing.Size(333, 245);
+            this.pnReport.MinimumSize = new System.Drawing.Size(333, 81);
+            this.pnReport.Name = "pnReport";
+            this.pnReport.Size = new System.Drawing.Size(333, 245);
+            this.pnReport.TabIndex = 7;
+            // 
+            // siderNV
+            // 
+            this.siderNV.Controls.Add(this.panel3);
+            this.siderNV.Controls.Add(this.panel5);
+            this.siderNV.Controls.Add(this.panel6);
+            this.siderNV.Controls.Add(this.panel4);
+            this.siderNV.Location = new System.Drawing.Point(3, 756);
+            this.siderNV.Name = "siderNV";
+            this.siderNV.Size = new System.Drawing.Size(330, 499);
+            this.siderNV.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Location = new System.Drawing.Point(3, 179);
+            this.panel3.MaximumSize = new System.Drawing.Size(333, 233);
+            this.panel3.MinimumSize = new System.Drawing.Size(333, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 91);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.iconButton3);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.MaximumSize = new System.Drawing.Size(333, 233);
+            this.panel5.MinimumSize = new System.Drawing.Size(333, 81);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(333, 91);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.iconButton4);
+            this.panel6.Location = new System.Drawing.Point(3, 264);
+            this.panel6.MaximumSize = new System.Drawing.Size(333, 233);
+            this.panel6.MinimumSize = new System.Drawing.Size(333, 81);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(333, 103);
+            this.panel6.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnDSDatPhong);
+            this.panel4.Location = new System.Drawing.Point(3, 94);
+            this.panel4.MaximumSize = new System.Drawing.Size(333, 233);
+            this.panel4.MinimumSize = new System.Drawing.Size(333, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(333, 91);
+            this.panel4.TabIndex = 6;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timeradmin
+            // 
+            this.timeradmin.Interval = 10;
+            this.timeradmin.Tick += new System.EventHandler(this.timeradmin_Tick);
+            // 
+            // timerUser
+            // 
+            this.timerUser.Interval = 10;
+            this.timerUser.Tick += new System.EventHandler(this.timerUser_Tick);
+            // 
+            // timereport
+            // 
+            this.timereport.Interval = 10;
+            this.timereport.Tick += new System.EventHandler(this.timereport_Tick);
             // 
             // btnten
             // 
@@ -169,91 +308,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // labeltile
-            // 
-            this.labeltile.AutoSize = true;
-            this.labeltile.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltile.Location = new System.Drawing.Point(28, 24);
-            this.labeltile.Name = "labeltile";
-            this.labeltile.Size = new System.Drawing.Size(361, 60);
-            this.labeltile.TabIndex = 0;
-            this.labeltile.Text = "                            ";
-            // 
-            // bodyContainer
-            // 
-            this.bodyContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bodyContainer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bodyContainer.ForeColor = System.Drawing.Color.Black;
-            this.bodyContainer.Location = new System.Drawing.Point(335, 113);
-            this.bodyContainer.MaximumSize = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.MinimumSize = new System.Drawing.Size(1591, 937);
-            this.bodyContainer.Name = "bodyContainer";
-            this.bodyContainer.Size = new System.Drawing.Size(1591, 958);
-            this.bodyContainer.TabIndex = 2;
-            // 
-            // siderBarControler
-            // 
-            this.siderBarControler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siderBarControler.Controls.Add(this.panel2);
-            this.siderBarControler.Controls.Add(this.siderbaradmin);
-            this.siderBarControler.Controls.Add(this.pnReport);
-            this.siderBarControler.Controls.Add(this.siderNV);
-            this.siderBarControler.Location = new System.Drawing.Point(0, 3);
-            this.siderBarControler.MaximumSize = new System.Drawing.Size(336, 1049);
-            this.siderBarControler.MinimumSize = new System.Drawing.Size(100, 1049);
-            this.siderBarControler.Name = "siderBarControler";
-            this.siderBarControler.Size = new System.Drawing.Size(336, 1049);
-            this.siderBarControler.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnMenu);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 109);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(145, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menu";
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Image = global::QuanLyNhaTro.Properties.Resources.menu__1_;
-            this.btnMenu.InitialImage = null;
-            this.btnMenu.Location = new System.Drawing.Point(18, 29);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(76, 64);
-            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.TabStop = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // siderbaradmin
-            // 
-            this.siderbaradmin.Controls.Add(this.btnPhucHoi);
-            this.siderbaradmin.Controls.Add(this.btnsaoLuu);
-            this.siderbaradmin.Controls.Add(this.btnPhong);
-            this.siderbaradmin.Controls.Add(this.btnTaiKhoan);
-            this.siderbaradmin.Controls.Add(this.btnAdmin);
-            this.siderbaradmin.Location = new System.Drawing.Point(3, 118);
-            this.siderbaradmin.MaximumSize = new System.Drawing.Size(333, 381);
-            this.siderbaradmin.MinimumSize = new System.Drawing.Size(333, 81);
-            this.siderbaradmin.Name = "siderbaradmin";
-            this.siderbaradmin.Size = new System.Drawing.Size(333, 81);
-            this.siderbaradmin.TabIndex = 1;
             // 
             // btnPhucHoi
             // 
@@ -345,18 +399,6 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
-            // pnReport
-            // 
-            this.pnReport.Controls.Add(this.btnRPKhachHang);
-            this.pnReport.Controls.Add(this.btnRPThongKe);
-            this.pnReport.Controls.Add(this.btnThongKeBaoCao);
-            this.pnReport.Location = new System.Drawing.Point(3, 205);
-            this.pnReport.MaximumSize = new System.Drawing.Size(333, 245);
-            this.pnReport.MinimumSize = new System.Drawing.Size(333, 81);
-            this.pnReport.Name = "pnReport";
-            this.pnReport.Size = new System.Drawing.Size(333, 245);
-            this.pnReport.TabIndex = 7;
-            // 
             // btnRPKhachHang
             // 
             this.btnRPKhachHang.FlatAppearance.BorderSize = 0;
@@ -411,27 +453,6 @@
             this.btnThongKeBaoCao.UseVisualStyleBackColor = true;
             this.btnThongKeBaoCao.Click += new System.EventHandler(this.btnThongKeBaoCao_Click);
             // 
-            // siderNV
-            // 
-            this.siderNV.Controls.Add(this.panel3);
-            this.siderNV.Controls.Add(this.panel5);
-            this.siderNV.Controls.Add(this.panel6);
-            this.siderNV.Controls.Add(this.panel4);
-            this.siderNV.Location = new System.Drawing.Point(3, 456);
-            this.siderNV.Name = "siderNV";
-            this.siderNV.Size = new System.Drawing.Size(330, 499);
-            this.siderNV.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.iconButton1);
-            this.panel3.Location = new System.Drawing.Point(3, 179);
-            this.panel3.MaximumSize = new System.Drawing.Size(333, 233);
-            this.panel3.MinimumSize = new System.Drawing.Size(333, 81);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 91);
-            this.panel3.TabIndex = 3;
-            // 
             // iconButton1
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
@@ -449,16 +470,6 @@
             this.iconButton1.Text = "Đặt phòng";
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.iconButton3);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.MaximumSize = new System.Drawing.Size(333, 233);
-            this.panel5.MinimumSize = new System.Drawing.Size(333, 81);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(333, 91);
-            this.panel5.TabIndex = 4;
             // 
             // iconButton3
             // 
@@ -478,16 +489,6 @@
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.iconButton4);
-            this.panel6.Location = new System.Drawing.Point(3, 264);
-            this.panel6.MaximumSize = new System.Drawing.Size(333, 233);
-            this.panel6.MinimumSize = new System.Drawing.Size(333, 81);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(333, 103);
-            this.panel6.TabIndex = 6;
-            // 
             // iconButton4
             // 
             this.iconButton4.FlatAppearance.BorderSize = 0;
@@ -505,16 +506,6 @@
             this.iconButton4.Text = "Thanh Toán";
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnDSDatPhong);
-            this.panel4.Location = new System.Drawing.Point(3, 94);
-            this.panel4.MaximumSize = new System.Drawing.Size(333, 233);
-            this.panel4.MinimumSize = new System.Drawing.Size(333, 81);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(333, 91);
-            this.panel4.TabIndex = 6;
             // 
             // btnDSDatPhong
             // 
@@ -534,25 +525,17 @@
             this.btnDSDatPhong.UseVisualStyleBackColor = true;
             this.btnDSDatPhong.Click += new System.EventHandler(this.btnDSDatPhong_Click);
             // 
-            // timer1
+            // button1
             // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timeradmin
-            // 
-            this.timeradmin.Interval = 10;
-            this.timeradmin.Tick += new System.EventHandler(this.timeradmin_Tick);
-            // 
-            // timerUser
-            // 
-            this.timerUser.Interval = 10;
-            this.timerUser.Tick += new System.EventHandler(this.timerUser_Tick);
-            // 
-            // timereport
-            // 
-            this.timereport.Interval = 10;
-            this.timereport.Tick += new System.EventHandler(this.timereport_Tick);
+            this.button1.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.nhatrologo;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(92, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 82);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -569,8 +552,6 @@
             this.flpuser.ResumeLayout(false);
             this.siderBarControler.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.siderbaradmin.ResumeLayout(false);
             this.pnReport.ResumeLayout(false);
             this.siderNV.ResumeLayout(false);
@@ -588,8 +569,6 @@
         private System.Windows.Forms.FlowLayoutPanel siderBarControler;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel siderbaradmin;
-        private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timeradmin;
         private System.Windows.Forms.Panel panel3;
@@ -619,5 +598,6 @@
         private FontAwesome.Sharp.IconButton btnThongKeBaoCao;
         private System.Windows.Forms.Timer timereport;
         private System.Windows.Forms.Panel bodyContainer;
+        private System.Windows.Forms.Button button1;
     }
 }

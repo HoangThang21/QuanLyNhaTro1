@@ -28,6 +28,16 @@ namespace QuanLyNhaTro.ClassModle
                 sqlConnection.Close();
             }
         }
+        public void CommandMaster(string squery)
+        {
+            using (SqlConnection sqlConnection = Connec.GetSqlConnectionmaster())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(squery, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+        }
         public void Command_proc(SqlCommand cmd) 
         {
             using (SqlConnection sqlConnection = Connec.GetSqlConnection())

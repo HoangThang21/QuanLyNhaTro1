@@ -81,7 +81,9 @@ namespace QuanLyNhaTro.GUI
             cbLoaiPhong.DisplayMember = "LoaiPhong";
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
+
+
+        private void btnDong_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

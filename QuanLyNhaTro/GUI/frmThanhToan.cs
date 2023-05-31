@@ -39,6 +39,7 @@ namespace QuanLyNhaTro.GUI
             dGVDaDong.Columns[4].HeaderText = "Ngày thu";
             dGVDaDong.Columns[5].HeaderText = "Trạng thái";
             dGVDaDong.Columns[6].HeaderText = "Đã thu";
+            
             dGVDaDong.Columns[2].Width = 150;
             dGVDaDong.Columns[3].Width = 160;
             dGVDaDong.Columns[4].Width = 160;
@@ -180,6 +181,14 @@ namespace QuanLyNhaTro.GUI
                 frmThuTienNo.ShowDialog();
                 loaddgvDaDong();
             }
+        }
+
+        private void btnQR_Click(object sender, EventArgs e)
+        {
+            int i = dGVDaDong.CurrentRow.Index;
+           
+            frmQR frmQR = new frmQR(dGVDaDong.Rows[i].Cells[2].Value.ToString(), dGVDaDong.Rows[i].Cells[3].Value.ToString());
+            frmQR.Show();
         }
     }
 }

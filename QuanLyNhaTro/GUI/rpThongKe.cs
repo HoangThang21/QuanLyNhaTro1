@@ -23,7 +23,7 @@ namespace QuanLyNhaTro.GUI
         private void rpThongKe_Load(object sender, EventArgs e)
         {
             DataTable table = modify.GetDataTable("select * from ThongKe ");
-            reportViewer1.LocalReport.ReportPath = "Report1.rdlc";
+            reportViewer1.LocalReport.ReportPath = "Report4.rdlc";
             ReportDataSource reportDataSource = new ReportDataSource("DataSet_ThongKe", table);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);

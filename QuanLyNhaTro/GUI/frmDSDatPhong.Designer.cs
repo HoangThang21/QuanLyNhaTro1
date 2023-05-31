@@ -44,7 +44,6 @@
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbTenPhong = new System.Windows.Forms.ComboBox();
-            this.btnDong = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -53,11 +52,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dTPNgayTra = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dGVDSOTro = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
+            this.btnDong = new FontAwesome.Sharp.IconButton();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDSOTro)).BeginInit();
             this.SuspendLayout();
@@ -227,20 +227,6 @@
             this.cbTenPhong.Size = new System.Drawing.Size(313, 68);
             this.cbTenPhong.TabIndex = 56;
             // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(1244, 696);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(304, 74);
-            this.btnDong.TabIndex = 55;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -325,34 +311,6 @@
             this.label3.TabIndex = 46;
             this.label3.Text = "Ngày Thuê:";
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(1244, 593);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(304, 74);
-            this.btnSua.TabIndex = 45;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(1244, 491);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(304, 74);
-            this.btnXoa.TabIndex = 44;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label13);
@@ -395,26 +353,79 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Danh sách ở trọ";
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnXoa.IconColor = System.Drawing.Color.Red;
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa.IconSize = 78;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(1241, 487);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(304, 74);
+            this.btnXoa.TabIndex = 59;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Untappd;
+            this.btnSua.IconColor = System.Drawing.Color.Blue;
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.IconSize = 78;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(1241, 585);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(304, 74);
+            this.btnSua.TabIndex = 60;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnDong.IconColor = System.Drawing.Color.DimGray;
+            this.btnDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.Location = new System.Drawing.Point(1241, 686);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(304, 74);
+            this.btnDong.TabIndex = 61;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // frmDSDatPhong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
+            this.Controls.Add(this.btnDong);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dTPNgayThue);
             this.Controls.Add(this.txtTienDatCoc);
             this.Controls.Add(this.txtGia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbTenPhong);
-            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiemKhachHang);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dTPNgayTra);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.dGVDSOTro);
             this.Controls.Add(this.label1);
@@ -450,7 +461,6 @@
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbTenPhong;
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnTimKiem;
@@ -459,10 +469,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dTPNgayTra;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dGVDSOTro;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnXoa;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private FontAwesome.Sharp.IconButton btnDong;
     }
 }

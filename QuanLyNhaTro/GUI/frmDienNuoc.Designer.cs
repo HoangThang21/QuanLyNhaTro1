@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSearchDn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dGVDienNuoc = new System.Windows.Forms.DataGridView();
             this.txtKH = new System.Windows.Forms.TextBox();
@@ -47,10 +46,11 @@
             this.cbDienNuoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btnSearchDn = new FontAwesome.Sharp.IconButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDienNuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKH)).BeginInit();
@@ -78,8 +78,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.btnSearchDn);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.txtSearch);
             this.groupBox3.Location = new System.Drawing.Point(783, 38);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -88,20 +88,6 @@
             this.groupBox3.Size = new System.Drawing.Size(659, 161);
             this.groupBox3.TabIndex = 85;
             this.groupBox3.TabStop = false;
-            // 
-            // btnSearchDn
-            // 
-            this.btnSearchDn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearchDn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchDn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchDn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchDn.Location = new System.Drawing.Point(354, 71);
-            this.btnSearchDn.Name = "btnSearchDn";
-            this.btnSearchDn.Size = new System.Drawing.Size(293, 60);
-            this.btnSearchDn.TabIndex = 33;
-            this.btnSearchDn.Text = "Tìm Kiếm ";
-            this.btnSearchDn.UseVisualStyleBackColor = true;
-            this.btnSearchDn.Click += new System.EventHandler(this.btnSearchDn_Click);
             // 
             // label6
             // 
@@ -266,6 +252,23 @@
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
             // 
+            // iconButton4
+            // 
+            this.iconButton4.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.right_arrow;
+            this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(1483, -1);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(86, 84);
+            this.iconButton4.TabIndex = 90;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.delete_button;
@@ -320,22 +323,21 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // iconButton4
+            // btnSearchDn
             // 
-            this.iconButton4.BackgroundImage = global::QuanLyNhaTro.Properties.Resources.right_arrow;
-            this.iconButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(1483, -1);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(86, 84);
-            this.iconButton4.TabIndex = 90;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.btnSearchDn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchDn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearchDn.IconColor = System.Drawing.Color.Black;
+            this.btnSearchDn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearchDn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchDn.Location = new System.Drawing.Point(378, 71);
+            this.btnSearchDn.Name = "btnSearchDn";
+            this.btnSearchDn.Size = new System.Drawing.Size(211, 54);
+            this.btnSearchDn.TabIndex = 91;
+            this.btnSearchDn.Text = "Tìm kiếm";
+            this.btnSearchDn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearchDn.UseVisualStyleBackColor = true;
+            this.btnSearchDn.Click += new System.EventHandler(this.btnSearchDn_Click_1);
             // 
             // frmDienNuoc
             // 
@@ -368,7 +370,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearchDn;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
@@ -390,5 +391,6 @@
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton btnSearchDn;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDong = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dTPNgayTra = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTienDatCoc = new System.Windows.Forms.TextBox();
-            this.btnNhanPhong = new System.Windows.Forms.Button();
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.lable = new System.Windows.Forms.Label();
             this.cbTenPhong = new System.Windows.Forms.ComboBox();
@@ -55,24 +53,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnNhanPhong = new FontAwesome.Sharp.IconButton();
+            this.btnDong = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(1171, 560);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(194, 61);
-            this.btnDong.TabIndex = 28;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label4
             // 
@@ -157,20 +143,6 @@
             this.txtTienDatCoc.Name = "txtTienDatCoc";
             this.txtTienDatCoc.Size = new System.Drawing.Size(293, 66);
             this.txtTienDatCoc.TabIndex = 20;
-            // 
-            // btnNhanPhong
-            // 
-            this.btnNhanPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnNhanPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanPhong.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanPhong.Location = new System.Drawing.Point(899, 560);
-            this.btnNhanPhong.Name = "btnNhanPhong";
-            this.btnNhanPhong.Size = new System.Drawing.Size(182, 61);
-            this.btnNhanPhong.TabIndex = 26;
-            this.btnNhanPhong.Text = "Nhận phòng";
-            this.btnNhanPhong.UseVisualStyleBackColor = false;
-            this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
             // 
             // cbLoaiPhong
             // 
@@ -374,14 +346,50 @@
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             // 
+            // btnNhanPhong
+            // 
+            this.btnNhanPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanPhong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanPhong.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnNhanPhong.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNhanPhong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNhanPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanPhong.Location = new System.Drawing.Point(826, 560);
+            this.btnNhanPhong.Name = "btnNhanPhong";
+            this.btnNhanPhong.Size = new System.Drawing.Size(254, 61);
+            this.btnNhanPhong.TabIndex = 29;
+            this.btnNhanPhong.Text = "Nhận phòng";
+            this.btnNhanPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhanPhong.UseVisualStyleBackColor = false;
+            this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.IconChar = FontAwesome.Sharp.IconChar.FeatherAlt;
+            this.btnDong.IconColor = System.Drawing.Color.Red;
+            this.btnDong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.Location = new System.Drawing.Point(1316, 560);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(158, 61);
+            this.btnDong.TabIndex = 30;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click_1);
+            // 
             // frmDatPhong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1569, 902);
             this.Controls.Add(this.btnDong);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNhanPhong);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
@@ -399,8 +407,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dTPNgayTra;
         private System.Windows.Forms.Label label2;
@@ -408,7 +414,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTienDatCoc;
-        private System.Windows.Forms.Button btnNhanPhong;
         private System.Windows.Forms.ComboBox cbLoaiPhong;
         private System.Windows.Forms.Label lable;
         private System.Windows.Forms.ComboBox cbTenPhong;
@@ -427,5 +432,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.GroupBox groupBox4;
+        private FontAwesome.Sharp.IconButton btnNhanPhong;
+        private FontAwesome.Sharp.IconButton btnDong;
     }
 }

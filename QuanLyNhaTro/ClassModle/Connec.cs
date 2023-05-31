@@ -15,6 +15,12 @@ namespace QuanLyNhaTro.ClassModle
         {
             return new SqlConnection(stringConnection);
         }
+        private static string stringConnectionmaster = @"Data Source=THANG;Initial Catalog=master;Integrated Security=True";
+        public static SqlConnection GetSqlConnectionmaster()
+        {
+            SqlConnection.ClearAllPools();
+            return new SqlConnection(stringConnectionmaster);
+        }
 
     }
 }

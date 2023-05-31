@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -134,6 +135,23 @@ namespace QuanLyNhaTro.DataAccess
                 MessageBox.Show(ex.Message);
             }
             return false;
+        }
+        public  bool PhucHoiDuLieu(string sDuongDan)
+        {
+
+            string sql = @"
+               RESTORE DATABASE QLNhaTro
+                FROM DISK = N'"+ sDuongDan + "'"+"WITH REPLACE, RECOVERY";
+            SqlConnection.ClearAllPools();
+           
+            try
+            {
+                modify.CommandMaster(sql);
+
+                return true;
+            }
+            catch(Exception ex) { }
+           return false;
         }
 
     }

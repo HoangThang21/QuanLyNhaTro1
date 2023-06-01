@@ -1,0 +1,14 @@
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling d:\DoAnQuanLyNhaTro\DoAn2\QuanLyNhaTro1\HuongDan\HuongDan.chm
+
+
+Compile time: 0 minutes, 1 second
+3	Topics
+4	Local links
+0	Internet links
+0	Graphics
+
+
+Created d:\DoAnQuanLyNhaTro\DoAn2\QuanLyNhaTro1\HuongDan\HuongDan.chm, 3,227,493 bytes
+Compression decreased file by 190,702 bytes.

@@ -442,6 +442,11 @@ namespace QuanLyNhaTro.GUI
             ActivateButtonReport(sender, RGBColors.color5, 3);
         }
 
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://D:\\DoAnQuanLyNhaTro\\DoAn2\\QuanLyNhaTro1\\HuongDan\\HuongDan.chm");
+        }
+
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             loadfrom_label(new QuanLyNhaTro.GUI.frmDoiMatKhau(TK));

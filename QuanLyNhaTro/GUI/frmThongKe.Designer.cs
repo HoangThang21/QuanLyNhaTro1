@@ -48,8 +48,6 @@
             this.labeltienthu = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labeltxtthang = new System.Windows.Forms.Label();
-            this.labelthang = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelTongDoanhThu = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -217,8 +215,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.panel4.Controls.Add(this.labeltxtthang);
-            this.panel4.Controls.Add(this.labelthang);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.labelTongDoanhThu);
             this.panel4.Controls.Add(this.label8);
@@ -226,26 +222,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(367, 354);
             this.panel4.TabIndex = 13;
-            // 
-            // labeltxtthang
-            // 
-            this.labeltxtthang.AutoSize = true;
-            this.labeltxtthang.Location = new System.Drawing.Point(19, 145);
-            this.labeltxtthang.Name = "labeltxtthang";
-            this.labeltxtthang.Size = new System.Drawing.Size(190, 32);
-            this.labeltxtthang.TabIndex = 4;
-            this.labeltxtthang.Text = "Tổng Doanh thu";
-            // 
-            // labelthang
-            // 
-            this.labelthang.AutoSize = true;
-            this.labelthang.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelthang.ForeColor = System.Drawing.Color.White;
-            this.labelthang.Location = new System.Drawing.Point(102, 187);
-            this.labelthang.Name = "labelthang";
-            this.labelthang.Size = new System.Drawing.Size(54, 45);
-            this.labelthang.TabIndex = 3;
-            this.labelthang.Text = "10";
             // 
             // label9
             // 
@@ -510,8 +486,6 @@
         private FontAwesome.Sharp.IconButton btnTìm;
         private System.Windows.Forms.Label labelEnd;
         private System.Windows.Forms.Label labelStart;
-        private System.Windows.Forms.Label labeltxtthang;
-        private System.Windows.Forms.Label labelthang;
         private FontAwesome.Sharp.IconButton btnReset;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;

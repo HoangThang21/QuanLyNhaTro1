@@ -25,12 +25,12 @@ namespace QuanLyNhaTro.GUI
         {
             loadchart("SELECT NgayThu, SUM(TongTien) AS TongTien, SUM(TienThu) AS TienThu FROM ThongKe GROUP BY NgayThu");
             labelTongHoaDon.Text = modify.GetInt32("select count(IDKhachHang) from ThongKe").ToString();
-            labelTongTienKhachHangNo.Text = (modify.GetInt32("select sum(TongTien) from ThongKe")- modify.GetInt32("select sum(TienThu) from ThongKe")).ToString();
+            labelTongTienKhachHangNo.Text = (modify.GetInt32("select sum(TongTien) from ThongKe") - modify.GetInt32("select sum(TienThu) from ThongKe")).ToString();
             labeltienthu.Text = modify.GetInt32("select sum(TienThu) from ThongKe").ToString();
-            labelthang.Text = modify.GetInt32("SELECT sum(TienThu) FROM ThongKe where Month(NgayThu)='" + DateTime.Now.Month + "'").ToString();;
+            //labelthang.Text = modify.GetInt32("SELECT sum(TienThu) FROM ThongKe where Month(NgayThu)='" + DateTime.Now.Month + "'").ToString(); ;
             dgvThongKe.DataSource = modify.GetDataTable("select HoTenKH,NgayThu,TrangThai, sum(TongTien-TienThu) as N'Tiền Còn Nợ' from ThongKe GROUP BY HoTenKH,NgayThu,TrangThai");
             labelTongDoanhThu.Text = modify.GetInt32("select sum(TongTien) from ThongKe").ToString();
-            labeltxtthang.Text = "Tổng doanh thu của tháng "+ DateTime.Now.Month;
+            //labeltxtthang.Text = "Tổng doanh thu của tháng " + DateTime.Now.Month;
             dgvThongKe.Columns[0].HeaderText = "Họ tên";
             dgvThongKe.Columns[1].HeaderText = "Ngày thu";
             dgvThongKe.Columns[2].HeaderText = "Trạng thái";

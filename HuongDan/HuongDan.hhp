@@ -1,0 +1,46 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=HuongDan.chm
+Contents file=HuongDan.hhc
+Index file=HuongDan.hhk
+Enhanced decompilation=Yes
+Binary TOC=Yes
+Full-text search=Yes
+Language=0x0409
+Title=HuongDan
+Error log file=Errlog.txt
+Default Window=main
+
+[WINDOWS]
+main="HuongDan","HuongDan.hhc","HuongDan.hhk","huongdan.html","",,,,,0x41520,240,0x184E,[262,184,762,584],,,,0,0,0,0
+
+[FILES]
+huongdan.html
+huongdan_files\colorschememapping.xml
+huongdan_files\filelist.xml
+huongdan_files\image001.png
+huongdan_files\image002.png
+huongdan_files\image003.png
+huongdan_files\image004.png
+huongdan_files\image005.png
+huongdan_files\image006.png
+huongdan_files\image007.png
+huongdan_files\image008.png
+huongdan_files\image009.png
+huongdan_files\image010.png
+huongdan_files\image011.png
+huongdan_files\image012.png
+huongdan_files\image013.png
+huongdan_files\image014.png
+huongdan_files\image015.png
+huongdan_files\image016.png
+huongdan_files\image017.png
+huongdan_files\image018.png
+huongdan_files\image019.png
+huongdan_files\image020.png
+huongdan_files\image021.png
+huongdan_files\image022.png
+huongdan_files\image023.png
+huongdan_files\image024.png
+huongdan_files\themedata.thmx
+

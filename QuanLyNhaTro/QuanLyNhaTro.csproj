@@ -336,6 +336,8 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Resort &amp; Sa Hotel %281%29.png" />
+    <None Include="Resources\Resort &amp; Sa Hotel.png" />
     <None Include="Resources\nhatrologo.jpg" />
     <None Include="Resources\phongtrochothue0001.jpg" />
     <None Include="Resources\seo-report.png" />
